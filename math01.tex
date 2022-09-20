@@ -2,6 +2,7 @@
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{bm}
+\usepackage{array,tabularx} 
 \begin{document}
     
 \begin{displaymath}
@@ -33,11 +34,11 @@
 \end{displaymath} 
 
 \begin{displaymath}
-    \oint_{\alpha}^{\beta} f(x(t),y(t)) \mathrm{d}s = \int_{a}^{b} f(x,y(x)) \sqrt{x'^2+y'^2} \mathrm{d}x = \int_{\alpha}^{\beta} f(r,\theta)\sqrt{r^2 + r'^2} \mathrm{d}\theta \quad t \in \alpha \to \beta \Rightarrow x \in a \to b
+    \int_{t1}^{t2} f(x(t),y(t)) \mathrm{d}s = \int_{a}^{b} f(x,y(x)) \sqrt{x'^2+y'^2} \mathrm{d}x = \int_{\alpha}^{\beta} f(r,\theta)\sqrt{r^2 + r'^2} \mathrm{d}\theta ,\quad \theta = \alpha \to \beta
 \end{displaymath}
 
 \begin{displaymath}
-    r = r(\theta), \theta = \alpha \to \beta , S = \frac{1}{2}\int_{\alpha}^{\beta}{r^2(\theta)}\mathrm{d}\theta
+    S = \int_{a}^{b}y(x)\mathrm{d}x = \int_{t1}^{t2}y(t)x'(t)\mathrm{d}t = \frac{1}{2}\int_{\alpha}^{\beta}{r^2(\theta)}\mathrm{d}\theta ,\quad \theta = \alpha \to \beta 
 \end{displaymath}
 
 \begin{displaymath}
@@ -61,15 +62,14 @@
 
 \begin{align*}
     \bm{Line-Area \quad Integral} \\ 
-    \frac{\partial f}{\partial l} |{(x_{0},y_{0},z_{0})} = f_{x}\cos \alpha + f_{y} \cos \beta + f_{z}\cos \gamma\\
+    \left. \frac{\partial f}{\partial l}\right|_{P_{0}=(x_{0},y_{0},z_{0})} = f_{x}(P_{0})\cos \alpha + f_{y}(P_{0})\cos \beta + f_{z}(P_{0})\cos \gamma\\
+    \bm{\mathrm{grad}}f(x_{0},y_{0},z_{0}) = f_{x}(x_{0},y_{0},z_{0})\bm{\vec{i}} + f_{y}(x_{0},y_{0},z_{0})\bm{\vec{j}} + f_{z}(x_{0},y_{0},z_{0})\bm{\vec{k}} \\ 
     \quad \exists \varOmega = 8\varOmega_{0},f(x,y,z) = f(y,z,x) = f(z,x,y) \\  
     \iiint_{\varOmega} f(x,y,z) \mathrm{d}v = 24 \iiint_{\varOmega_{0}}f(z) \mathrm{d}z = 24\iint_{D_{xy}}\mathrm{d}\sigma\int_{}f(z)\mathrm{d}z \\ 
-    \bm{\mathrm{grad}}f(x_{0},y_{0}) = f_{x}(x_{0},y_{0})\bm{\vec{i}} + f_{y}(x_{0},y_{0})\bm{\vec{j}} \\ 
-    S = \iint_{D_{xy}}\mathrm{d}S = \iint_{D_{xy}}\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}\sigma \\ 
-    \iint_{\Sigma}f \mathrm{d}S = \iint_{\Sigma_{1}}f\mathrm{d}S +  \iint_{\Sigma_{2}}f\mathrm{d}S \\ 
+    (\bar{x},\bar{y},\bar{z}) = (\frac{\iiiint_{\Omega}x\rho \mathrm{d}v}{\iiiint_{\Omega}\rho \mathrm{d}v},\frac{\iiiint_{\Omega}y\rho \mathrm{d}v}{\iiiint_{\Omega}\rho \mathrm{d}v},\frac{\iiiint_{\Omega}z\rho \mathrm{d}v}{\iiiint_{\Omega}\rho \mathrm{d}v}), \quad J_{k_{j}} = \iiiint_{\Omega}(\sum_{i=1}^n{k_{i}^2}-k^2_{j})\rho\mathrm{d}v\\
+    S = \iint_{D_{xy}}\mathrm{d}S = \iint_{D_{xy}}\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}\sigma ,\quad \iint_{\Sigma}f \mathrm{d}S = \iint_{\Sigma_{1}}f\mathrm{d}S +  \iint_{\Sigma_{2}}f\mathrm{d}S \\ 
     \iint_{-\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y = -\iint_{\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y \\  
-    \oint_{\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y = \iiint_{\Omega} (\frac{\partial P}{\partial x}+{\frac{\partial Q}{\partial y}}+{\frac{\partial R}{\partial z}}) \mathrm{d}v \\ 
-    \mathrm{div}\bm{\vec{A}} = \frac{\partial P}{\partial x}+{\frac{\partial Q}{\partial y}}+{\frac{\partial R}{\partial z}} \\
+    \oint_{\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y = \iiint_{\Omega} (\frac{\partial P}{\partial x}+{\frac{\partial Q}{\partial y}}+{\frac{\partial R}{\partial z}}) \mathrm{d}v ,\quad \mathrm{div}\bm{\vec{A}} = \frac{\partial P}{\partial x}+{\frac{\partial Q}{\partial y}}+{\frac{\partial R}{\partial z}} \\
     \oint_{\Gamma}P\mathrm{d}x+Q\mathrm{d}y +R\mathrm{d}z = \iint_{\Sigma}(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z})\mathrm{d}y\mathrm{d}z+(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x})\mathrm{d}z\mathrm{d}x+(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\mathrm{d}x\mathrm{d}y \\
     \bm{\mathrm{rot}\vec{A}} = (\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z})\bm{\vec{i}}+(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x})\bm{\vec{j}}+(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\bm{\vec{k}}\\
 \end{align*}
@@ -89,12 +89,10 @@
 
 
 \begin{align*}
-    \bm{Probability \quad Theory} \\ 
-    A - B = A\bar{B} = A \cap \bar{B} \\ 
+    \bm{Traditional \quad Probability \quad Theory} \\ 
+    A - B = A\bar{B} = A \cap \bar{B} \Rightarrow P(A-B) = P(A) - P(AB) \\ 
     f(x) = \frac{1}{\sqrt{2\pi}\sigma}\mathrm{e}^{-\frac{(x-\mu)^2}{2\sigma^2}} , x \in (-\infty,+\infty)  \\ 
-    \Phi(x) = \int_{-\infty}^{x} f(t) \mathrm{d}t , X \sim N(0,1) \\ 
-    \Phi(a)+\Phi(-a) = 1 \\ 
-    F(x) = \Phi(\frac{x-\mu}{\sigma}) \\ 
+    \Phi(x) = \int_{-\infty}^{x} f(t) \mathrm{d}t , X \sim N(0,1) ,\quad \Phi(a)+\Phi(-a) = 1, \quad F(x) = \Phi(\frac{x-\mu}{\sigma}) \\ 
     f_{X|Y}(x|y) = \frac{f(x,y)}{f_{Y}(y)}, f_{Y|X}(y|x) = \frac{f(x,y)}{f_{X}(x)}\\ 
     (X,Y) \sim U(D), 
     f(x,y) = \left\{ 
@@ -102,8 +100,29 @@
         \frac{1}{S_{D}}, (x,y) \in D\\ 
         0, others
     \end{array} \right. \ \\ 
-    f(x,y) = \frac{1}{2\pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^2}} \mathrm{e}^{-\frac{1}{2(1-\rho^2)}[(\frac{x-\mu_{1}}{\sigma_{1}})^2-\frac{2\rho (x-\mu_{1})(y-\mu_{2})}{\sigma_{1}\sigma_{2}}+(\frac{x-\mu_{2}}{\sigma_{2}})^2]}
+    (X,Y) \sim N(\mu_{1},\mu_{2};\sigma_{1},\sigma_{2},\rho),f(x,y) = \frac{1}{2\pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^2}} \mathrm{e}^{-\frac{1}{2(1-\rho^2)}[(\frac{x-\mu_{1}}{\sigma_{1}})^2-\frac{2\rho (x-\mu_{1})(y-\mu_{2})}{\sigma_{1}\sigma_{2}}+(\frac{y-\mu_{2}}{\sigma_{2}})^2]} \\
 \end{align*}
+
+$\bm{Variable \quad Digital \quad Properties}$ \\ 
+\begin{tabular}{|c|c|c|c|}%
+    \hline 
+    Distr & Mark & EX & DX \\ 
+    \hline 
+    Bin & B(n,p) & np & np(1-p) \\ 
+    \hline 
+    Poi & P($\lambda$) & $\lambda$ & $\lambda$ \\ 
+    \hline 
+    Geo & G(p) & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ \\ 
+    \hline 
+    Hyp & H(n,M,N) & $\frac{nM}{N}$ & $\frac{nM}{N}(1-\frac{M}{N})(\frac{N-n}{N-1})$ \\ 
+    \hline 
+    Uni & U(a,b) & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ \\ 
+    \hline 
+    Exp & $E(\lambda)$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ \\ 
+    \hline 
+    Nor & $N(\mu,\sigma^2)$ & $\mu$ & $\sigma^2$ \\ 
+    \hline 
+\end{tabular}
 
 \begin{align*}
     \bm{Large \quad Number \quad Law \quad Central \quad Limit \quad Theorem } \\ 
@@ -138,18 +157,13 @@
 
 \begin{align*}
     \bm{Constant \quad Series} \\  
-    \sum_{i=0}^{n}{i} = \frac{n(n+1)}{2} \\ 
-    \sum_{i=0}^{n}{i^2} = \frac{n(n+1)(2n+1)}{6} \\
-    \sum_{i=0}^{n}{i^3} = (\sum_{i=0}^{n}{i})^2 = \frac{n^2(n+1)^2}{4} \\ 
     \sum_{i=0}^{n}{a_{i}} \cdot \sum_{j=0}^{n}{b_{j}} = \sum_{i=0}^{n}\sum_{j=0}^{n}{(a_{i} \cdot b_{j})} \\
     \sum_{n=s}^{t}\ln{f(n)} = \ln{\prod_{n=s}^{t}}f(n) \\ 
-    \sum_{n=1}^{\infty}{\frac{(-1)^{n-1}}{n}} = \ln2 \\ 
     \sum_{n=1}^{\infty}{\frac{(-1)^n}{2n-1}} = -\frac{\pi}{4} \\ 
-    \sum_{n=1}^{\infty}{\frac{1}{n^2}} = \frac{\pi^2}{6} \\
+    \sum_{k=1}^{\infty}{\frac{1}{\sum_{i=1}^k{i}}} = 2 \\ 
+    \sum_{i=0}^{n}{i} = \frac{n(n+1)}{2} \quad \sum_{i=0}^{n}{i^2} = \frac{n(n+1)(2n+1)}{6} \quad \sum_{i=0}^{n}{i^3} = (\sum_{i=0}^{n}{i})^2 = \frac{n^2(n+1)^2}{4} \\ 
+    \sum_{n=1}^{\infty}{\frac{1}{n^2}} = \frac{\pi^2}{6} \quad \sum_{k=1}^{\infty}{\frac{1}{k^4}} = \frac{\pi^4}{90} \quad \sum_{k=1}^{\infty}{\frac{1}{k^6}} = \frac{\pi^6}{945} \\ 
     \sum_{i=1}^{\infty}{\frac{(-1)^{i+1}}{i}} = \sum_{i=0}^{\infty}{\frac{1}{(2i+1)(2i+2)}} = \sum_{i=1}^{\infty}{\frac{1}{2^i i}} = \sum_{n=1}^{\infty}({\frac{1}{3^i}+\frac{1}{4^i}})\frac{1}{i}= \ln2 \\ 
-    \sum_{k=1}^{\infty}{\frac{1}{k^4}} = \frac{\pi^4}{90} \\ 
-    \sum_{k=1}^{\infty}{\frac{1}{k^6}} = \frac{\pi^6}{945} \\ 
-    \sum_{k=1}^{\infty}{\frac{1}{\sum_{i=1}^k{i}}} = 2 
 \end{align*}
 
 \clearpage
