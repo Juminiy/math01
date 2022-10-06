@@ -30,15 +30,15 @@
 \end{displaymath}
 
 \begin{displaymath}
-    \int_{a}^{b} f(x) \mathrm{d}x = \lim_{\lambda \to 0} \sum_{i=1}^{n}f(\xi_{i})\Delta x_{i}
+    \int_{0}^{1} f(x) \mathrm{d}x = \sum_{i=1}^{n}f(\frac{i}{n})(\frac{i+1}{n}-\frac{i}{n}) = \sum_{i=1}^{n}f(\frac{2i+1}{2n})\frac{1}{n}
 \end{displaymath} 
 
 \begin{displaymath}
-    \int_{t1}^{t2} f(x(t),y(t)) \mathrm{d}s = \int_{a}^{b} f(x,y(x)) \sqrt{x'^2+y'^2} \mathrm{d}x = \int_{\alpha}^{\beta} f(r,\theta)\sqrt{r^2 + r'^2} \mathrm{d}\theta ,\quad \theta = \alpha \to \beta
+    \int_{t1}^{t2} f(x(t),y(t)) \mathrm{d}s = \int_{a}^{b} f(x,y(x)) \sqrt{x'^2+y'^2} \mathrm{d}x = \int_{\alpha}^{\beta} f(r,\theta)\sqrt{r^2 + r'^2} \mathrm{d}\theta
 \end{displaymath}
 
 \begin{displaymath}
-    S = \int_{a}^{b}y(x)\mathrm{d}x = \int_{t1}^{t2}y(t)x'(t)\mathrm{d}t = \frac{1}{2}\int_{\alpha}^{\beta}{r^2(\theta)}\mathrm{d}\theta ,\quad \theta = \alpha \to \beta 
+    S = \int_{a}^{b}y(x)\mathrm{d}x = \int_{t1}^{t2}y(t)x'(t)\mathrm{d}t = \frac{1}{2}\int_{\alpha}^{\beta}{r^2(\theta)}\mathrm{d}\theta 
 \end{displaymath}
 
 \begin{displaymath}
@@ -104,6 +104,43 @@
         \frac{f(x-0)+f(x+0)}{2},x \in discontinuity \\ 
         \frac{f(l-0)+f(l+0)}{2},x = \{-l,l\}
     \end{array} \right. \ \\ 
+\end{align*}
+
+\clearpage
+
+\begin{align*}
+    \bm{Linear \quad Algebra} \\ 
+    \mathbf{A} = \left(
+        \begin{array}{ccc}
+            a_{11} & a_{12} & a_{13} \\ 
+            a_{21} & a_{22} & a_{23} \\ 
+            a_{31} & a_{32} & a_{33} \\  
+        \end{array}
+    \right) =  
+    \begin{bmatrix} 
+        a_{11} & a_{12} & a_{13} \\ 
+        a_{21} & a_{22} & a_{23} \\ 
+        a_{31} & a_{32} & a_{33} \\  
+    \end{bmatrix} 
+    \qquad 
+    \mathbf{\alpha^{T}} = \left(
+        \begin{array}{c}
+            a_{1} \\
+            a_{2} \\ 
+            a_{3} \\ 
+            a_{4} \\ 
+         \end{array}
+    \right) \\
+    |\mathbf{A}| =\det \mathbf{A} = \left|
+    \begin{array}{ccc}
+        a_{11} & a_{12} & a_{13} \\ 
+        a_{21} & a_{22} & a_{23} \\ 
+        a_{31} & a_{32} & a_{33} \\  
+    \end{array}
+    \right| \\ 
+    |\mathbf{A}| = \Pi_{i=1}^n{\lambda_{i}} \quad |k \mathbf{A}| = k^{n}|\mathbf{A}| \quad |\mathbf{A}\mathbf{B}|=|\mathbf{A}||\mathbf{B}| \quad |\mathbf{A}^{n}|=|\mathbf{A}|^{n}\\
+    |\mathbf{A}^{\mathbf{T}}| = |\mathbf{A}| \quad (k\mathbf{A})^{\mathbf{T}} = k\mathbf{A}^{\mathbf{T}} \quad (\mathbf{A}^{\mathbf{T}})^{\mathbf{T}} = \mathbf{A} \quad (\mathbf{A}^{n})^{\mathbf{T}} = (\mathbf{A}^{\mathbf{T}})^{n}\\ 
+    |\mathbf{A^{-1}}| = \frac{1}{|\mathbf{A|} \quad (k\mathbf{A})^{-1} = \frac{1}{k}\mathbf{A}^{-1} \\ 
 \end{align*}
 
 \clearpage
