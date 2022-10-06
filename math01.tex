@@ -54,22 +54,25 @@
     \end{vmatrix}
 \end{displaymath}
 
-\begin{displaymath}
-    \cos \theta = \frac{\vec{a}}{|\vec{a} \cdot \vec{b}|}
-\end{displaymath}
-
 \clearpage 
 
 \begin{align*}
-    \bm{Line-Area \quad Integral} \\ 
+    \bm{Multivariate \quad Integral} \\ 
+    \iiint_{\Omega_{xyz}}f(x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z = \iiint_{\Omega_{uvw}}f(u,v,w)
+        \begin{vmatrix}
+            \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w} \\
+            \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w} \\
+            \frac{\partial z}{\partial u} & \frac{\partial z}{\partial v} & \frac{\partial z}{\partial w} \\
+        \end{vmatrix}\mathrm{d}u\mathrm{d}v\mathrm{d}w\\ 
     \left. \frac{\partial f}{\partial l}\right|_{P_{0}=(x_{0},y_{0},z_{0})} = f_{x}(P_{0})\cos \alpha + f_{y}(P_{0})\cos \beta + f_{z}(P_{0})\cos \gamma\\
     \bm{\mathrm{grad}}f(x_{0},y_{0},z_{0}) = f_{x}(x_{0},y_{0},z_{0})\bm{\vec{i}} + f_{y}(x_{0},y_{0},z_{0})\bm{\vec{j}} + f_{z}(x_{0},y_{0},z_{0})\bm{\vec{k}} \\ 
-    \quad \exists \varOmega = 8\varOmega_{0},f(x,y,z) = f(y,z,x) = f(z,x,y) \\  
-    \iiint_{\varOmega} f(x,y,z) \mathrm{d}v = 24 \iiint_{\varOmega_{0}}f(z) \mathrm{d}z = 24\iint_{D_{xy}}\mathrm{d}\sigma\int_{}f(z)\mathrm{d}z \\ 
-    (\bar{x},\bar{y},\bar{z}) = (\frac{\iiiint_{\Omega}x\rho \mathrm{d}v}{\iiiint_{\Omega}\rho \mathrm{d}v},\frac{\iiiint_{\Omega}y\rho \mathrm{d}v}{\iiiint_{\Omega}\rho \mathrm{d}v},\frac{\iiiint_{\Omega}z\rho \mathrm{d}v}{\iiiint_{\Omega}\rho \mathrm{d}v}), \quad J_{k_{j}} = \iiiint_{\Omega}(\sum_{i=1}^n{k_{i}^2}-k^2_{j})\rho\mathrm{d}v\\
-    S = \iint_{D_{xy}}\mathrm{d}S = \iint_{D_{xy}}\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}\sigma ,\quad \iint_{\Sigma}f \mathrm{d}S = \iint_{\Sigma_{1}}f\mathrm{d}S +  \iint_{\Sigma_{2}}f\mathrm{d}S \\ 
+    (\bar{x},\bar{y},\bar{z}) = (\frac{\iiint_{\Omega}x\rho \mathrm{d}v}{\iiint_{\Omega}\rho \mathrm{d}v},\frac{\iiint_{\Omega}y\rho \mathrm{d}v}{\iiint_{\Omega}\rho \mathrm{d}v},\frac{\iiint_{\Omega}z\rho \mathrm{d}v}{\iiint_{\Omega}\rho \mathrm{d}v}), \quad J_{k_{j}} = \iiint_{\Omega}((\sum_{i=1}^n{k_{i}^2})-k^2_{j})\rho\mathrm{d}v\\
+    S = \iint_{\Sigma}\mathrm{d}S = \iint_{D_{xy}}\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}x\mathrm{d}y \\ 
+    S = \iint_{D_{zx}}\sqrt{1+(\frac{\partial y}{\partial z})^2+(\frac{\partial y}{\partial x})^2}\mathrm{d}z\mathrm{d}x = \iint_{D_{yz}}\sqrt{1+(\frac{\partial x}{\partial y})^2+(\frac{\partial x}{\partial z})^2}\mathrm{d}y\mathrm{d}z \\ 
     \iint_{-\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y = -\iint_{\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y \\  
     \oint_{\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y = \iiint_{\Omega} (\frac{\partial P}{\partial x}+{\frac{\partial Q}{\partial y}}+{\frac{\partial R}{\partial z}}) \mathrm{d}v ,\quad \mathrm{div}\bm{\vec{A}} = \frac{\partial P}{\partial x}+{\frac{\partial Q}{\partial y}}+{\frac{\partial R}{\partial z}} \\
+    \Sigma:F(x,y,z)=0 \quad \vec{n}=(\frac{F_{x}}{\sqrt{F_{x}^2+F_{y}^2+F_{z}^2}},\frac{F_{y}}{\sqrt{F_{x}^2+F_{y}^2+F_{z}^2}},\frac{F_{z}}{\sqrt{F_{x}^2+F_{y}^2+F_{z}^2}}) = (\cos \alpha,\cos \beta,\cos \gamma)\\
+    \oint_{\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y = \iint_{\Sigma}(P\cos \alpha+Q\cos \beta+R\cos \gamma )\mathrm{d}S\\  
     \oint_{\Gamma}P\mathrm{d}x+Q\mathrm{d}y +R\mathrm{d}z = \iint_{\Sigma}(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z})\mathrm{d}y\mathrm{d}z+(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x})\mathrm{d}z\mathrm{d}x+(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\mathrm{d}x\mathrm{d}y \\
     \bm{\mathrm{rot}\vec{A}} = (\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z})\bm{\vec{i}}+(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x})\bm{\vec{j}}+(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\bm{\vec{k}}\\
 \end{align*}
@@ -87,6 +90,7 @@
     \end{array} \right. \ \\ 
 \end{align*}
 
+\clearpage
 
 \begin{align*}
     \bm{Traditional \quad Probability \quad Theory} \\ 
@@ -157,12 +161,10 @@ $\bm{Variable \quad Digital \quad Properties}$ \\
 
 \begin{align*}
     \bm{Constant \quad Series} \\  
-    \sum_{i=0}^{n}{a_{i}} \cdot \sum_{j=0}^{n}{b_{j}} = \sum_{i=0}^{n}\sum_{j=0}^{n}{(a_{i} \cdot b_{j})} \\
-    \sum_{n=s}^{t}\ln{f(n)} = \ln{\prod_{n=s}^{t}}f(n) \\ 
     \sum_{n=1}^{\infty}{\frac{(-1)^n}{2n-1}} = -\frac{\pi}{4} \\ 
-    \sum_{k=1}^{\infty}{\frac{1}{\sum_{i=1}^k{i}}} = 2 \\ 
+    \sum_{k=1}^{\infty}{\frac{1}{k^2}} = \frac{\pi^2}{6} \quad \sum_{k=1}^{\infty}{\frac{1}{k^4}} = \frac{\pi^4}{90} \quad \sum_{k=1}^{\infty}{\frac{1}{k^6}} = \frac{\pi^6}{945} \\ 
+    \sum_{i=0}^{n}{a_{i}} \cdot \sum_{j=0}^{n}{b_{j}} = \sum_{i=0}^{n}\sum_{j=0}^{n}{(a_{i} \cdot b_{j})} \quad \sum_{n=s}^{t}\ln{f(n)} = \ln{\prod_{n=s}^{t}}f(n) \\ 
     \sum_{i=0}^{n}{i} = \frac{n(n+1)}{2} \quad \sum_{i=0}^{n}{i^2} = \frac{n(n+1)(2n+1)}{6} \quad \sum_{i=0}^{n}{i^3} = (\sum_{i=0}^{n}{i})^2 = \frac{n^2(n+1)^2}{4} \\ 
-    \sum_{n=1}^{\infty}{\frac{1}{n^2}} = \frac{\pi^2}{6} \quad \sum_{k=1}^{\infty}{\frac{1}{k^4}} = \frac{\pi^4}{90} \quad \sum_{k=1}^{\infty}{\frac{1}{k^6}} = \frac{\pi^6}{945} \\ 
     \sum_{i=1}^{\infty}{\frac{(-1)^{i+1}}{i}} = \sum_{i=0}^{\infty}{\frac{1}{(2i+1)(2i+2)}} = \sum_{i=1}^{\infty}{\frac{1}{2^i i}} = \sum_{n=1}^{\infty}({\frac{1}{3^i}+\frac{1}{4^i}})\frac{1}{i}= \ln2 \\ 
 \end{align*}
 
@@ -196,11 +198,44 @@ $\bm{Variable \quad Digital \quad Properties}$ \\
     \bm{eg.} \quad \tan x = x \Longrightarrow \sin{x} = \cos{x} \cdot x \\
     x - \frac{1}{6}x^3 + \frac{1}{120}x^5 +... = x \cdot (1-\frac{1}{2}x^2+\frac{1}{24}x^4+...) \\
     \frac{1}{3}x^3-\frac{1}{30}x^5+... = 0 \quad \underrightarrow{x \not= 0} \quad \frac{1}{3}x^2-\frac{1}{30}x^4+... = 0 \\
-    \aleph x^2 = t , \quad \sum_{i=0}^{n}\frac{1}{t_{i}} = \frac{1}{10} \quad \underrightarrow{t = x^2} \quad \lim_{n \to \infty}\sum_{i=0}^{n}\frac{1}{x_{i}^2} = \frac{1}{10} 
+    \sum_{i=0}^{n}\frac{1}{t_{i}} = \frac{1}{10} \quad \underrightarrow{t = x^2} \quad \lim_{n \to \infty}\sum_{i=0}^{n}\frac{1}{x_{i}^2} = \frac{1}{10} 
 \end{align*}
 
+\clearpage
 
+\begin{align*}
+    \bm{Beyond \quad Integral} \\
+    \sum_{n=0}^\infty \frac{1}{(3n)!} \Longrightarrow S(x) = \sum_{n=0}^{\infty}{\frac{x^{3n}}{(3n)!}} ,S(1) = \frac{\mathrm{e}}{3}+\frac{2}{3}\cos\frac{\sqrt{3}}{2}\mathrm{e}^{-\frac{1}{2}}\\ 
+    \iint_{D_{xy}}(\mathrm{e}^{x}\cos y)\mathrm{d}\sigma, D=\{(x,y)|x^2+y^2 \le 1\} \\ 
+    \iint_{D_{xy}} (x+y)\mathrm{d}\sigma , D=\{(x,y)|y^2 \le x+2, x^2 \le y+2\} \\
+    \bm{A_{0}} = \sum_{n=1}^\infty\frac{(-1)^{n-1}}{n}\sum_{m=0}^\infty\frac{1}{n2^m+1} \\
+    \bm{A_{1}} = \int_{0}^{x^2} \pi(\sqrt[4]{1+t}-1)\sin t^4 \mathrm{d}x\\ 
+    \bm{A_{2}} = \sum_{n=1}^\infty \frac{((n-1)!)^2(2t)^{2n}}{(2n)!} \\
+    \bm{A_{3}} = \int_{0}^1\frac{(1-2x)\ln(1-x)}{x^2-x+1}\mathrm{d}x\\
+    \bm{A_{4}} = x^2(x-\tan x)\ln(x^2+1)[(\frac{2\arctan \frac{y}{x}}{\pi})^y-1] \\ 
+    \lim_{x \to 0^{+}} \lim_{y \to +\infty}\frac{\bm{A_{0}}\bm{A_{1}}}{\bm{A_{2}}\bm{A_{3}}\bm{A_{4}}} = \frac{27}{32}\\
+\end{align*}
 
+\begin{align*}
+    \int\frac{\sec^3 x}{1-\tan^6 x}\mathrm{d}x \\
+    \int\frac{1}{\csc x+\sec x+\tan x +\cot x}\mathrm{d}x \\ 
+\end{align*}
+
+\clearpage
+\begin{displaymath}
+    \lim_{N \to \infty}\sum_{n=1}^N\sum_{k=1}^n\frac{(-1)^{k-1}}{k}-\ln 2  = \ln 2-\frac{1}{2} \newline 
+\end{displaymath}
+
+\begin{displaymath}
+    \lim_{n \to \infty}\sum_{i=1}^{n}\frac{1-\cos\frac{\pi}{\sqrt{n}}}{1+\cos\frac{i\pi}{\sqrt{2n}}}
+\end{displaymath}
+\begin{displaymath}
+    \sum_{n=1 }^\infty\frac{(-1)^{[\sqrt{n}]}}{n}
+\end{displaymath}
+
+\begin{displaymath}
+    t\frac{\mathrm{d}^3x}{\mathrm{d}t^3} + 3\frac{\mathrm{d}^2x}{\mathrm{d}t^2}-t\frac{\mathrm{d}x}{\mathrm{d}t}-x = 0
+\end{displaymath}
 \end{document}
 
 
