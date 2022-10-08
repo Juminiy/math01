@@ -30,7 +30,7 @@
 \end{displaymath}
 
 \begin{displaymath}
-    \int_{0}^{1} f(x) \mathrm{d}x = \sum_{i=1}^{n}f(\frac{i}{n})(\frac{i+1}{n}-\frac{i}{n}) = \sum_{i=1}^{n}f(\frac{2i+1}{2n})\frac{1}{n}
+    \int_{0}^{1} f(x) \mathrm{d}x = \sum_{i=1}^{n}f\left(\frac{i}{n}\right)\left(\frac{i+1}{n}-\frac{i}{n}\right) = \sum_{i=1}^{n}f\left(\frac{2i+1}{2n}\right)\frac{1}{n}
 \end{displaymath} 
 
 \begin{displaymath}
@@ -58,16 +58,16 @@
 
 \begin{align*}
     \bm{Gamma \quad Function \quad Integral} \\ 
-    (-\frac{1}{2})! = \sqrt{\pi} \\ 
-    (\frac{2n+1}{2})! = \Pi_{i=n}^{0}{\frac{2i+1}{2}}\sqrt{\pi} = \frac{2n+1}{2}\frac{2n-1}{2}\dots\frac{1}{2}\sqrt{\pi} \\ 
+    \left(-\frac{1}{2}\right)! = \sqrt{\pi} \\ 
+    \left(\frac{2n+1}{2}\right)! = \Pi_{i=n}^{0}{\frac{2i+1}{2}}\sqrt{\pi} = \frac{2n+1}{2}\frac{2n-1}{2}\dots\frac{1}{2}\sqrt{\pi} \\ 
     \int_{0}^{\infty} x^{a}\mathrm{e}^{-x} = a! \\
     \int_{0}^{\infty} x^{-\frac{1}{2}}\mathrm{e}^{-x} = \sqrt{\pi}\\ 
     \int_{0}^{\infty} x^{3}\mathrm{e}^{-x} = (3)! = 6 \\ 
     \int_{0}^{\infty} x^{\frac{5}{2}}\mathrm{e}^{-x} = \frac{5}{2}\frac{3}{2}\frac{1}{2}\sqrt{\pi}\\  
-    \int_{0}^{\infty} x^{a}\mathrm{e}^{-x^2} = \frac{1}{2} (\frac{a-1}{2})! \\ 
-    \int_{0}^{\infty} x^{1}\mathrm{e}^{-x^2} = \frac{1}{2} (\frac{1-1}{2})! = \frac{1}{2} \\
-    \int_{0}^{\infty} x^{4}\mathrm{e}^{-x^2} = \frac{1}{2} (\frac{4-1}{2})! = \frac{1}{2}\frac{3}{2}\frac{1}{2}\sqrt{\pi}\\ 
-    \int_{0}^{\infty} x^{7}\mathrm{e}^{-x^2} = \frac{1}{2} (\frac{7-1}{2})! = \frac{1}{2}(3)! = \frac{1}{2}6\\
+    \int_{0}^{\infty} x^{a}\mathrm{e}^{-x^2} = \frac{1}{2} \left(\frac{a-1}{2}\right)! \\ 
+    \int_{0}^{\infty} x^{1}\mathrm{e}^{-x^2} = \frac{1}{2} \left(\frac{1-1}{2}\right)! = \frac{1}{2} \\
+    \int_{0}^{\infty} x^{4}\mathrm{e}^{-x^2} = \frac{1}{2} \left(\frac{4-1}{2}\right)! = \frac{1}{2}\frac{3}{2}\frac{1}{2}\sqrt{\pi}\\ 
+    \int_{0}^{\infty} x^{7}\mathrm{e}^{-x^2} = \frac{1}{2} \left(\frac{7-1}{2}\right)! = \frac{1}{2}(3)! = \frac{1}{2}6\\
 \end{align*}
 
 \cleardoublepage
@@ -82,12 +82,12 @@
         \end{vmatrix}\mathrm{d}u\mathrm{d}v\mathrm{d}w\\ 
     \left. \frac{\partial f}{\partial l}\right|_{P_{0}=(x_{0},y_{0},z_{0})} = f_{x}(P_{0})\cos \alpha + f_{y}(P_{0})\cos \beta + f_{z}(P_{0})\cos \gamma\\
     \bm{\mathrm{grad}}f(x_{0},y_{0},z_{0}) = f_{x}(x_{0},y_{0},z_{0})\bm{\vec{i}} + f_{y}(x_{0},y_{0},z_{0})\bm{\vec{j}} + f_{z}(x_{0},y_{0},z_{0})\bm{\vec{k}} \\ 
-    (\bar{x},\bar{y},\bar{z}) = (\frac{\iiint_{\Omega}x\rho \mathrm{d}v}{\iiint_{\Omega}\rho \mathrm{d}v},\frac{\iiint_{\Omega}y\rho \mathrm{d}v}{\iiint_{\Omega}\rho \mathrm{d}v},\frac{\iiint_{\Omega}z\rho \mathrm{d}v}{\iiint_{\Omega}\rho \mathrm{d}v}), \quad J_{k_{j}} = \iiint_{\Omega}((\sum_{i=1}^n{k_{i}^2})-k^2_{j})\rho\mathrm{d}v\\
+    (\bar{x},\bar{y},\bar{z}) = \left(\frac{\iiint_{\Omega}x\rho \mathrm{d}v}{\iiint_{\Omega}\rho \mathrm{d}v},\frac{\iiint_{\Omega}y\rho \mathrm{d}v}{\iiint_{\Omega}\rho \mathrm{d}v},\frac{\iiint_{\Omega}z\rho \mathrm{d}v}{\iiint_{\Omega}\rho \mathrm{d}v}\right), \quad J_{k_{j}} = \iiint_{\Omega}((\sum_{i=1}^n{k_{i}^2})-k^2_{j})\rho\mathrm{d}v\\
     S = \iint_{\Sigma}\mathrm{d}S = \iint_{D_{xy}}\sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}\mathrm{d}x\mathrm{d}y \\ 
     S = \iint_{D_{zx}}\sqrt{1+(\frac{\partial y}{\partial z})^2+(\frac{\partial y}{\partial x})^2}\mathrm{d}z\mathrm{d}x = \iint_{D_{yz}}\sqrt{1+(\frac{\partial x}{\partial y})^2+(\frac{\partial x}{\partial z})^2}\mathrm{d}y\mathrm{d}z \\ 
     \iint_{-\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y = -\iint_{\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y \\  
     \oint_{\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y = \iiint_{\Omega} (\frac{\partial P}{\partial x}+{\frac{\partial Q}{\partial y}}+{\frac{\partial R}{\partial z}}) \mathrm{d}v ,\quad \mathrm{div}\bm{\vec{A}} = \frac{\partial P}{\partial x}+{\frac{\partial Q}{\partial y}}+{\frac{\partial R}{\partial z}} \\
-    \Sigma:F(x,y,z)=0 \quad \vec{n}=(\frac{F_{x}}{\sqrt{F_{x}^2+F_{y}^2+F_{z}^2}},\frac{F_{y}}{\sqrt{F_{x}^2+F_{y}^2+F_{z}^2}},\frac{F_{z}}{\sqrt{F_{x}^2+F_{y}^2+F_{z}^2}}) = (\cos \alpha,\cos \beta,\cos \gamma)\\
+    \Sigma:F(x,y,z)=0 \quad \vec{n}=\left(\frac{F_{x}}{\sqrt{F_{x}^2+F_{y}^2+F_{z}^2}},\frac{F_{y}}{\sqrt{F_{x}^2+F_{y}^2+F_{z}^2}},\frac{F_{z}}{\sqrt{F_{x}^2+F_{y}^2+F_{z}^2}}\right) = (\cos \alpha,\cos \beta,\cos \gamma)\\
     \oint_{\Sigma}P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y = \iint_{\Sigma}(P\cos \alpha+Q\cos \beta+R\cos \gamma )\mathrm{d}S\\  
     \oint_{\Gamma}P\mathrm{d}x+Q\mathrm{d}y +R\mathrm{d}z = \iint_{\Sigma}(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z})\mathrm{d}y\mathrm{d}z+(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x})\mathrm{d}z\mathrm{d}x+(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\mathrm{d}x\mathrm{d}y \\
     \bm{\mathrm{rot}\vec{A}} = (\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z})\bm{\vec{i}}+(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x})\bm{\vec{j}}+(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\bm{\vec{k}}\\
@@ -101,15 +101,15 @@
     S(x) = \left\{ 
     \begin{array}{rl} 
         f(x),x \in consecutive \\ 
-        \frac{f(x-0)+f(x+0)}{2},x \in discontinuity \\ 
-        \frac{f(l-0)+f(l+0)}{2},x = \{-l,l\}
+        \frac{f(x-0)+f(x+0)}{2},x \in discontinuity \\  
+        \frac{f(l-0)+f(l+0)}{2},x = \{-l,l\} 
     \end{array} \right. \ \\ 
 \end{align*}
 
 \clearpage
 
 \begin{align*}
-    \bm{Linear \quad Algebra} \\ 
+    \bm{Matrix \quad Calculation} \\  
     \mathbf{A} = \left(
         \begin{array}{ccc}
             a_{11} & a_{12} & a_{13} \\ 
@@ -122,15 +122,14 @@
         a_{21} & a_{22} & a_{23} \\ 
         a_{31} & a_{32} & a_{33} \\  
     \end{bmatrix} 
-    \qquad 
+    \quad 
     \mathbf{\alpha^{T}} = \left(
         \begin{array}{c}
             a_{1} \\
-            a_{2} \\ 
-            a_{3} \\ 
-            a_{4} \\ 
+            a_{2} \\  
+            \vdots \\ 
          \end{array}
-    \right) \\
+    \right) \quad 
     |\mathbf{A}| =\det \mathbf{A} = \left|
     \begin{array}{ccc}
         a_{11} & a_{12} & a_{13} \\ 
@@ -139,10 +138,251 @@
     \end{array}
     \right| \\ 
     |\mathbf{A}| = \Pi_{i=1}^n{\lambda_{i}} \quad |k \mathbf{A}| = k^{n}|\mathbf{A}| \quad |\mathbf{A}\mathbf{B}|=|\mathbf{A}||\mathbf{B}| \quad |\mathbf{A}^{n}|=|\mathbf{A}|^{n}\\
-    |\mathbf{A}^{\mathbf{T}}| = |\mathbf{A}| \quad (k\mathbf{A})^{\mathbf{T}} = k\mathbf{A}^{\mathbf{T}} \quad (\mathbf{A}^{\mathbf{T}})^{\mathbf{T}} = \mathbf{A} \quad (\mathbf{A}^{n})^{\mathbf{T}} = (\mathbf{A}^{\mathbf{T}})^{n}\\ 
-    |\mathbf{A^{-1}}| = \frac{1}{|\mathbf{A|} \quad (k\mathbf{A})^{-1} = \frac{1}{k}\mathbf{A}^{-1} \\ 
+    |\mathbf{A}^{\mathbf{T}}| = |\mathbf{A}| \quad (k\mathbf{A})^{\mathbf{T}} = k\mathbf{A}^{\mathbf{T}} \quad (\mathbf{A}^{\mathbf{T}})^{\mathbf{T}} = \mathbf{A} \quad (\mathbf{A}^{n})^{\mathbf{T}} = (\mathbf{A}^{\mathbf{T}})^{n}\\  
+    |\mathbf{A}^{-1}| = \frac{1}{|\mathbf{A}|} \quad (k\mathbf{A})^{-1} = \frac{1}{k}\mathbf{A}^{-1} \quad (\mathbf{A}^{-1})^{-1} = \mathbf{A} \quad (\mathbf{A}^{n})^{-1} = (\mathbf{A}^{-1})^{n}\\
+    |\mathbf{A}^{*}| = |\mathbf{A}|^{n-1} \quad (k\mathbf{A})^{*} = k^{n-1}\mathbf{A}^{*} \quad (\mathbf{A}^{*})^{*} = |\mathbf{A}|^{n-2}\mathbf{A} \quad \mathbf{A}\mathbf{A}^{*} = \mathbf{A}^{*}\mathbf{A} = |\mathbf{A}|\mathbf{E}\\ 
+    (\mathbf{A}\mathbf{B}\mathbf{C})^{T} = \mathbf{C}^{\mathbf{T}}\mathbf{B}^{\mathbf{T}}\mathbf{A}^{\mathbf{T}} \quad (\mathbf{A}\mathbf{B}\mathbf{C})^{-1} = \mathbf{C}^{-1}\mathbf{B}^{-1}\mathbf{A}^{-1} \quad (\mathbf{A}\mathbf{B}\mathbf{C})^{\mathbf{*}} = \mathbf{C}^{\mathbf{*}}\mathbf{B}^{\mathbf{*}}\mathbf{A}^{\mathbf{*}} \\ 
+    \mathbf{diag}(a_{1},...,a_{n})\mathbf{diag}(b_{1},...,b_{n})=\mathbf{diag}(a_{1}b_{1},...,a_{n}b_{n}) \\ 
+    \Lambda = \mathbf{diag}(\lambda_{1},...,\lambda_{n}),|\Lambda| = \Pi_{i=1}^{n} \lambda_{i},\varphi(\Lambda) = \mathbf{diag}(\varphi(\lambda_{1}),...,\varphi(\lambda_{n}))\\
+    \Lambda = \left(
+        \begin{array}{cccc}
+            0 & 0 & \lambda_{1}\\
+            0 & \lambda_{i} & 0 \\
+            \lambda_{n} & 0 & 0\\
+        \end{array}
+    \right) \quad 
+    |\Lambda| = (-1)^{\frac{n(n-1)}{2}}\Pi_{i=1}^{n}\lambda_{i} \quad \Lambda^{-1} = \left(
+        \begin{array}{cccc}
+            0 & 0 & \frac{1}{\lambda_{1}}\\
+            0 & \frac{1}{\lambda_{i}} & 0 \\
+            \frac{1}{\lambda_{n}} & 0 & 0\\
+        \end{array}
+    \right) \\ 
+    \left|
+        \begin{array}{ccc}
+            \mathbf{A} & * \\ 
+            \mathbf{O} & \mathbf{B} \\ 
+        \end{array} 
+    \right| = 
+    \left|
+        \begin{array}{ccc}
+            \mathbf{A} & \mathbf{O} \\ 
+            \mathbf{*} & \mathbf{B} \\ 
+        \end{array} 
+    \right| = |\mathbf{A}||\mathbf{B}|\\ 
+    \left|
+        \begin{array}{ccc}
+            \mathbf{O} & \mathbf{A}_{mm} \\ 
+            \mathbf{B}_{nn} & \mathbf{*} \\ 
+        \end{array} 
+    \right| = 
+    \left|
+        \begin{array}{ccc}
+            \mathbf{*} & \mathbf{A}_{mm} \\ 
+            \mathbf{B}_{nn} & \mathbf{O} \\ 
+        \end{array} 
+    \right| = (-1)^{mn}|\mathbf{A}||\mathbf{B}|\\
+    \left(
+        \begin{array}{ccc}
+            \mathbf{A} & \mathbf{B} \\ 
+            \mathbf{C} & \mathbf{D} \\   
+        \end{array}
+    \right)^{\mathbf{T}} = 
+    \left(
+        \begin{array}{ccc}
+            \mathbf{A}^{\mathbf{T}} & \mathbf{B}^{\mathbf{T}} \\ 
+            \mathbf{C}^{\mathbf{T}} & \mathbf{D}^{\mathbf{T}} \\   
+        \end{array}
+    \right) \quad 
+    \left(
+        \begin{array}{ccc}
+            \mathbf{A} & 0 & 0 \\ 
+            0 & \mathbf{B} & 0 \\   
+            0 & 0 & \mathbf{C} \\ 
+        \end{array}
+    \right)^{-1} = \left(
+        \begin{array}{ccc}
+            \mathbf{A}^{-1} & 0 & 0 \\ 
+            0 & \mathbf{B}^{-1} & 0 \\   
+            0 & 0 & \mathbf{C}^{-1} \\ 
+        \end{array}
+    \right)  \\
+    \left(
+        \begin{array}{ccc}
+            \mathbf{A} \\
+            \mathbf{B} \\  
+        \end{array}
+    \right)^{\mathbf{T}} =  (\mathbf{A}^{\mathbf{T}},\mathbf{B}^{\mathbf{T}}) \quad 
+    \left(
+        \begin{array}{ccc}
+            0 & 0 & \mathbf{A} \\ 
+            0 & \mathbf{B} & 0 \\   
+            \mathbf{C} & 0 & 0 \\ 
+        \end{array}
+    \right)^{-1} = \left(
+        \begin{array}{ccc}
+            0 & 0 & \mathbf{A}^{-1} \\ 
+            0 & \mathbf{B}^{-1} & 0 \\   
+            \mathbf{C}^{-1} & 0 & 0 \\ 
+        \end{array}
+    \right) \\ 
+    \left(
+        \begin{array}{cccc}
+            \mathbf{A} & \mathbf{C} \\
+            \mathbf{O} & \mathbf{B} \\ 
+        \end{array}        
+    \right)^{-1} = \left(
+        \begin{array}{cccc}
+            \mathbf{A}^{-1} & -\mathbf{A}^{-1}\mathbf{C}\mathbf{B}^{-1} \\ 
+            \mathbf{O} & \mathbf{B}^{-1} \\ 
+        \end{array}
+    \right) \quad 
+    \left(
+        \begin{array}{cccc}
+            \mathbf{A} & \mathbf{O} \\
+            \mathbf{C} & \mathbf{B} \\ 
+        \end{array}        
+    \right)^{-1} = \left(
+        \begin{array}{cccc}
+            \mathbf{A}^{-1} & \mathbf{O} \\ 
+            -\mathbf{B}^{-1}\mathbf{C}\mathbf{A}^{-1} & \mathbf{B}^{-1} \\ 
+        \end{array}
+    \right) \\ 
+    \left(
+        \begin{array}{cccc}
+            \mathbf{C} & \mathbf{A} \\
+            \mathbf{B} & \mathbf{O} \\ 
+        \end{array}        
+    \right)^{-1} = \left(
+        \begin{array}{cccc}
+            \mathbf{O} & \mathbf{B}^{-1} \\ 
+            \mathbf{A}^{-1} & -\mathbf{A}^{-1}\mathbf{C}\mathbf{B}^{-1} \\ 
+        \end{array}
+    \right) \quad 
+    \left(
+        \begin{array}{cccc}
+            \mathbf{O} & \mathbf{A} \\
+            \mathbf{B} & \mathbf{C} \\ 
+        \end{array}        
+    \right)^{-1} = \left(
+        \begin{array}{cccc}
+            -\mathbf{B}^{-1}\mathbf{C}\mathbf{A}^{-1} & \mathbf{B}^{-1} \\ 
+            \mathbf{A}^{-1} & \mathbf{O}\\ 
+        \end{array}
+    \right) \\
+    \left(
+        \begin{array}{cccc}
+            \mathbf{A} & \mathbf{O} \\ 
+            \mathbf{O} & \mathbf{B} \\ 
+        \end{array}
+    \right)^{*} = \left(
+        \begin{array}{cccc}
+            |\mathbf{B}|\mathbf{A}^{*} & \mathbf{O} \\ 
+            \mathbf{O} & |\mathbf{A}|\mathbf{B}^{*} \\ 
+        \end{array}
+    \right) \quad 
+    \left(
+        \begin{array}{cccc}
+            \mathbf{O} & \mathbf{A_{mm}} \\ 
+            \mathbf{B_{nn}} & \mathbf{O} \\ 
+        \end{array}
+    \right)^{*} = (-1)^{mn}\left(
+        \begin{array}{cccc}
+            \mathbf{O} & |\mathbf{A}|\mathbf{B}^{*} \\ 
+            |\mathbf{B}|\mathbf{A}^{*} & \mathbf{O} \\ 
+        \end{array}
+    \right) \\  
+    \left(
+        \begin{array}{cccc}
+            \mathbf{A} & \mathbf{O} \\ 
+            \mathbf{O} & \mathbf{B} \\ 
+        \end{array}
+    \right)^{n} = \left(
+        \begin{array}{cccc}
+            \mathbf{A}^{n} & \mathbf{O} \\ 
+            \mathbf{O} & \mathbf{B}^{n} \\ 
+        \end{array}
+    \right) \quad  
+    \left(
+        \begin{array}{cccc}
+            \mathbf{O} & \mathbf{A} \\ 
+            \mathbf{B} & \mathbf{O} \\ 
+        \end{array}
+    \right)^{n} = \left(
+        \begin{array}{cccc}
+            \mathbf{not} & \mathbf{important} \\
+            \mathbf{at} & \mathbf{all} \\  
+        \end{array}
+    \right) \\
+\end{align*}
+    
+\clearpage
+\begin{align*}
+    \bm{Matrix \quad Rank} \\       
+    r(\mathbf{A}^{*}) = \begin{cases} 
+            n & \text{if } r(\mathbf{A}) = n,\\
+            1 & \text{if } r(\mathbf{A}) = n-1,\\
+            0 & \text{if } r(\mathbf{A}) < n-1. 
+    \end{cases} \\ 
+    0 \le r(\mathbf{A_{mn}}) \le \max\{m,n\} \\
+    \max\{r(\mathbf{A}),r(\mathbf{B})\} \le \mathbf{r(\mathbf{A},\mathbf{B})} \le r(\mathbf{A})+r(\mathbf{B}) \\
+    \max\{r(\mathbf{A}),r(\mathbf{B})\} \le r\left(
+        \begin{array}{c}
+            \mathbf{A} \\ 
+            \mathbf{B} \\ 
+         \end{array} 
+    \right) \le r(\mathbf{A})+r(\mathbf{B}) \\   
+    r(\mathbf{A}\pm\mathbf{B}) \le r(\mathbf{A}\pm\mathbf{B},\mathbf{B}) = r(\mathbf{A},\mathbf{B}) \le r(\mathbf{A})+r(\mathbf{B}) \\ 
+    r(\mathbf{A},\mathbf{B}) \le r\left(
+        \begin{array}{c}
+            \mathbf{A}^{\mathbf{T}} \\ 
+            \mathbf{B}^{\mathbf{T}} \\ 
+        \end{array}
+    \right) \neq r\left(
+        \begin{array}{c}
+            \mathbf{A} \\ 
+            \mathbf{B} \\ 
+        \end{array}
+    \right) = r(\mathbf{A},\mathbf{B}) \\ 
+    r(\mathbf{A})+r(\mathbf{B})-n \le r(\mathbf{AB}) \le \min\{r(\mathbf{A}),r(\mathbf{B})\} \\
+    r(\mathbf{A^{\mathbf{T}}A}) = r(\mathbf{AA^{\mathbf{T}}}) = r(\mathbf{A}^{\mathbf{T}}) = r(\mathbf{A}) = r(k\mathbf{A}),(\forall k \neq 0)\\
+    \exists \mathbf{A_{mn}B_{ns}} = \mathbf{O},r(\mathbf{A})+r(\mathbf{B}) \le n \\ 
+    \exists \mathbf{A_{mn}B_{ns}} = \mathbf{C},\exists r(\mathbf{A}=n), r(\mathbf{B}) = r(\mathbf{C}) \\ 
+    \exists \mathbf{A_{mn}B_{ns}} = \mathbf{C},\exists r(\mathbf{B}=n), r(\mathbf{A}) = r(\mathbf{C}) \\
+    \exists \mathbf{A_{nn}},\forall k \in \mathbf{N^{*}} ,r(\mathbf{A}^{n}) = r(\mathbf{A}^{n+k}) \\
+\end{align*}
+\clearpage
+
+\begin{align*}
+    \bm{Similarity \quad Theory \quad and \quad Feature \quad Vector} \\ 
+    |\lambda\mathbf{E}-\mathbf{A}| = 0 \Rightarrow \lambda_{i},i \in [1,n] \\ 
+    |\lambda\mathbf{E}-\mathbf{A}| = \left( 
+        \begin{array}{ccc}
+            \lambda-a_{11} & ... & a_{1n} \\  
+            \vdots & \ddots & \vdots \\ 
+            a_{n1} & ... & \lambda-a_{nn} \\ 
+        \end{array}  
+    \right) = \lambda^{n}+\sum_{i=1}^{n}a_{ii}\lambda^{n-1}+...\\ 
+    \forall i\in [0,n],\exists \lambda_{i},f(\lambda_{i})=0 \Longrightarrow \Pi_{i=1}^{n}(\lambda-\lambda_{i}) = 0 \\ 
+    \lambda^{n}+\sum_{i=1}^{n}\lambda_{i}\lambda^{n-1}+...+ (-1)^{n}\Pi_{i=1}^{n}\lambda_{i} = 0 \Rightarrow \sum_{i=1}^{n}a_{ii} = \sum_{i=1}^{n}\lambda_{i} \\
+    \exists \lambda = 0, (-1)^{n}\Pi_{i=1}^{n}\lambda_{i}=|-\mathbf{A}|=(-1)^{n}|\mathbf{A}| \Rightarrow\Pi_{i=1}^{n}\lambda_{i} = |\mathrm{A}| \\ 
 \end{align*}
 
+\begin{align*}
+    \mathbf{A} \sim \mathbf{B} \Longrightarrow \mathbf{A}^{\mathbf{T}} \sim \mathbf{B}^{\mathbf{T}},\mathbf{A}^{-1} \sim \mathbf{B}^{-1},\mathbf{A}^{\mathbf{*}} \sim \mathbf{B}^{\mathbf{*}},f(\mathbf{A}) \sim f(\mathbf{B}) \\ 
+    f(\mathbf{A})=0 \Rightarrow f(\lambda) = 0 (E \sim 1)\\ 
+    \lambda_{\mathbf{A}^{*}_{i}} \lambda_{\mathbf{A}_{i}} = |\mathbf{A}|,i \in [1,n]\\ 
+\end{align*}
+
+\begin{tabular}{|c|c|c|c|c|c|c|}%
+    \hline 
+    $\mathbf{A}$ & $\mathbf{A}^{\mathbf{T}}$ & $\mathbf{A}^{-1}$ & $\mathbf{A}^{*}$ & $f(\mathbf{A})$ & $\mathbf{P}^{-1}\mathbf{A}\mathbf{P}$ & $\mathbf{P}\mathbf{A}\mathbf{P}^{-1}$ \\   
+    \hline
+    $\lambda$ & $\lambda$ & $\frac{1}{\lambda}$ & $\frac{|\mathbf{A}|}{\lambda}$ & $f(\mathbf{\lambda})$ & $\lambda$ & $\lambda$ \\ 
+    \hline 
+    $\alpha$ & & $\alpha$ & $\alpha$ & $\alpha$ & $\mathbf{P}^{-1}\alpha$ & $\mathbf{P}\alpha$ \\ 
+    \hline 
+\end{tabular}
 \clearpage
 
 \begin{align*}
@@ -159,6 +399,8 @@
     \end{array} \right. \ \\ 
     (X,Y) \sim N(\mu_{1},\mu_{2};\sigma_{1},\sigma_{2},\rho),f(x,y) = \frac{1}{2\pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^2}} \mathrm{e}^{-\frac{1}{2(1-\rho^2)}[(\frac{x-\mu_{1}}{\sigma_{1}})^2-\frac{2\rho (x-\mu_{1})(y-\mu_{2})}{\sigma_{1}\sigma_{2}}+(\frac{y-\mu_{2}}{\sigma_{2}})^2]} \\
 \end{align*}
+
+
 
 $\bm{Variable \quad Digital \quad Properties}$ \\ 
 \begin{tabular}{|c|c|c|c|}%
@@ -265,7 +507,7 @@ $\bm{Variable \quad Digital \quad Properties}$ \\
     \bm{A_{1}} = \int_{0}^{x^2} \pi(\sqrt[4]{1+t}-1)\sin t^4 \mathrm{d}x\\ 
     \bm{A_{2}} = \sum_{n=1}^\infty \frac{((n-1)!)^2(2t)^{2n}}{(2n)!} \\
     \bm{A_{3}} = \int_{0}^1\frac{(1-2x)\ln(1-x)}{x^2-x+1}\mathrm{d}x\\
-    \bm{A_{4}} = x^2(x-\tan x)\ln(x^2+1)[(\frac{2\arctan \frac{y}{x}}{\pi})^y-1] \\ 
+    \bm{A_{4}} = x^2(x-\tan x)\ln(x^2+1)[\left(\frac{2\arctan \frac{y}{x}}{\pi}\right)^y-1] \\ 
     \lim_{x \to 0^{+}} \lim_{y \to +\infty}\frac{\bm{A_{0}}\bm{A_{1}}}{\bm{A_{2}}\bm{A_{3}}\bm{A_{4}}} = \frac{27}{32}\\
 \end{align*}
 
@@ -283,7 +525,8 @@ $\bm{Variable \quad Digital \quad Properties}$ \\
     \lim_{n \to \infty}\sum_{i=1}^{n}\frac{1-\cos\frac{\pi}{\sqrt{n}}}{1+\cos\frac{i\pi}{\sqrt{2n}}}
 \end{displaymath}
 \begin{displaymath}
-    \sum_{n=1 }^\infty\frac{(-1)^{[\sqrt{n}]}}{n}
+    \sum_{n=1 }^\infty \frac{(-1)^{[\sqrt{n}]}}{n} \quad 
+    \sum_{n=1}^{\infty} \frac{(n)!}{(2n+1)!}\frac{1}{(n+1)} 
 \end{displaymath}
 
 \begin{displaymath}
