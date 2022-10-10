@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{bm}
 \usepackage{array,tabularx} 
+\usepackage{amssymb}
 \begin{document}
     
 \begin{displaymath}
@@ -10,7 +11,7 @@
 \end{displaymath}
 
 \begin{displaymath}
-    (a+b)^n = \sum_{k=0}^n{\bm{C_{n}^{k}}a^{n-k}b^k}
+    (a+b)^n = \sum_{k=0}^n{\mathbf{C_{n}^{k}}a^{n-k}b^k}
 \end{displaymath}
 
 \begin{displaymath}
@@ -378,7 +379,7 @@
         \end{array}  
     \right) = \lambda^{3}-\left(\sum_{i=1}^{3}a_{ii}\right)\lambda^{2}+\left(\sum_{i=1}^{3}\mathbf{A_{ii}}\right)\lambda-|\mathbf{A}|\\
     \lambda^{3}-(a_{11}+a_{22}+a_{33})\lambda^{2}+(\mathbf{A_{11}}+\mathbf{A_{22}}+\mathbf{A_{33}})\lambda-|\mathbf{A}| = (\lambda-\lambda_{1})(\lambda-\lambda_{2})(\lambda-\lambda_{3}) \\ 
-    (\lambda-\lambda_{1})(\lambda-\lambda_{2})(\lambda-\lambda_{3}) = \lambda^{3}-(\lambda_{1}+\lambda_{2}+\lambda_{3})\lambda^{2}+(\lambda_{2}\lambda_{1}+\lambda_{3}+\lambda_{1}\lambda_{2}\lambda_{3})\lambda-|\lambda_{1}\lambda_{2}\lambda_{3}| \\ 
+    (\lambda-\lambda_{1})(\lambda-\lambda_{2})(\lambda-\lambda_{3}) = \lambda^{3}-(\lambda_{1}+\lambda_{2}+\lambda_{3})\lambda^{2}+(\lambda_{2}\lambda_{3}+\lambda_{1}\lambda_{3}+\lambda_{1}\lambda_{2})\lambda-(\lambda_{1}\lambda_{2}\lambda_{3}) \\ 
     \sum_{i=1}^{3}\mathbf{A_{ii}} = \mathbf{tr}(\mathbf{A}^{*}) = (\lambda_{2}\lambda_{3}+\lambda_{1}\lambda_{3}+\lambda_{1}\lambda_{2})\\ 
 \end{align*}
 
@@ -397,14 +398,86 @@
     $\alpha$ & & $\alpha$ & $\alpha$ & $\alpha$ & $\mathbf{P}^{-1}\alpha$ & $\mathbf{P}\alpha$ \\ 
     \hline 
 \end{tabular}
-\clearpage
 
+\clearpage
+\begin{align*} 
+    \bm{Base \quad \sigma} \\ 
+    (\eta_{1},\eta_{2},...\eta_{n}) = (\xi_{1},\xi_{2},...\xi_{n})\mathbf{M} \\ 
+    \left\{
+        \begin{array}{rl}
+            \eta_{1} = a_{11}\xi_{1} + a_{21}\xi_{2}+...+a_{n1}\xi{n} \\
+            \vdots \quad \vdots \quad \ddots  \qquad \qquad \qquad \qquad \vdots \quad \vdots  \\
+            \eta_{n} = a_{1n}\xi_{1} + a_{2n}\xi_{2}+...+a_{nn}\xi{n} \\
+        \end{array} \Longrightarrow \mathbf{A}\mathbf{M} = \mathbf{B} \Longleftrightarrow \mathbf{M} = \mathbf{A^{-1}}\mathbf{B} 
+    \right. \\ 
+    \mathbf{A}\xi_{\mathbf{A}} = \mathbf{B}\xi_{\mathbf{B}} \Longrightarrow \xi_{\mathbf{A}} = \mathbf{A}^{-1}\mathbf{B}\xi_{\mathbf{B}} \\ 
+\end{align*}
+
+\clearpage 
 \begin{align*}
     \bm{Traditional \quad Probability \quad Theory} \\ 
+    \bm{Opposition}: P(A)+P(\bar{A}) = 1 \quad \bm{Exclusive}: A\cap B = \varnothing \Rightarrow P(AB)=0\\ 
+    \bm{Independent}: P(AB) = P(A)P(B) \quad \bm{Equal}: A = B \Rightarrow P(A) = P(B)\\ 
     A - B = A\bar{B} = A \cap \bar{B} \Rightarrow P(A-B) = P(A) - P(AB) \\ 
-    f(x) = \frac{1}{\sqrt{2\pi}\sigma}\mathrm{e}^{-\frac{(x-\mu)^2}{2\sigma^2}} , x \in (-\infty,+\infty)  \\ 
-    \Phi(x) = \int_{-\infty}^{x} f(t) \mathrm{d}t , X \sim N(0,1) ,\quad \Phi(a)+\Phi(-a) = 1, \quad F(x) = \Phi(\frac{x-\mu}{\sigma}) \\ 
-    f_{X|Y}(x|y) = \frac{f(x,y)}{f_{Y}(y)}, f_{Y|X}(y|x) = \frac{f(x,y)}{f_{X}(x)}\\ 
+    P(A \cup B \cup C) = P(A)+P(B)+P(C)-P(BC)-P(AC)-P(AB)+P(ABC) \\ 
+    P(B|A) = \frac{P(AB)}{P(A)} \quad P(A_{1}A_{2}...A_{n}) = P(A_{1})P(A_{2}|A_{1})P(A_{3}|A_{1}A_{2})...P(A_{n}|A_{1}...A_{n-1}) \\
+    \bm{Bayes} \quad P(B_{j}|A) = \frac{P(A|B_{j})P(B_{j})}{\sum_{i=1}^n P(A|B_{i})P(B_{i})}\\  
+\end{align*}
+
+\clearpage
+
+$\bm{Variable \quad Digital \quad Properties}$ \\ 
+\begin{tabular}{|c|c|c|c|c|}%
+    \hline 
+    Distr & Mark & EX & DX & Addition \\ 
+    \hline 
+    Bin & $B(n,p)$ & $np$ & $np(1-p)$ & $P\{X=k\}$ = $\mathbf{C_{n}^k}(1-p)^{n-k}p^k$\\ 
+    \hline 
+    Poi & $P(\lambda)$ & $\lambda$ & $\lambda$ & $P\{X=k\} = \frac{\lambda^k}{k!}\mathrm{e}^{-\lambda}, k = 0,1,2,...$ \\ 
+    \hline 
+    Geo & $G(p)$ & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ & $P\{X=k\} = (1-p)^{k-1}p,k=1,2,...$\\ 
+    \hline 
+    Hyp & $H(n,M,N)$ & $\frac{nM}{N}$ & $\frac{nM}{N}(1-\frac{M}{N})(\frac{N-n}{N-1})$ & $P\{X=i\} = \frac{\mathbf{C}_{M}^{i}\mathbf{C}_{N-M}^{n-i}}{\mathbf{C}_{N}^{n}}$ \\ 
+    \hline 
+    Uni & $U(a,b)$ & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ \\ 
+    \hline 
+    Exp & $E(\lambda)$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ \\ 
+    \hline 
+    Nor & $N(\mu,\sigma^2)$ & $\mu$ & $\sigma^2$ \\ 
+    \hline 
+\end{tabular}
+
+\begin{align*} 
+    \mathbf{Uni} : f(x) = \left\{
+        \begin{array}{rl}
+            \frac{1}{b-a}, a \le x \le b \\
+            0, others   
+        \end{array} \right.\ \quad F(x) = \left\{
+        \begin{array}{rl}
+            0, x < a\\ 
+            \frac{x-a}{b-a}, a \le x < b \\
+            1, x \ge b    
+        \end{array} \right.\ \\
+    \mathbf{Exp} : f(x) = \left\{
+        \begin{array}{rl}
+            \lambda\mathrm{e}^{-\lambda x}, x > 0 \\
+            0, x \le 0    
+        \end{array} \right.\ \quad F(x) = \left\{
+        \begin{array}{rl}
+            1-\lambda\mathrm{e}^{-\lambda x}, x > 0\\ 
+            0, x \le 0 
+        \end{array} \right.\ \\
+    \mathbf{Nor}: f(x) = \frac{1}{\sqrt{2\pi}\sigma}\mathrm{e}^{-\frac{(x-\mu)^2}{2\sigma^2}} , F(x) = \int_{-\infty}^{x} f(t)\mathrm{d}t,x \in (-\infty,+\infty)  \\ 
+    f(\mu+x) = f(\mu-x),F(\mu+x)+F(\mu-x)=1,F(\mu)=\frac{1}{2} \\
+    X \sim N(0,1),\phi(x) = \frac{1}{\sqrt{2\pi}}\mathrm{e}^{-\frac{x^2}{2}},\Phi(x) = \int_{-\infty}^{x}\phi(t)\mathrm{d}t \\ 
+    \phi(-x) = \phi(x),\quad \Phi(a)+\Phi(-a) = 1,\Phi(0)=\frac{1}{2}, \quad F(x) = \Phi\left(\frac{x-\mu}{\sigma}\right)\\  
+    f(x,y) \ge 0 \quad \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}f(x,y)\mathrm{d}x\mathrm{d}y = 1\\ 
+    f_{X}(x) = \int_{-\infty}^{\infty}f(x,y)\mathrm{d}y > 0 \quad f_{Y}(y) = \int_{-\infty}^{\infty}f(x,y)\mathrm{d}x > 0 \\ 
+    f_{X|Y}(x|y) = \frac{f(x,y)}{f_{Y}(y)}, f_{Y|X}(y|x) = \frac{f(x,y)}{f_{X}(x)} \\ 
+    \bm{Discrete}: P\{Z=g(x_{i},y_{j})\} = P\{X=x_{i},Y=y_{j}\} = P_{ij} \\ 
+    F_{Z}(z)=P\{Z \le z\} = P\{ g(X,Y) \le z \} = \sum_{g(x_{i},y_{j})\le z} P\{X=x_{i},Y=y_{j}\} \\ 
+    \bm{Continuous} : Z = g(X,Y) \quad F_{Z}(z)=P\{Z\le z\} = P\{g(X,Y)\le z\} = \iint_{g(x,y)\le z}f(x,y)\mathrm{d}x\mathrm{d}y \\
+    Z=\max(X,Y),F_{\max}(z)=F_{X}(z)F_{Y}(z) \quad Z=\min(X,Y),F_{\min}(z)=1-[1-F_{X}(z)][1-F_{Y}(z)] \\ 
     (X,Y) \sim U(D), 
     f(x,y) = \left\{ 
     \begin{array}{rl} 
@@ -413,29 +486,20 @@
     \end{array} \right. \ \\ 
     (X,Y) \sim N(\mu_{1},\mu_{2};\sigma_{1},\sigma_{2},\rho),f(x,y) = \frac{1}{2\pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^2}} \mathrm{e}^{-\frac{1}{2(1-\rho^2)}[(\frac{x-\mu_{1}}{\sigma_{1}})^2-\frac{2\rho (x-\mu_{1})(y-\mu_{2})}{\sigma_{1}\sigma_{2}}+(\frac{y-\mu_{2}}{\sigma_{2}})^2]} \\
 \end{align*}
+\clearpage
 
-
-
-$\bm{Variable \quad Digital \quad Properties}$ \\ 
-\begin{tabular}{|c|c|c|c|}%
-    \hline 
-    Distr & Mark & EX & DX \\ 
-    \hline 
-    Bin & B(n,p) & np & np(1-p) \\ 
-    \hline 
-    Poi & P($\lambda$) & $\lambda$ & $\lambda$ \\ 
-    \hline 
-    Geo & G(p) & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ \\ 
-    \hline 
-    Hyp & H(n,M,N) & $\frac{nM}{N}$ & $\frac{nM}{N}(1-\frac{M}{N})(\frac{N-n}{N-1})$ \\ 
-    \hline 
-    Uni & U(a,b) & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ \\ 
-    \hline 
-    Exp & $E(\lambda)$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ \\ 
-    \hline 
-    Nor & $N(\mu,\sigma^2)$ & $\mu$ & $\sigma^2$ \\ 
-    \hline 
-\end{tabular}
+\begin{align*}
+    E(X) = \sum_{i=1}^{\infty}x_{i}p_{i} \quad E(X) = \int_{-\infty}^{\infty}xf(x)\mathrm{d} x \\  
+    E[g(X)] = \sum_{i=1}^{\infty}g(x_{i})p_{i} \quad E[g(X)] = \int_{-\infty}^{\infty}g(x)f(x)\mathrm{d} x \\
+    E[g(X,Y)] = \sum_{j=1}^{\infty}\sum_{i=1}^{\infty}g(x_{i},y_{j})P_{ij} \quad E[g(X,Y)] = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}g(x,y)f(x,y)\mathrm{d}x\mathrm{d}y \\ 
+    E(C) = C \quad E(CX) = CE(X) \quad E(X+C) = E(X)+C \quad E(X+Y) = E(X)+E(Y) \\ 
+    D(X) = \sum_{i}[x_{i}-E(X)]^2p_{i} \quad D(X) = \int_{-\infty}^{\infty}[x-E(X)]^2f(x)\mathrm{d}x \\ 
+    D(X) = E(X^2)-[E(X)]^2 \quad D(C) = 0 \quad D(CX)=C^2D(X) \quad D(X+C) = D(X) \\ 
+    Cov(X,Y) = E(XY) - E(X)E(Y) \quad D(X\pm Y) = D(X)+D(Y)\pm 2Cov(X,Y) \\ 
+    Cov(X,Y) = Cov(Y,X) \quad Cov(X,X) = D(X) \quad Cov(X,c) = 0 \\ 
+    Cov(aX,bY) = abCov(X,Y) \quad Cov(X_{1}+X_{2},Y) = Cov(X_{1},Y)+Cov(X_{2},Y) \\ 
+    \rho_{XY} = \frac{Cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}} \\ 
+\end{align*}
 
 \begin{align*}
     \bm{Large \quad Number \quad Law \quad Central \quad Limit \quad Theorem } \\ 
@@ -470,11 +534,10 @@ $\bm{Variable \quad Digital \quad Properties}$ \\
 
 \begin{align*}
     \bm{Constant \quad Series} \\  
-    \sum_{n=1}^{\infty}{\frac{(-1)^n}{2n-1}} = -\frac{\pi}{4} \\ 
     \sum_{k=1}^{\infty}{\frac{1}{k^2}} = \frac{\pi^2}{6} \quad \sum_{k=1}^{\infty}{\frac{1}{k^4}} = \frac{\pi^4}{90} \quad \sum_{k=1}^{\infty}{\frac{1}{k^6}} = \frac{\pi^6}{945} \\ 
     \sum_{i=0}^{n}{a_{i}} \cdot \sum_{j=0}^{n}{b_{j}} = \sum_{i=0}^{n}\sum_{j=0}^{n}{(a_{i} \cdot b_{j})} \quad \sum_{n=s}^{t}\ln{f(n)} = \ln{\prod_{n=s}^{t}}f(n) \\ 
     \sum_{i=0}^{n}{i} = \frac{n(n+1)}{2} \quad \sum_{i=0}^{n}{i^2} = \frac{n(n+1)(2n+1)}{6} \quad \sum_{i=0}^{n}{i^3} = (\sum_{i=0}^{n}{i})^2 = \frac{n^2(n+1)^2}{4} \\ 
-    \sum_{i=1}^{\infty}{\frac{(-1)^{i+1}}{i}} = \sum_{i=0}^{\infty}{\frac{1}{(2i+1)(2i+2)}} = \sum_{i=1}^{\infty}{\frac{1}{2^i i}} = \sum_{n=1}^{\infty}({\frac{1}{3^i}+\frac{1}{4^i}})\frac{1}{i}= \ln2 \\ 
+    \sum_{i=1}^{\infty}{\frac{(-1)^{i+1}}{i}} = \sum_{i=0}^{\infty}{\frac{1}{(2i+1)(2i+2)}} = \sum_{i=1}^{\infty}{\frac{1}{2^i i}} = \sum_{i=1}^{\infty}({\frac{1}{3^i}+\frac{1}{4^i}})\frac{1}{i}= \ln2 \\ 
 \end{align*}
 
 \clearpage
@@ -546,6 +609,21 @@ $\bm{Variable \quad Digital \quad Properties}$ \\
 \begin{displaymath}
     t\frac{\mathrm{d}^3x}{\mathrm{d}t^3} + 3\frac{\mathrm{d}^2x}{\mathrm{d}t^2}-t\frac{\mathrm{d}x}{\mathrm{d}t}-x = 0
 \end{displaymath}
+
+
+
+\begin{align*}
+    \bm{Basel \quad Problem} \\
+    \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6} \\ 
+    f(x) = x^2 \quad \underrightarrow{Fourier Expansion} \quad S(x) = \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n}\cos nx+b_{n}\cos nx \right) \\
+    a_{0} = \frac{2}{3}\pi^{2} \quad a_{n} = \frac{1}{\pi}\int_{-\pi}^{\pi} x^2 \cos nx \mathrm{d}x = (-1)^{n}\frac{4}{n^2}\\
+    b_{n} = \frac{1}{\pi}\int_{-\pi}^{\pi} x^2 \sin nx \mathrm{d}x = 0 \\     
+    S(x) = \frac{a_{0}}{2}+\sum_{n=1}^{\infty}a_{n}\cos nx= \frac{1}{3}\pi^{2} + \sum_{n=1}^{\infty}(-1)^{n}\frac{4}{n^2}\cos nx = \frac{1}{3}\pi^{2} + \sum_{n=1}^n\frac{4}{n^2} \\
+    \exists x = 0, S(0) = \frac{1}{3}\pi^{2} + \sum_{n=1}^{\infty}(-1)^{n}\frac{4}{n^2} = f(0) = 0 \Longrightarrow \sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^2} = \frac{\pi^{2}}{12}\\
+    \exists x = \pi, S(\pi) = \frac{1}{3}\pi^{2} + \sum_{n=1}^{\infty}\frac{4}{n^2} = f(\pi) = \pi^2 \Longrightarrow \sum_{n=1}^{\infty}\frac{4}{n^2} = \frac{\pi^{2}}{6} \\ 
+    \sum_{n=1}^{\infty}\frac{1}{(2n-1)^2} = \frac{\pi^{2}}{8} \quad \sum_{n=1}^{\infty}\frac{1}{(2n)^2} = \frac{\pi^{2}}{24} \\  
+\end{align*}
+
 \end{document}
 
 
