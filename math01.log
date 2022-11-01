@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.6)  10 OCT 2022 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.6)  1 NOV 2022 18:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -117,25 +117,25 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 ) (./math01.aux)
 \openout1 = `math01.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -143,14 +143,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-Overfull \hbox (99.96684pt too wide) detected at line 95
+Overfull \hbox (99.96684pt too wide) detected at line 96
 []
  []
 
 [3
 
 ] [4]
-Overfull \hbox (84.00388pt too wide) detected at line 318
+Overfull \hbox (44.58078pt too wide) detected at line 325
 []
  []
 
@@ -159,7 +159,7 @@ Overfull \hbox (84.00388pt too wide) detected at line 318
 ] [6
 
 ]
-Overfull \hbox (35.98615pt too wide) detected at line 384
+Overfull \hbox (35.98615pt too wide) detected at line 391
 []
  []
 
@@ -168,26 +168,26 @@ Overfull \hbox (35.98615pt too wide) detected at line 384
 ] [8
 
 ]
-Overfull \hbox (27.40067pt too wide) detected at line 425
+Overfull \hbox (27.40067pt too wide) detected at line 449
 []
  []
 
 [9
 
 ]
-Overfull \hbox (46.87216pt too wide) in paragraph at lines 429--449
+Overfull \hbox (46.87216pt too wide) in paragraph at lines 453--473
 [] 
  []
 
 
-Overfull \hbox (71.73749pt too wide) detected at line 488
+Overfull \hbox (71.73749pt too wide) detected at line 512
 []
  []
 
 [10
 
 ]
-Overfull \hbox (30.75746pt too wide) detected at line 502
+Overfull \hbox (30.75746pt too wide) detected at line 526
 []
  []
 
@@ -207,20 +207,27 @@ Overfull \hbox (30.75746pt too wide) detected at line 502
 
 ] [18
 
+]
+Overfull \hbox (49.74957pt too wide) detected at line 667
+[]
+ []
+
+[19
+
 ] (./math01.aux) ) 
 Here is how much of TeX's memory you used:
  1869 strings out of 480247
  26625 string characters out of 5896152
- 345043 words of memory out of 5000000
+ 347596 words of memory out of 5000000
  19839 multiletter control sequences out of 15000+600000
  473715 words of font info for 45 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  54i,20n,62p,406b,200s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on math01.pdf (18 pages, 227907 bytes).
+Output written on math01.pdf (19 pages, 231434 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 141 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
