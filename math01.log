@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.6)  17 NOV 2022 17:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.6)  19 NOV 2022 22:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -187,15 +187,13 @@ Overfull \hbox (71.73749pt too wide) detected at line 525
 [10
 
 ] [11]
-Overfull \hbox (30.75746pt too wide) detected at line 540
+Overfull \hbox (30.75746pt too wide) detected at line 543
 []
  []
 
 [12
 
-] [13
-
-] [14
+] [13] [14
 
 ] [15
 
@@ -207,14 +205,16 @@ Overfull \hbox (30.75746pt too wide) detected at line 540
 
 ] [19
 
+] [20
+
 ]
-Overfull \hbox (49.74957pt too wide) detected at line 686
+Overfull \hbox (49.74957pt too wide) detected at line 693
 []
  []
 
-[20
+[21
 
-] [21
+] [22
 
 ] (./math01.aux) ) 
 Here is how much of TeX's memory you used:
@@ -226,10 +226,10 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  54i,20n,62p,406b,200s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on math01.pdf (21 pages, 235676 bytes).
+Output written on math01.pdf (22 pages, 237994 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 150 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

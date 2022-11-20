@@ -12,7 +12,7 @@
 \end{displaymath}
 
 \begin{displaymath}
-    (a+b)^n = \sum_{k=0}^n{\mathbf{C_{n}^{k}}a^{n-k}b^k}
+    (a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^{k} = \sum_{k=0}^n{C_{n}^{k}a^{n-k}b^k}
 \end{displaymath}
 
 \begin{displaymath}
@@ -526,10 +526,13 @@ $\bm{Variable \quad Digital \quad Properties}$ \\
 \clearpage
 
 \begin{align*}
+    F(x) = P\{X \le x\} = \int_{-\infty}^{x} f(x) \mathrm{d}x \\ 
+    F(x,y) = P\{X \le x,Y \le y\} = \int_{-\infty}^{x}\int_{-\infty}^{y}f(u,v)\mathrm{d}v\mathrm{d}u \\
     1 = \sum_{i=1}^{\infty} x_{i}p_{i} \quad 1 = \int_{-\infty}^{+\infty}f(x)\mathrm{d}x \\ 
-    E(X) = \sum_{i=1}^{\infty}x_{i}p_{i} \quad E(X) = \int_{-\infty}^{+\infty}xf(x)\mathrm{d}x\\  
+    E(X) = \sum_{i=1}^{\infty}x_{i}p_{i} \quad E(X) = \int_{-\infty}^{+\infty}xf(x)\mathrm{d}x \\  
     E[g(X)] = \sum_{i=1}^{\infty}g(x_{i})p_{i} \quad E[g(X)] = \int_{-\infty}^{+\infty}g(x)f(x)\mathrm{d} x \\
     E[g(X,Y)] = \sum_{j=1}^{\infty}\sum_{i=1}^{\infty}g(x_{i},y_{j})P_{ij} \quad E[g(X,Y)] = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}g(x,y)f(x,y)\mathrm{d}x\mathrm{d}y \\ 
+    \exists X \sim F(x) ,\forall X > 0 , E(X) = \int_{0}^{+\infty}(1-F(x))\mathrm{d}x = \int_{0}^{+\infty} P\{X>x\}\mathrm{d}x \\ 
     E(C) = C \quad E(CX) = CE(X) \quad E(X+C) = E(X)+C \quad E(X+Y) = E(X)+E(Y) \\ 
     D(X) = \sum_{i=1}^{n}[x_{i}-E(X)]^2p_{i} \quad D(X) = \int_{-\infty}^{+\infty}[x-E(X)]^2f(x)\mathrm{d}x \\ 
     D(X) = E(X^2)-[E(X)]^2 \quad D(C) = 0 \quad D(CX)=C^2D(X) \quad D(X+C) = D(X) \\ 
@@ -668,6 +671,10 @@ $\bm{Variable \quad Digital \quad Properties}$ \\
     t\frac{\mathrm{d}^3x}{\mathrm{d}t^3} + 3\frac{\mathrm{d}^2x}{\mathrm{d}t^2}-t\frac{\mathrm{d}x}{\mathrm{d}t}-x = 0
 \end{displaymath}
 
+\begin{align*}
+    X \sim F(x) \quad is \quad Consecutive \quad Variable : \int_{-\infty}^{+\infty}[F(x+a)-F(x)]\mathrm{d}x = a \\ 
+\end{align*}
+
 \clearpage
 \begin{align*}
     \mathbf{L} = \mathbf{L_{1}} + \mathbf{L_{2}} + \mathbf{L_{3}} + \mathbf{L_{4}} \\
@@ -702,6 +709,11 @@ $\bm{Variable \quad Digital \quad Properties}$ \\
     \\ \exists only \quad A=B=1 \in \mathbf{R^2},f(A,B)=0 \longrightarrow f(A,B) = A^3+B^3-3AB+1 = 0 
     \\ so \quad \exists m = n = p = 1 \longrightarrow \log_{4}\left(\frac{a+b}{c}\right)=\frac{1}{2} 
 \end{align*}
+
+
+\begin{displaymath}
+    \lim_{x \to 0 }\frac{-2\sin x+\arctan x-\frac{x^3 \cos x}{3}+\frac{\ln(\frac{1+x}{1-x})}{2}}{(\mathrm{e}^{x}-1)^2 \sum_{n=0}^{\infty}\left(1-\frac{1}{x^2}\right)^n D(\chi^2(x))} =  \frac{11}{40} 
+\end{displaymath}
 
 \end{document}
 
