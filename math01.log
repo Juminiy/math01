@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.6)  19 NOV 2022 22:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.6)  10 DEC 2022 15:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -138,19 +138,24 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Overfull \hbox (27.46758pt too wide) detected at line 60
+[]
+ []
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-Overfull \hbox (99.96684pt too wide) detected at line 96
+Overfull \hbox (99.96684pt too wide) detected at line 109
 []
  []
 
 [3
 
 ] [4]
-Overfull \hbox (44.58078pt too wide) detected at line 325
+Overfull \hbox (44.58078pt too wide) detected at line 338
 []
  []
 
@@ -159,7 +164,7 @@ Overfull \hbox (44.58078pt too wide) detected at line 325
 ] [6
 
 ]
-Overfull \hbox (35.98615pt too wide) detected at line 403
+Overfull \hbox (35.98615pt too wide) detected at line 416
 []
  []
 
@@ -168,26 +173,26 @@ Overfull \hbox (35.98615pt too wide) detected at line 403
 ] [8
 
 ]
-Overfull \hbox (27.40067pt too wide) detected at line 461
+Overfull \hbox (27.40067pt too wide) detected at line 468
 []
  []
 
 [9
 
 ]
-Overfull \hbox (46.87216pt too wide) in paragraph at lines 465--485
+Overfull \hbox (46.87216pt too wide) in paragraph at lines 472--492
 [] 
  []
 
 
-Overfull \hbox (71.73749pt too wide) detected at line 525
+Overfull \hbox (71.73749pt too wide) detected at line 532
 []
  []
 
 [10
 
 ] [11]
-Overfull \hbox (30.75746pt too wide) detected at line 543
+Overfull \hbox (30.75746pt too wide) detected at line 551
 []
  []
 
@@ -208,13 +213,15 @@ Overfull \hbox (30.75746pt too wide) detected at line 543
 ] [20
 
 ]
-Overfull \hbox (49.74957pt too wide) detected at line 693
+Overfull \hbox (49.74957pt too wide) detected at line 702
 []
  []
 
 [21
 
 ] [22
+
+] [23
 
 ] (./math01.aux) ) 
 Here is how much of TeX's memory you used:
@@ -225,11 +232,11 @@ Here is how much of TeX's memory you used:
  473715 words of font info for 45 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  54i,20n,62p,406b,200s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on math01.pdf (22 pages, 237994 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on math01.pdf (23 pages, 245741 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 158 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
