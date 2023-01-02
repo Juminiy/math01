@@ -7,4 +7,17 @@
 % \usepackage{txfonts}
 \begin{document}
 
+\begin{align*}
+    \lim_{x \to 0^{+}}\frac{\sqrt{1-\mathrm{e}^{-x}}-\sqrt{1-\cos x}}{\sqrt{\sin x}} = 
+    \frac{\sqrt{1-(1-x+\frac{x^2}{2}+o(x^{2}))}-\sqrt{1-(1-\frac{x^2}{2}+o(x^{2}))}}{x^{\frac{1}{2}}+o(x^{\frac{1}{2}})} = \\ 
+    \frac{x^{\frac{1}{2}}+o(x^\frac{1}{2})-\sqrt{\frac{1}{2}}x+o(x)}{x^{\frac{1}{2}}+o(x^{\frac{1}{2}})} = 1  \\ 
+    I = \int_{0}^{1}\frac{\mathrm{d}x}{x+\sqrt{1-x^2}} =  \int_{0}^{1}\frac{x-\sqrt{1-x^2}}{2x^2-1}\mathrm{d}x = \int_{0}^{1}\frac{\mathrm{d}(2x^2-1)}{4(2x^2-1)} - I_{1} \\
+    = \frac{1}{4}\ln|2x^2-1| |_{0}^{1} - \int_{0}^{\frac{\pi}{2}}\frac{\cos^{2} u\mathrm{d}u}{2sin^2 u-1} = \frac{1}{4}(0-0)+\int_{0}^{\frac{\pi}{2}}\frac{\cos 2u + 1\mathrm{d}u}{2\cos 2u} \\ 
+    = \frac{\pi}{4} + \frac{1}{4}\ln|\sec v+\tan v| |_{0}^{\pi} = \frac{\pi}{4} \\ 
+    \sum_{n=0}^{\infty}x^{n} = \frac{1}{1-x} \quad \sum_{n=0}^{\infty}(n+1)x^{n} = \frac{1}{(1-x)^{2}} \quad \sum_{n=0}^{\infty}(n+2)(n+1)x^{n} = \frac{2}{(1-x)^3}\\ 
+    \sum_{n=1}^{\infty}\frac{n(n+3)}{2^{n}} = \sum_{n=1}^{\infty}(n^2+3n)x^{n} |(x=\frac{1}{2}) = \frac{2}{(1-x)^3}-\frac{2}{1-x}|(x=\frac{1}{2}) = (16-2) - (4-2) = 12 \\ 
+    I = \iint_{D}x+xyf(1+|\sin x|+\cos y) \mathrm{d}\sigma = \iint_{D_{1}+D_{2}+D_{3}}g_{1}(x,y)+g_{2}(x,y) \mathrm{d}\sigma = \\ 
+    \iint_{D}x\mathrm{d}\sigma +\iint_{D_{1}+D_{2}+D_{3}}g_{2}(x,y)\mathrm{d}\sigma \quad \underrightarrow{g_{2}(x,y)=g_{2}(-x,-y)} \\ 
+\end{align*}
+
 \end{document}
