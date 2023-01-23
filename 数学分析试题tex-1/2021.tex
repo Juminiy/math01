@@ -1,0 +1,378 @@
+%!TEX program = pdflatex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{array,tabularx} 
+\usepackage{amssymb}
+% \usepackage{txfonts}
+\begin{document}
+\begin{align*}
+    \lim_{n \to \infty} n\frac{\left(\sum_{k=1}^{n}\sqrt{k}\right)^2}{\left(\sum_{k=1}^{n}\sqrt[3]{k}\right)^3}+\sum_{k=1}^{n-1}\left[\ln\left(1+\frac{1}{n+k}\right)\sin\left(\ln\left(1+\frac{k}{n}\right)\right)\right] = \\ 
+    \lim_{n \to \infty} \frac{\left(\frac{1}{n}\sum_{k=1}^{n}\sqrt{\frac{k}{n}}\right)^2}{\left(\frac{1}{n}\sum_{k=1}^{n}\sqrt[3]{\frac{k}{n}}\right)^3} + \frac{1}{n}\sum_{k=1}^{n-1}\frac{1}{1+\frac{k}{n}}\sin \left(\ln\left(1+\frac{k}{n}\right)\right) = \\
+    \lim_{n \to \infty} \frac{\left(\int_{0}^{1}x^{\frac{1}{2}}\mathrm{d}x\right)^2}{\left(\int_{0}^{1}x^{\frac{1}{3}}\mathrm{d}x\right)^3} + \int_{0}^{1}\frac{\sin(\ln(1+x))}{1+x} \mathrm{d}x = \frac{\frac{4}{9}}{\frac{27}{64}} + \int_{0}^{1}\sin(\ln(1+x))\mathrm{d}(\ln(x+1)) = \\ 
+    \frac{256}{243} - \cos u |_{0}^{\ln 2} = \frac{499}{243} - \cos(\ln 2) \\ 
+    p(x) = \frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}(1-x^m)^{n} = \left(\sum_{k=0}^{n}C_{n}^{k}(-x^m)^{k}\right)^{(n)} = \left(1+C_{n}^{1}(-x^{m})+C_{n}^{2}(-x^{m})^2+...\right)^{(n)} \\
+    \exists k_{0} \in \{1,2,3,...\},mk_{0} > n \\  
+    \int_{0}^{\frac{\pi}{2}} \ln\left[\left(\sin^{2}x+99\cos^{2}x\right)\left(999\sin^{2}x+\cos^{2}x\right)\right] \mathrm{d}x \\
+    \left\{
+        \begin{array}{rl}
+            x^2+y^2 = z \\
+            y = x\tan z \\ 
+        \end{array}
+    \right. =  
+    \left\{
+        \begin{array}{rl}
+            x = \sqrt{\theta} \cos \theta \\
+            y = \sqrt{\theta} \sin \theta \\
+            z = \theta 
+        \end{array} , \theta \in (0,c)
+    \right.\\ 
+    s = \int\mathrm{d}s = \int_{0}^{c} \sqrt{\left(\frac{\cos \theta}{2\sqrt{\theta}}-\sqrt{\theta}\sin \theta\right)^2+\left(\frac{\sin \theta}{2\sqrt{\theta}}+\sqrt{\theta}\cos \theta\right)^2+1} \mathrm{d}\theta = \\
+    \int_{0}^{c} \sqrt{\frac{1}{4\theta}+\theta+1}\mathrm{d}\theta = \int_{0}^{c}\frac{2\theta+1}{2\sqrt{\theta}}\mathrm{d}\theta = \frac{2}{3}\theta^{\frac{3}{2}}+\theta^{\frac{1}{2}}|_{0}^{c} = \frac{2}{3}c^{\frac{3}{2}}+c^{\frac{1}{2}} = \sqrt{c}\left(\frac{2c}{3}+1\right) \\ 
+    f(x) = \sec x , x \in (-\frac{\pi}{4},\frac{\pi}{4}) \\
+    S(x) = \frac{a_{0}}{2} + \sum_{n=1}^{\infty}a_{n}\cos 4nx \\
+    a_{0} = \frac{8}{\pi}\int_{0}^{\frac{\pi}{4}} \sec x \mathrm{d}x = \frac{8}{\pi}\ln|\sec x + \tan x| |_{0}^{\frac{\pi}{4}} = \frac{8}{\pi}\ln(\sqrt{2}+1) \\ 
+    a_{n} = \frac{8}{\pi}\int_{0}^{\frac{\pi}{4}} \sec x \cos 4nx \mathrm{d}x = \frac{4}{n\pi}\int_{0}^{\frac{\pi}{4}} \frac{\mathrm{d}(\sin 4nx)}{\cos x} = \frac{4\sin 4nx}{n\pi\cos x} |_{0}^{\frac{\pi}{4}} - \frac{4}{n\pi}\int_{0}^{\frac{\pi}{4}}\sin 4nx \sec x \tan x \mathrm{d}x  = \\
+   \end{align*}
+\begin{align*}
+    2m = n , \frac{x^2}{2}-\frac{\sqrt{2}xy}{m}+\frac{3y^2}{2m} = 1 \\
+    A = \left[
+        \begin{array}{cc}
+            \frac{1}{2} & \frac{-\sqrt{2}}{2m} \\
+            \frac{-\sqrt{2}}{2m} & \frac{3}{2m} \\  
+        \end{array}
+    \right] \quad \left(x,y\right)^{T} = Q \left(u,v\right)^{T} \\ 
+    |\lambda E - A| = (\lambda-\frac{1}{2})(\lambda-\frac{3}{2m})-\frac{1}{2m^2} = \lambda^2-\frac{m+3}{2m}\lambda+\frac{3m-2}{4m^2} = 0 \\
+    \lambda = \frac{\frac{m+3}{2m} \pm \sqrt{\left(\frac{m+3}{2m}\right)^2-4\frac{3m-2}{4m^2}}}{2} \notin Z \\ 
+\end{align*}
+\clearpage
+\begin{align*}
+    \lim_{x \to 0} \frac{\int_{0}^{x}t\cos t\mathrm{d}t - 1 + \cos x }{\sqrt{1+x\tan x}-\sqrt{1+x\sin x}} = \\
+    \lim_{x \to 0} \frac{2(\int_{0}^{x}t\cos t\mathrm{d}t-1+\cos x)}{x(\tan x -\sin x)} = \lim_{x \to 0 }\frac{2(x\cos x-\sin x)}{2x^3} = -\frac{1}{3} \\
+    \sum_{n=0}^{\infty} \frac{n^2+1}{(\frac{1}{2})^n n!} x^{n} = \sum_{n=0}^{\infty}\frac{n^2 (2x)^{n}}{n!} + \sum_{n=0}^{\infty}\frac{(2x)^n}{n!} \\
+    \lim_{n \to \infty} \frac{u_{n+1}}{u_{n}} = \lim_{n \to \infty} 2\frac{(n+1)^2+1}{(n^2+1)(n+1)} = 0, x \in (-\infty,+\infty) \\
+    S(x) = \sum_{n=1}^{\infty}\frac{n(2x)^n}{(n-1)!} + \mathrm{e}^{2x} = \sum_{n=0}^{\infty}\frac{(n+1)(2x)^{n+1}}{n!}+\mathrm{e}^{2x} = \sum_{n=0}^{\infty}\frac{(2x)^{n+2}}{n!}+\sum_{n=0}^{\infty}\frac{(2x)^{n+1}}{n!} + \mathrm{e}^{2x} \\
+    = (4x^2+2x+1)\mathrm{e}^{2x} , x \in (-\infty,+\infty) \\  
+    \left\{
+        \begin{array}{rl}
+            x + y - z = \mathrm{e}^{z} \\
+            x\mathrm{e}^{x} = \tan t \\
+            y = \cos t \\ 
+        \end{array}
+    \right. \\ 
+    x'\mathrm{e}^x+x\mathrm{e}^{x}x'=\sec t \rightarrow \mathrm{e}^{x}(x'+x'x) = \sec t , \mathrm{e}^{x}(x'+x'x+x''+x''x+x'x') = \sec t \tan t \\ 
+    y' = -\sin t , y'' = -\cos t\\
+    x'+y'-z'=\mathrm{e}^{z}z' \rightarrow z' = \frac{x'+y'}{\mathrm{e}^{z}+1} \\ 
+    t = 0 , x = 0 , y =  1 , z = 0 ,x' = 1,y'=0,z' = \frac{1}{2} \\
+    1+0+x''+0+1= 0,x''=-2, y'' = -1 \\  
+    z'' = \frac{(x''+y'')(\mathrm{e}^{z}+1)-(x'+y')(\mathrm{e}^{z}z')}{(\mathrm{e}^{z}+1)^2} = \frac{-3*2-\frac{1}{2}}{4} = -\frac{13}{8}\\
+    \iint_{D}r^2\sin \theta \sqrt{1-r^2\cos (2\theta)}\mathrm{d}\sigma , D = \{(r,\theta),0 \le r \le \sec \theta,0 \le \theta \le \frac{\pi}{4}\} \\
+    D = \{(x,y),0 \le y \le x , 0 \le x \le 1\} \\ 
+    \iint_{D} y\sqrt{1-x^2+y^2}\mathrm{d}\sigma = \frac{1}{2} \int_{0}^{1} \int_{1-x^2}^{x^2+1-x^2} \sqrt{1-x^2+y^2} \mathrm{d}(y^2+1-x^2)\mathrm{d}x = \frac{1}{3} \int_{0}^{1} u^{\frac{3}{2}}|_{1-x^2}^{1} \mathrm{d}x\\
+    = \frac{1}{3}\int_{0}^{1} 1-(1-x^2)^{\frac{3}{2}} \mathrm{d}x = \frac{1}{3} - \int_{0}^{\frac{\pi}{2}} \cos^4 t\mathrm{d}t = \frac{1}{3} - \frac{1*3*1*\pi}{3*4*2*2} = \frac{1}{3} - \frac{\pi}{16} \\
+    u = ax^2+by^2+cz^2 , x+y+z=1 , (ax^2+by^2+cz^2)(\frac{1}{a}+\frac{1}{b}+\frac{1}{c}) \ge (x+y+z)^2 = 1 \\
+    \min_{x>0,y>0,z>0} {u(x,y,z)} = \frac{1}{\frac{1}{a}+\frac{1}{b}+\frac{1}{c}}\\ 
+\end{align*}
+    
+
+\clearpage
+\begin{align*}
+    a_{n} = \int_{0}^{1} \frac{x^{n-1}}{1+x}\mathrm{d}x = \int_{0}^{1} x^{n-1}\mathrm{d}(\ln(x+1)) = x^{n-1}\ln(x+1)|_{0}^{1} - (n-1)\int_{0}^{1}\ln(x+1)x^{n-2}\mathrm{d}x\\ 
+    a_{n} = \frac{1}{n}\int_{0}^{1}\frac{\mathrm{d}(x^n)}{1+x} = \frac{x^n}{n(1+x)}|_{0}^{1} + \int_{0}^{1}\frac{x^n\mathrm{d}x}{n(1+x)^2} = \frac{1}{2n} + \int_{0}^{1}\frac{\mathrm{d}(x^{n+1})}{(1+x)^2 n(n+1)} =\\ 
+    \frac{1}{2n} + \frac{x^{n+1}}{(1+x)^2 n(n+1)}|_{0}^{1} + \int_{0}^{1}\frac{2x^{n+1}\mathrm{d}x}{(n+1)(1+x)^3} = \frac{1}{2n} + \frac{1}{4n^2}+o(\frac{1}{n^2}) m n \to \infty \\ 
+    I_{1} = \iint_{S} \frac{xz}{a^2}\mathrm{d}y\mathrm{d}z+\frac{yz}{b^2}\mathrm{d}z\mathrm{d}x+\frac{z^2}{c^2} \mathrm{d}x\mathrm{d}y\\
+    I_{2} = 0 , S_{1} = \{(x,y,z),\frac{x^2}{a^2}+\frac{y^2}{b^2} \le 1,z = 0 \},down0 \\
+    D_{xy} = \{(x,y),\frac{x^2}{a^2}+\frac{y^2}{b^2} \le 1\} \\
+    I_{1}+I_{2} = \left(\frac{1}{a^2}+\frac{1}{b^2}+\frac{2}{c^2}\right) \iiint_{\Omega} z\mathrm{d}v = \left(\frac{1}{a^2}+\frac{1}{b^2}+\frac{2}{c^2}\right)\frac{c^2}{2}\iint_{D_{xy}} \left(1-\frac{x^2}{a^2}-\frac{y^2}{b^2}\right)\mathrm{d}\sigma \\
+    \frac{x}{a} = u , \frac{y}{b} = v ,J = ab \\
+    I_{1}+I_{2} = \left(\frac{1}{a^2}+\frac{1}{b^2}+\frac{2}{c^2}\right)\frac{c^2}{2}ab \iint_{D_{uv}}(1-u^2-v^2)\mathrm{d}\sigma \\ 
+    \iint_{D_{uv}}(1-u^2-v^2)\mathrm{d}\sigma = \int_{0}^{1}(1-r^2)r\mathrm{d}r\int_{0}^{2\pi}\mathrm{d}\theta = \frac{\pi}{2} \\
+    I_{1} = \left(\frac{1}{a^2}+\frac{1}{b^2}+\frac{2}{c^2}\right)\frac{c^2\pi}{4}ab  \\ 
+\end{align*}
+    
+
+\clearpage
+\begin{align*}
+    \lim_{n \to \infty}\left(\frac{1+\sqrt[n]{3}}{2}\right)^{n} \\ 
+    \lim_{x \to +\infty}\left(\left(x+1\right)^a-x^a\right) = a \\
+    \sum_{n=0}^{\infty} x^{n} = \frac{1}{1-x} , \sum_{n=0}^{\infty} (n+1)x^{n} = \frac{1}{(1-x)^2}\\
+    \lim_{n \to \infty} \frac{(n+1)^2}{n^2} = 1 , x \in (-1,1),x \neq \pm 1 \\
+    \sum_{n=1}^{\infty} n^2x^{n-1} = \left(\sum_{n=1}^{\infty}nx^{n}\right)' = \left(\frac{1}{(1-x)^2}-1-\left(\frac{1}{1-x}-1\right)\right)' = \frac{2}{(1-x)^3}-\frac{1}{(1-x)^2} \\ 
+    f(x) = \ln(1+x) + ax\mathrm{e}^{-x} ,x_{1}\in(-1,0),x_{2} \in (0,+\infty) \\
+    f(x) , x \in (-1,+\infty) \\ 
+    f'(x) = \frac{1}{x+1}+a(1-x)\mathrm{e}^{-x} = \frac{1+a(1-x^2)\mathrm{e}^{-x}}{x+1} \\
+    g(x) = 1+a(1-x^2)\mathrm{e}^{-x} , x \in (-1,+\infty) \\ 
+    g'(x) = a(x^2-2x-1)\mathrm{e}^{-x} = a(x-1+\sqrt{2})(x-1-\sqrt{2})\mathrm{e}^{-x} \\
+    \exists a = 0 , g(x) \equiv 1 f'(x) > 0 , f(x) \uparrow,a \neq 0 \\ 
+    \exists a < 0,g'(x) \le 0 , x \in (-1,+\infty),g(x) \downarrow \\    
+    \exists a > 0,g'(x) \ge 0 , x \in (-1,+\infty),g(x) \uparrow \\
+    g(-1) = 1,g(0)=1+a,g(+\infty) = 1 \\ 
+    \lim_{n \to \infty} \frac{1}{n}\sum_{i=1}^{n}\frac{1}{1+\frac{i}{n}} = \int_{0}^{1}\frac{1}{1+x}\mathrm{d}x = \ln(x+1)|_{0}^{1} = \ln 2 \\ 
+\end{align*}
+
+\clearpage
+
+\begin{align*}
+    \lim_{x \to 0}\frac{1}{x}\left(\frac{1}{x}-\cot x\right) = \lim_{x \to 0}\frac{\tan x - x}{x^3} = \frac{1}{3} \\ 
+    \lim_{n \to \infty} \tan n , n = k\pi \lim = 0,n \to \left(k\pi+\frac{\pi}{2}\right)^{-} ,\lim = +\infty,n \to \left(k\pi+\frac{\pi}{2}\right)^{+} ,\lim = -\infty\\
+    \sum_{n=1}^{\infty} \frac{x^n}{n} = -\ln(1-x) ,\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n} = \ln 2 \\
+    \oint_{L} \frac{1}{x}\arctan \frac{y}{x}\mathrm{d}x + \frac{2}{y}\arctan \frac{x}{y}\mathrm{d}y = \iint_{D} \frac{2}{y}\frac{\frac{1}{y}}{\left(\frac{x}{y}\right)^2+1} - \frac{1}{x}\frac{\frac{1}{x}}{\left(\frac{y}{x}\right)^2+1} \mathrm{d}\sigma = \iint_{D} \frac{1}{x^2+y^2} \mathrm{d}\sigma \\ 
+    = \int_{1}^{2} \frac{1}{r}\mathrm{d}r \int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\mathrm{d}\theta = \frac{\pi \ln 2}{12} \\
+    \vec{n} = \left(\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}}\right), \mathrm{d}S = \sqrt{(-1)^2+1^2+1}\mathrm{d}x\mathrm{d}y=\sqrt{3}\mathrm{d}x\mathrm{d}y \\
+    \iint_{\Sigma} (x-y+z) \frac{1}{\sqrt{3}} \mathrm{d}S = S_{xy} = \frac{1}{2} \\ 
+    \iiint_{\Omega} \left(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\right) \mathrm{d}v = \frac{1}{3} \iiint_{\Omega} \left(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}+\frac{y^2}{a^2}+\frac{z^2}{b^2}+\frac{x^2}{c^2}+\frac{z^2}{a^2}+\frac{x^2}{b^2}+\frac{y^2}{c^2}\right)\mathrm{d}v\\ 
+    \frac{1}{3} \left(\frac{1}{a^2}+\frac{1}{b^2}+\frac{1}{c^2}\right) \int_{0}^{1} r^4 \mathrm{d}r \int_{0}^{\pi} \sin \phi \mathrm{d}\phi \int_{0}^{2\pi} \mathrm{d}\theta = \left(\frac{1}{a^2}+\frac{1}{b^2}+\frac{1}{c^2}\right) \frac{1*1*2*2\pi}{3*5} = \left(\frac{1}{a^2}+\frac{1}{b^2}+\frac{1}{c^2}\right) \frac{4\pi}{15} \\
+    \lim_{n \to \infty} \sum_{i=1}^{n}\frac{\sin \frac{i\pi}{n}}{n+i} = \lim_{n \to \infty} \frac{1}{n} \sum_{i=1}^{n} \frac{\sin \left(\pi \frac{i}{n}\right)}{1+\frac{i}{n}} = \int_{0}^{1} \frac{\sin\left(\pi x\right)}{1+x} \mathrm{d}x \\
+    S(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{3n+2}}{3n+2} ,S(0) = 0 \\
+    S'(x) = \sum_{n=0}^{\infty}(-1)^nx^{3n+1} = x\sum_{n=0}^{\infty}(-x^3)^n = \frac{x}{1+x^3} \\
+    S(x) = \int_{0}^{x} S(t) \mathrm{d}t + S(0) = \int_{0}^{x} \frac{t}{(t+1)(t^2-t+1)} \mathrm{d} t + 0  = \frac{1}{3}\int_{0}^{x} -\frac{1}{t+1} + \frac{t+1}{t^2-t+1}\mathrm{d}t \\
+    At^2-At+A+Bt^2+Ct+Bt+C \rightarrow A+B = 0,B+C-A =1 ,A+C=0,A=-\frac{1}{3},B=C=\frac{1}{3} \\  
+    S(x) = -\frac{\ln(x+1)}{3} + \frac{1}{3}\int_{0}^{x} \frac{1}{2} \frac{\mathrm{d}(t^2-t+1)}{t^2-t+1} + \frac{1}{\sqrt{3}}\frac{\mathrm{d}(t-\frac{1}{2})(\frac{2}{\sqrt{3}})}{[(t-\frac{1}{2})(\frac{2}{\sqrt{3}})]^2+1}  \\ 
+    = -\frac{\ln(x+1)}{3} + \frac{\ln(t^2-t+1)}{6} +\frac{1}{\sqrt{3}}\arctan \left(\frac{2t-1}{\sqrt{3}}\right) + C |_{0}^{x} \\ 
+    =  -\frac{\ln(x+1)}{3} + \frac{\ln(x^2-x+1)}{6} +\frac{1}{\sqrt{3}}\arctan \left(\frac{2x-1}{\sqrt{3}}\right) + \frac{\pi}{6\sqrt{3}} \\ 
+    S(1) = \sum_{n=0}^{\infty}\frac{(-1)^n}{3n+2} = -\frac{\ln 2}{3} + \frac{\pi\sqrt{3}}{9}\\
+    \lim_{n \to \infty} \sum_{k=1}^{n} \frac{1}{\sqrt{k(n-k+1)}} = \lim_{n \to \infty} \frac{1}{n} \sum_{k=1}^{n} \frac{1}{\sqrt{\frac{k}{n}-\frac{k^2}{n^2}+\frac{k}{n^2}}} =\int_{0}^{1} \frac{\mathrm{d}x}{\sqrt{x-x^2}} = \pi \\
+    I = \int \sec^3 x\mathrm{d}x = \int \sec x(\tan^2 x+1) \mathrm{d}x = \int \tan x\mathrm{d}(\sec x) + \ln|\sec x + \tan x| \\ 
+    = \ln|\sec x + \tan x| + \sec x \tan x - \int \sec ^3 x \mathrm{d}x  \\ 
+    \int \sec ^3 x \mathrm{d}x = \frac{1}{2}\left(\ln|\sec x + \tan x| + \sec x \tan x \right) + C 
+\end{align*}
+
+\begin{align*}
+    \bm{USTC \quad 2023 \quad - \quad Math} \\
+    y(x) = \sqrt{x+\sqrt[3]{x+\sqrt[4]{x}}} ,\ln y(x) = \frac{1}{2}\ln\left(x+g(x)\right)\\
+    \frac{y'(x)}{y(x)} = \frac{1}{2}\frac{1+g'(x)}{x+g(x)} \\
+    g(x) = \sqrt[3]{x+\sqrt[4]{x}},\ln\left(g(x)\right) = \frac{1}{3}\ln\left(x+x^{\frac{1}{4}}\right)\\
+    \frac{g'(x)}{g(x)} = \frac{1}{3} \frac{1+\frac{1}{4}x^{-\frac{3}{4}}}{x+x^{\frac{1}{4}}} \\
+    g'(x) = \frac{4x^{\frac{3}{4}}+1}{12(x+x^{\frac{7}{4}})}g(x)=\frac{4x^{\frac{3}{4}}+1}{12(x+x^{\frac{1}{4}})^{\frac{2}{3}}x^{\frac{3}{4}}} \\
+    y'(x) = \frac{1+g'(x)}{2(x+g(x))}y(x) = \frac{1+\frac{4x^{\frac{3}{4}}+1}{12(x+x^{\frac{1}{4}})^{\frac{2}{3}}x^{\frac{3}{4}}}}{2(x+(x+x^{\frac{1}{4}})^{\frac{1}{3}})^{\frac{1}{2}}} \\ 
+    = \frac{12(x+x^{\frac{1}{4}})^{\frac{2}{3}}x^{\frac{3}{4}}+4x^{\frac{3}{4}}+1}{24(x+x^{\frac{1}{4}})^{\frac{2}{3}}x^{\frac{3}{4}}(x+(x+x^{\frac{1}{4}})^{\frac{1}{3}})^{\frac{1}{2}}} \\ 
+    I = \lim_{x \to +\infty} y(x)-x^{\frac{1}{2}} = \lim_{x \to +\infty} \frac{\sqrt[3]{x+\sqrt[4]{x}}}{\sqrt{x+\sqrt[3]{x+\sqrt[4]{x}}}+\sqrt{x}} = 0 \\ 
+    \lim_{n \to \infty}  \frac{1}{n} \sum_{i=1}^{n} \frac{1}{1+\left(\frac{i}{n}\right)^2} = \frac{\pi}{4}  \\
+    \lim_{x \to 1} \frac{x^{x}-x}{\ln x-x +1} = \lim_{ x \to 1} \frac{x^{x-1}-1}{\ln(x-1 + 1)-x+1} = \lim_{t \to 0}\frac{(t+1)^{t}-1}{\ln (t+1)-t} \\ 
+    = \lim_{t \to 0}\frac{\mathrm{e}^{t\ln(t+1)}-1}{-\frac{t^2}{2}+o(t^2)} = -2\\ 
+    \int_{0}^{+\infty} (x+1)\mathrm{e}^{-x^2}\mathrm{d}x = -\frac{1}{2}\int_{0}^{+\infty} \mathrm{e}^{-x^2}\mathrm{d}(-x^2) + \frac{\sqrt{\pi}}{2} = \frac{1+\sqrt{\pi}}{2}
+\end{align*}
+
+\clearpage 
+
+\begin{align*}
+    X_{1} = X_{2} \sim N(0,1) ,F_{X_{1}}(x) = F_{X_{2}}(x) = \Phi(x) \\
+    F(x,y) = P\{X_{1} \le x,Y \le y\} = P\{X_{1} \le x,X_{3}X_{1}+(1-X_{3})X_{2} \le y\} \\
+    = P\{X_{1} \le x,\{X_{3}X_{1}+(1-X_{3})X_{2} \le y \},X_{3}=0\} + \\ 
+    P\{X_{1} \le x,\{X_{3}X_{1}+(1-X_{3})X_{2} \le y \},X_{3}=1 \} \\
+    = P\{X_{1} \le x,X_{2} \le y \}P\{X_{3}=0\} +P\{X_{1} \le x,X_{1}\le y \} P\{X_{3}=1\} \\
+    = \frac{1}{2} \left(P\{X_{1} \le x\}P\{X_{2} \le y \} +P\{X_{1} \le x,X_{1}\le y \} \right) \\
+    \exists x < y ,\quad F(x,y) = \frac{1}{2}\left(\Phi(x)\Phi(y)+\Phi(x)\right) \\
+    \exists x \ge y ,\quad F(x,y) = \frac{1}{2}\left(\Phi(x)\Phi(y)+\Phi(y)\right) \\
+    F_{Y}(y) = P\{Y \le y\} = P\{X_{3}X_{1}+(1-X_{3})X_{2} \le y\} = \frac{1}{2}\left(P\{X_{2} \le y\} + P\{X_{1} \le y\}\right) \\
+    = \frac{1}{2} \left(\Phi(y)+\Phi(y)\right) = \Phi(y) ,Y \sim N(0,1) \\
+\end{align*}
+
+\clearpage 
+\begin{align*}
+    D = \{(x,y)|x^2+y^2 \le 1\},\alpha^2+\beta^2 = 1 \\
+    I = \iint_{D} \frac{\mathrm{d}\sigma}{(1-\alpha x+\beta y)^2+(\beta x+\alpha y)^2}  = \iint_{D} \frac{\mathrm{d}\sigma}{(x-\alpha)^2+(y+\beta)^2} \\
+    \left\{
+        \begin{array}{rl}
+            x-\alpha = u \\
+            y + \beta = v \\ 
+        \end{array}
+    \right. \\ 
+    D_{uv} = \{(u,v)|(u+\alpha)^2+(v-\beta)^2 \le 1\} \rightarrow D_{uv} = \{(u,v)|r^2+2\alpha r\cos \theta -2\beta r \sin \theta \le 0\} \\
+    I = \iint_{D_{uv}} \frac{1}{r} \mathrm{d}r \mathrm{d}\theta = \int_{\sqrt{\alpha^2+\beta^2}-1}^{2(\beta \sin \theta-\alpha \cos \theta)} \frac{1}{r}\mathrm{d}r \int_{?}^{?} \mathrm{d}\theta\\  
+    \int_{-2}^{2} x^3\cos \frac{x}{2}\sqrt{4-x^2} + \frac{1}{2} \sqrt{4-x^2}\mathrm{d}x = \frac{1}{2*2}\pi 4 = \pi \approx 3.1415926 \\ 
+    I = \int \frac{\sqrt{\mathrm{e}^{2x}+1}}{\mathrm{e}^{x}+1}\mathrm{d}x \\
+    \mathrm{e}^{x}+1 = u ,\mathrm{e}^{2x}+2\mathrm{e}^{x}+1 = u^2 ,\mathrm{e}^{2x}+1 = u^2-2(u-1),\\
+    x = \ln(u-1),\mathrm{d}x = \frac{\mathrm{d}u}{u-1} \\
+    I = \int \frac{\sqrt{u^2-2u+2}\mathrm{d}u}{u(u-1)} = \int \frac{\sqrt{(u-1)^2+1}}{u-1}-\frac{\sqrt{u^2-2u+2}}{u} \mathrm{d}u\\
+    = \int \frac{\sqrt{(u-1)^2+1}}{u-1} \mathrm{d}(u-1) -\int \frac{\sqrt{(u-1)^2+1}}{u} \mathrm{d}u \\
+    v= u - 1 ,I =I_{1} - I_{2}= \int \frac{\sqrt{v^2+1}}{v}\mathrm{d}v-\int \frac{\sqrt{v^2+1}}{v+1}\mathrm{d}v \\ 
+    v = \tan t,I_{1} = \int \frac{\sec^3 t\mathrm{d}t}{\tan t} = \int \frac{1}{\cos^2 x \sin x}\mathrm{d}t \\
+    I_{2} = \\
+\end{align*}
+
+\clearpage 
+\begin{align*}
+    \bm{2010 \quad Math(1)22 } \\
+    f(x,y) = A \mathrm{e}^{-2x^2+2xy-y^2} \\
+    \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} f(x,y) \mathrm{d}x\mathrm{d}y = 1 \\ 
+    A  \int_{-\infty}^{+\infty} \mathrm{e}^{-2(x^2-xy+\frac{y^2}{4}-\frac{y^2}{4})-y^2} \mathrm{d}x\int_{-\infty}^{+\infty}\mathrm{d}y=A\int_{-\infty}^{+\infty}\mathrm{e}^{-2(x-\frac{y}{2})^2}\mathrm{d}x\int_{-\infty}^{+\infty}\mathrm{e}^{-\frac{y^2}{2}}\mathrm{d}y \\
+    \int_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi}}\mathrm{e}^{-\frac{x^2}{2}} \mathrm{d}x = 1 ,\int_{-\infty}^{+\infty}\mathrm{e}^{-\frac{x^2}{2}} \mathrm{d}x = \sqrt{2\pi},\int_{-\infty}^{+\infty}\mathrm{e}^{-2u^2} \mathrm{d}u = \sqrt{\frac{\pi}{2}} \\
+    A = \frac{1}{\pi} \\
+    \lim_{x \to 0^{+}}\tan \left(2x^2 \arctan\frac{1}{5x}\right) \sim \tan\left(2x^2 \frac{\pi}{2}\right) \sim \pi x^2 + o(x^2)\\
+    x \to 0^{+} ,\arctan 5x \sim 5x, x \to 0^{+} , \arctan\left(\frac{1}{5x}\right) = \frac{\pi}{2} \\
+    I = \int \frac{1}{\sqrt{x}+1}\mathrm{d}x , \sqrt{x} = t,x = t^2,\mathrm{d}x = 2t\mathrm{d}t\\
+    I = 2\int \frac{t+1-1}{t+1} \mathrm{d}t = 2t-2\ln(t+1)+C = 2\sqrt{x}-2\ln(\sqrt{x}+1)+C \\
+    y = x^{2022} , y^{(1)} = 2022x^{2021}...y^{(2022)} = 2022!x^{0}, y^{(2023)}=0\\
+    y = \frac{x^{1+x}}{(1+x)^{x}} ,x > 0 \\
+    k = \lim_{x \to +\infty} \frac{y}{x} = \lim_{x \to +\infty}\frac{x^{x}}{(1+x)^{x}} = \frac{1}{\lim_{x \to +\infty}\left(1+\frac{1}{x}\right)^{x}}  = \frac{1}{\mathrm{e}} \\
+    \lim_{x \to +\infty} \mathrm{e} - \left(1+\frac{1}{x}\right)^{x} = \lim_{x \to +\infty} \mathrm{e} - \mathrm{e}^{x\ln\left(1+\frac{1}{x}\right)} = \lim_{x \to +\infty}\mathrm{e}\left(1-\mathrm{e}^{x\ln\left(1+\frac{1}{x}\right)-1}\right) \\
+    = \lim_{x \to +\infty}\mathrm{e}\left(1-x\ln\left(1+\frac{1}{x}\right)\right) = \lim_{x \to +\infty} \mathrm{e}\left(1-x\left(\frac{1}{x}-\frac{1}{2x^2}+o(\frac{1}{x^2})\right)\right) = \frac{\mathrm{e}}{2x} + o(\frac{1}{x})\\
+    b = \lim_{x \to +\infty} (y - kx) = \lim_{x \to +\infty}\left(\frac{x^{1+x}}{(1+x)^{x}}-\frac{x}{\mathrm{e}} \right) = \lim_{x \to +\infty} \frac{x}{\mathrm{e}}\left(\frac{ex^{x}-(1+x)^{x}}{(1+x)^{x}} \right) \\
+    = \lim_{x \to +\infty} \frac{x}{\mathrm{e}} \frac{\mathrm{e}-\left(1+\frac{1}{x}\right)^{x}}{\left(1+\frac{1}{x}\right)^{x}} =\lim_{x \to +\infty}\frac{x\frac{\mathrm{e}}{2x}}{\mathrm{e}^{2}} = \frac{1}{2\mathrm{e}}\\
+    y = \frac{x}{\mathrm{e}}+\frac{1}{2\mathrm{e}}\\
+    A = \int_{0}^{4}f(x)\mathrm{d}x ,f(x) = \sin 2x+3A \\ 
+    A = \int_{0}^{4} (\sin 2x +3A )\mathrm{d}x \\
+    A = -\frac{1}{2} \cos 2x |_{0}^{4} + 12A \rightarrow \int_{0}^{4}f(x)\mathrm{d}x = A = \frac{\cos 8-1}{22}\\ 
+\end{align*}
+
+\clearpage
+\begin{align*}
+    tx^2 = u , x = \sqrt{\frac{u}{t}} , \mathrm{d}x = \frac{1}{2\sqrt{ut}}\mathrm{d}u \\ 
+    \lim_{t \to 0}\frac{\int_{0}^{t}\sin(tx^2)\mathrm{d}x}{t^4} = \lim_{t \to 0} \frac{\int_{0}^{t^{3}} \frac{\sin u}{\sqrt{u}}\mathrm{d}u}{2t^{\frac{9}{2}}} = \lim_{t \to 0} \frac{3t^2\sin t^3}{9t^{\frac{7}{2}}t^{\frac{3}{2}}} = \frac{1}{3}\\
+    \lim_{n \to \infty} \left|\frac{u_{n+1}}{u_{n}}\right| = \lim_{n \to \infty} \frac{n}{n+2} = 1 ,x \in (-1,1) \\
+    S(x) = \sum_{n=1}^{\infty} (-1)^{n+1}\frac{x^{n+1}}{n(n+1)} = \sum_{n=1}^{\infty} \frac{(-x)^{n+1}}{n} - \sum_{n=1}^{\infty} \frac{(-x)^{n+1}}{n+1} \\
+    = (-x)\sum_{n=1}^{\infty} \frac{(-x)^{n}}{n} - \sum_{n=2}^{\infty} \frac{(-x)^{n}}{n} = x\ln(x+1) - \left(-\ln(x+1)-(-x)\right) = (x+1)\ln(x+1)-x \\
+    \sum_{n=0}^{\infty} x^{n} = \frac{1}{1-x} ,\sum_{n=1}^{\infty} \frac{x^n}{n} = -\ln(1-x),\sum_{n=1}^{\infty} \frac{(-x)^n}{n} = -\ln(1+x) \\
+    x = -1 , S(x) = \sum_{n=1}^{\infty} \frac{1}{n}-\frac{1}{n+1} = 1\\
+    x = 1 , S(x) = 2\ln2-1 \\
+    S(x) = (x+1)\ln(x+1)-x , x\in [-1,1] \\ 
+    \lim_{n \to \infty} n^2\left[1-\frac{\pi}{2n}\sum_{k=1}^{n}\sin\frac{(2k-1)\pi}{4n}\right]\\
+    \sin\frac{(2k-1)\pi}{4n} = \sin \frac{\pi}{2}\left(\frac{k-1}{2n}+\frac{k}{2n}\right)\\
+    I_{n(k)} = \lim_{n \to \infty} \frac{\pi}{2} \left(\frac{k}{n}-\frac{k-1}{n}\right) \sum_{k=1}^{n}\sin(\frac{\pi}{2}\frac{k-1+k}{2n}) = \frac{\pi}{2}\int_{0}^{1}\sin(\frac{\pi x}{2})\mathrm{d}x = 1 \\ 
+    I_{n(k)} = 1 + \frac{\pi^{2}}{96n^2} + o(\frac{1}{n^2}) \\ 
+    \int_{0}^{1}\left(\ln\frac{1}{x}\right)^5\mathrm{d}x= -\int_{0}^{1}(\ln x)^5\mathrm{d}x = -x(\ln x)^5|_{0}^{1} + 5 \int_{0}^{1} \left(\ln x\right)^4 \mathrm{d}x = 5x(\ln x)^4|_{0}^{1} - 5\int_{0}^{1} 4 (\ln x)^3\mathrm{d}x \\ 
+    = 20x(\ln x)^3 |_{0}^{1} - 20\int_{0}^{1} 3(\ln x)^2\mathrm{d}x = -60x(\ln x)^2|_{0}^{1} + 60\int_{0}^{1} 2\ln x\mathrm{d}x = -120\int_{0}^{1} \mathrm{d}x = -120 \\ 
+    \lim_{x \to -1} \frac{x^3-ax^2-x+4}{x+1} = \lim_{x \to -1} \frac{(x+1)^3-3x^2-3x-1-ax^2-x+4}{x+1} \\ 
+    = \lim_{x \to -1} \frac{(x+1)^3-(3+a)(x+1)^2 +2(a+1)(x+1)+4-a}{x+1} = \lim_{t \to 0}\frac{t^3-(3+a)t^2+2(a+1)t+4-a}{t} \\
+    2a+2=l,4-a=0 \rightarrow a=4,l=10 \\
+\end{align*}
+    
+
+\begin{align*}
+    \lim_{x \to 0}\frac{\sqrt{1+x\sin x}-\sqrt{\cos x}}{x\tan x} = \lim_{x \to 0} \frac{1+x\sin x-\cos x}{(\sqrt{1+x\sin x}+\sqrt{\cos x})x\tan x}  \\
+    = \lim_{x \to 0} \frac{1+x(x+o(x))-\left(1-\frac{1}{2}x^2+o(x^2)\right)}{2x\tan x} = \frac{3}{4} \\
+    \sum_{n=1}^{\infty} \frac{x^{2n+1}}{2n} = x\sum_{n=1}^{\infty} \frac{x^{2n}}{2n} = x\int_{0}^{x} \sum_{n=1}^{\infty}t^{2n-1}\mathrm{d}t = x\int_{0}^{x} \frac{t}{1-t^2}\mathrm{d}t \\
+    =  \frac{x}{2} \int_{0}^{x} \frac{1}{1-t} - \frac{1}{1+t} \mathrm{d}t = -\frac{x}{2} \ln(1-x^2) ,x \in (-1,1) \\
+    x = \tan u ,\mathrm{d}x = \sec^2 u\mathrm{d}u \\ 
+    \int_{0}^{\sqrt{3}}\frac{1}{\sqrt{x^2+1}}\mathrm{d}x = \int_{0}^{\frac{\pi}{3}}\frac{\sec^2 u\mathrm{d}u}{\sec u} = \ln\left| \sec u + \tan u \right| |_{0}^{\frac{\pi}{3}} = \ln(2+\sqrt{3}) \\
+    \int xf''(x)\mathrm{d}x = \int x\mathrm{d}(f'(x)) = xf'(x)-\int f'(x)\mathrm{d}x +C = \\
+    x\left(\frac{1-\ln x}{x^2}\right)-\frac{\ln x}{x} + C = \frac{1-2\ln x}{x} + C\\
+\end{align*}
+
+\begin{align*}
+    \bm{Consistent \quad Continuity} \\
+    f(x) , x \in I \\
+    \forall \epsilon > 0 ,\exists \delta  = \delta(\epsilon) > 0 , \forall x_{1},x_{2} \in I , |x_{1}-x_{2}| < \delta , |f(x_{1})-f(x_{2})| < \epsilon \\
+    \forall \epsilon > 0 ,\exists \delta > 0 ,|x-x_{0}| < \delta ,|f(x)-f(x_{0})| < \epsilon\\ 
+\end{align*}
+
+\clearpage 
+\begin{align*}
+    \lim_{n \to \infty} \left(\frac{\sqrt[n]{a}+\sqrt[n]{b}+\sqrt[n]{c}}{3}\right)^{n} = \mathrm{e}^{n\ln\left(\frac{a^{\frac{1}{n}}-1+b^{\frac{1}{n}}-1+c^{\frac{1}{n}}-1}{3}+1\right)} = \mathrm{e}^{n\frac{(a^{\frac{1}{n}}-1+b^{\frac{1}{n}}-1+c^{\frac{1}{n}}-1)}{3}} = \\
+    \mathrm{e}^{\ln a^{\frac{1}{3}}+\ln b^{\frac{1}{3}} + \ln c^{\frac{1}{3}}} = \sqrt[3]{abc}\\
+    \lim_{x \to 0} \frac{x\ln(1+x)-ax^2+bx^3}{x-\tan x} = \lim_{x \to 0} \frac{x(x-\frac{1}{2}x^2+\frac{1}{3}x^3+o(x^3))-ax^2+bx^3}{-\frac{1}{3}x^3+o(x^3)}= 0\\
+   1-a=0,b-\frac{1}{2}==0 \rightarrow a=1,b=\frac{1}{2} \\    
+   \iint_{\Sigma} x\mathrm{d}y\mathrm{d}z+y\mathrm{d}z\mathrm{d}x+z\mathrm{d}x\mathrm{d}y = 3\iiint_{\Omega}\mathrm{d}v = 3\iint_{D} \int_{\sqrt{x^2+y^2}}^{\sqrt{R^2-x^2-y^2}} \mathrm{d}z \mathrm{d}\sigma \\
+   = 3\iint_{D} (\sqrt{R^2-x^2-y^2}-\sqrt{x^2+y^2}) \mathrm{d}\sigma , \quad D = \{(x,y)|x^2+y^2 \le \frac{R^2}{2}\} \\
+   = 3 \int_{0}^{\frac{R}{\sqrt{2}}} (\sqrt{R^2-r^2} -r )r\mathrm{d}r \int_{0}^{2\pi}\mathrm{d}\theta = 6\pi \left( -\frac{1}{2}\int_{R^2}^{\frac{R^2}{2}} \sqrt{R^2-r^2} \mathrm{d}(R^2-r^2) -\frac{R^{3}}{6\sqrt{2}}\right) \\ 
+   = 6\pi \left( \frac{1}{3} u^{\frac{3}{2}}|_{\frac{R^2}{2}}^{R^2} -\frac{R^3}{6\sqrt{2}}\right) = 2\pi R^3\left(1-\frac{1}{2\sqrt{2}}\right)-\pi R^3\frac{1}{\sqrt{2}} = (2-\sqrt{2})\pi R^3 \\
+\end{align*}
+
+\begin{align*}
+    \lim_{\Delta x \to 0} \frac{\ln(x+\Delta x)-\ln x}{\Delta x} = \lim_{\Delta x \to 0} \frac{\ln\left(1+\frac{\Delta x}{x}\right)}{\Delta x} = \frac{1}{x} \\
+    \lim_{\Delta x \to 0} \frac{\tan(x+\Delta x)-\tan x}{\Delta x} = \lim_{\Delta x \to 0} \frac{\frac{\tan x + \tan \Delta x}{1-\tan x \tan \Delta x}-\tan x}{\Delta x} = \lim_{\Delta x \to 0} \frac{(\tan^2 x+1)\tan \Delta x}{\Delta x} = \sec x \\
+    \lim_{\Delta x \to 0} \frac{\cos(x+\Delta x)- \cos x}{\Delta x} = -\sin x \\
+    \lim_{\Delta x \to 0} \frac{\sec(x+\Delta x)-\sec x}{\Delta x} = \lim_{\Delta x \to 0} \frac{\cos x-\cos (x+\Delta x)}{\Delta x \cos (x+\Delta x) \cos x} = \tan x \sec x\\ 
+    \lim_{\Delta x \to 0} \frac{\log_{a}(x+\Delta x)-\log_{a}x}{\Delta x} = \lim_{\Delta x \to 0} \frac{\log_{a}(1+\frac{\Delta x}{x}) \log_{\mathrm{e}}a}{\Delta x \ln a} = \frac{1}{x\ln a} \\
+    \lim_{\Delta x \to 0} \frac{\arctan (x+\Delta x)-\arctan x}{\Delta x} = \lim_{\Delta x \to 0} \frac{\arctan(\frac{\Delta x}{1+x^2+x\Delta x })}{\Delta x} = \frac{1}{1+x^2} \\
+    \lim_{\Delta x \to 0} \frac{\arcsin(x+\Delta x)-\arcsin x}{\Delta x} = \lim_{\Delta x \to 0} \frac{\arcsin((x+\Delta x)\sqrt{1-x^2}-x\sqrt{1-(x+\Delta x)^2})}{\Delta x} \\
+    = \lim_{\Delta x \to 0} \frac{(x+\Delta x)\sqrt{1-x^2}-x\sqrt{1-(x+\Delta x)^2}}{\Delta x} = \lim_{\Delta x \to 0} \frac{x(\sqrt{1-x^2}-\sqrt{1-(x+\Delta x)^2})}{\Delta x} + \sqrt{1-x^2} \\
+    = \lim_{\Delta x \to 0} \frac{x(2x\Delta x+\Delta^2 x)}{\Delta x(\sqrt{1-x^2}+\sqrt{1-(x+\Delta x)^2})} + \sqrt{1-x^2} = \frac{x^2}{\sqrt{1-x^2}} + \sqrt{1-x^2} = \frac{1}{\sqrt{1-x^2}}\\ 
+    \lim_{x \to 0^{+}} \frac{x^2\sin \frac{1}{x} -0 }{x - 0} = \lim_{x \to 0^{+}} x\sin \frac{1}{x} = (x + o(x)) * M = 0, |M| <= 1 \\
+    f'(x) = 2x \sin \frac{1}{x} + x^2 (\frac{-1}{x^2})\cos \frac{1}{x}=2x\sin \frac{1}{x}-\cos \frac{1}{x} ,(x \neq 0) \\
+    \lim_{x \to 0^{+}} f'(x) = \lim_{x \to 0^{+}}2x\sin \frac{1}{x}-\cos \frac{1}{x} = 0 - \nexists = \nexists \\
+    \lim_{x \to 0} f(x) = \lim_{x \to 0} \frac{f(x)}{x^2} * x^2 = A * \lim_{x \to 0} x^2 = 0 \\
+    \lim_{x \to 0} f(x) = f(0) = 0 \\
+    \lim_{x \to 0} \frac{f(x)-f(0)}{x-0} = \lim_{x \to 0} \frac{f(x)}{x} = f(0) \\
+    \lim_{x \to 0} \frac{1-\cos x \sqrt{\cos 2x}\sqrt[3]{\cos 3x}}{x^2} \\
+    x \to 0 , \ln(1+x) = x - \frac{x^2}{2} + o(x^2) , \ln(1+2x) = 2x - \frac{4x^2}{2} + o(x^2) \\
+    \lim_{x \to 0} \frac{xf(x)-\ln(1+2x)}{x-\ln(1+x)} = \lim_{x \to 0} \frac{xf(x)-2x+2x^2+o(x^2)}{\frac{x^2}{2}+o(x^2)} = 4 \\
+    x \to 0 ,f(x) = 2 + o(1) , f'(0) = 0 \\ 
+\end{align*}
+
+\clearpage
+\begin{align*}
+    f(x) = \frac{1}{x} - \frac{1}{\mathrm{e}^{x}-1} , \lim_{x \to 0}\frac{f(x)-\lim_{x \to 0}f(x)}{x} = ? \\ 
+    \lim_{x \to 0}f(x) = \lim_{x \to 0} \frac{\mathrm{e}^{x}-1-x}{x(\mathrm{e}^{x}-1)} = \lim_{x \to 0} \frac{1+x+\frac{x^2}{2}+o(x^2)-1-x}{x^2 +o(x^2)} = \frac{1}{2} \\
+    \lim_{x \to 0} \frac{ f(x) - \frac{1}{2}}{x} \\
+    = \lim_{x \to 0} \frac{2\mathrm{e}^{x}-2-2x-x\mathrm{e}^{x}+x}{2x^2 (\mathrm{e}^{x}-1)} = \lim_{x \to 0} \frac{2(1+x+\frac{x^2}{2}+\frac{x^3}{6}+o(x^3))-2-2x-x(1+x+\frac{x^2}{2}+o(x^2))+x}{2x^3+o(x^3)} \\
+    = \lim_{x \to 0} \frac{-\frac{1}{6}x^3+o(x^3)}{2x^3+o(x^3)} = -\frac{1}{12} \\
+    \lim_{x \to 0} \frac{\tan \tan x - \sin \sin x}{x^3} = \lim_{x \to 0} \frac{\tan \tan x - \tan \sin x }{x^3} + \frac{ \tan \sin x - \sin \sin x}{x^3} = \frac{1}{2} + \frac{1}{2} = 1\\
+\end{align*}
+
+\clearpage 
+\begin{align*}
+    \bm{Math Comp \quad - 13}\\
+    \lim_{x \to +\infty} \sqrt{x^2+x+1}\frac{x-\ln(\mathrm{e}^{x}+x)}{x} \sim \frac{\infty * \infty}{\infty}
+    = \lim_{x \to +\infty} \sqrt{1+\frac{1}{x}+\frac{1}{x^2}}\ln \left(\frac{\mathrm{e}^{x}}{\mathrm{e}^{x}+x}\right) = 1 * 0 = 0 \\
+    2\sin(x+2y-3z) = x+2y-3z \\ 
+    \quad 2\cos(x+2y-3z) (1-3z'_{x}) = 1-3z'_{x} \\
+    \quad 2\cos(x+2y-3z)(2-3z'_{y}) =2-3z'_{y} \\
+    \frac{\partial z}{\partial x} + \frac{\partial z}{\partial y} = \frac{1}{3} + \frac{2}{3} = 1\\ 
+    F(x) = \int_{0}^{x} f(t) \mathrm{d}t \\
+    \lim_{x \to 0}\frac{2\int_{0}^{x}(x-t)f(t)\mathrm{d}t}{x\int_{0}^{x}f(x-t)\mathrm{d}t} = \lim_{x \to 0} \frac{2x\int_{0}^{x}f(t)\mathrm{d}t-2\int_{0}^{x}tf(t)\mathrm{d}t}{x\int_{0}^{x}f(u)\mathrm{d}u} = \lim_{x \to 0} \frac{2F(x)+2xf(x)-2xf(x)}{F(x)+xf(x)} \\ 
+    = \lim_{x \to 0 , \xi \to 0} \frac{2xf(\xi)}{xf(\xi)+xf(x)} = 1 \\
+    ABA^{-1} = BA^{-1}+3I , AB = B + 3A , (A-I)B = 3A , B = 3(A-I)^{-1}A \\
+    A^{*}A = |A|I , |A^{*}| = 16 , |A| = 4 , A^{*} = 4A^{-1}, A = 4\left(A^{*}\right)^{-1} \\
+    A = diag(4,\frac{1}{4},4) , B = 3diag(\frac{1}{3},-\frac{4}{3},\frac{1}{3})diag(4,\frac{1}{4},4) = diag(4,-1,4)\\
+    \int \frac{x^2}{1+x^2} \arctan x \mathrm{d}x = \int \left(1-\frac{1}{1+x^2}\right) \arctan x \mathrm{d}x = \int \arctan x\mathrm{d}x - \int \arctan x \mathrm{d}(\arctan x) \\
+    = x\arctan x - \int \frac{x}{1+x^2} \mathrm{d}x - \frac{1}{2} (\arctan x)^2 = x\arctan x - \frac{1}{2} \ln(1+x^2) - \frac{1}{2}(\arctan x)^2 + C \\
+\end{align*}
+
+\clearpage 
+\begin{align*}
+    \int \frac{\mathrm{d}x}{\mathrm{e}^x - \mathrm{e}^{-x} } = \int \frac{\mathrm{d}\mathrm{e}^x}{\mathrm{e}^{2x}-1} = \frac{1}{2} \left(\int \frac{\mathrm{d}(\mathrm{e}^x-1)}{\mathrm{e}^x-1} - \int \frac{\mathrm{d}(\mathrm{e}^x+1)}{\mathrm{e}^x+1} \right) = \frac{1}{2}\ln \left|\frac{\mathrm{e}^x-1}{\mathrm{e}^x+1}\right|+C\\
+    \int \frac{x}{(1-x)^3}\mathrm{d}x = \int \frac{1-(1-x)}{(1-x)^3}\mathrm{d}x = \int \frac{1}{(1-x)^3} - \frac{1}{(1-x)^2} \mathrm{d}x = \frac{1}{2(1-x)^2} - \frac{1}{1-x} + C \\ 
+    \int \frac{x^2}{a^6 - x^6} \mathrm{d}x = \int \frac{\mathrm{d}x^3}{3(a^3-x^3)(a^3+x^3)} = \int -\frac{\mathrm{d}(a^3-x^3)}{6a^3(a^3-x^3)} + \int \frac{\mathrm{d}(a^3+x^3)}{6a^3(a^3+x^3)} = \frac{1}{6a^3} \ln\left|\frac{a^3+x^3}{a^3-x^3}\right| + C \\ 
+    \int \frac{1+\cos x}{x+\sin x}\mathrm{d}x = \ln|x+\sin x| + C \\ 
+    \int \frac{\ln(\ln x)}{x} \mathrm{d} x = \int \ln(\ln x) \mathrm{d}\ln x = \ln(\ln x) \ln x - \int \frac{\ln x}{x\ln x}\mathrm{d} x = \ln |\ln x | \ln x - \ln x + C \\
+    1-2\sin^2 x = \cos 2x , \sin^2 x = \frac{1-\cos 2x}{2}, \sin^4 x = \frac{(1-\cos 2x)^2}{4}\\ 
+    \int \frac{\sin x \cos x}{1+\sin^4 x} \mathrm{d}x = \int \frac{\sin 2x}{2(1+\frac{(1-\cos 2x)^2}{4})} \mathrm{d}x = \int \frac{1}{2} \frac{\mathrm{d}(\frac{1-\cos 2x}{2})}{1+\left(\frac{(1-\cos 2x)}{2}\right)^2} = \frac{1}{2}\int \arctan \sin^2 x + C \\
+    \int \tan^4 x \mathrm{d}x = \int (\sec^2 x - 1)^2 \mathrm{d}x  = \int (\tan^2 x+1) \mathrm{d} \tan x - 2\tan x + x = \frac{1}{3}\tan^2 x - \tan x + x + C \\
+    \cos(a+b) - \cos(a-b) = -2\sin a \sin b , \sin(a+b) + \sin(a-b) = 2\sin a \cos b \\
+    \int \sin x \sin 2x \sin 3x\mathrm{d}x = \frac{1}{2} \int ( \cos x - \cos 3x) \sin 3x \mathrm{d}x = - \frac{1}{4}\int \sin 6x \mathrm{d}x + \frac{1}{4} \int (\sin 4x + \sin 2x) \mathrm{d}x \\ 
+    = \frac{\cos 6x}{24} - \frac{\cos 4x}{16} - \frac{\cos 2x}{8} + C \\  
+    \int \frac{\mathrm{d}x}{x(x^6+4)} = \frac{1}{4} \int \frac{1}{x} - \frac{x^5}{x^6+4} \mathrm{d}x = \frac{1}{4}\ln x - \frac{1}{24} \ln(x^6+4) + C \\ 
+    a>0 , \int \sqrt{\frac{a+x}{a-x}}\mathrm{d}x = \int \frac{a+x}{\sqrt{a^2-x^2}}\mathrm{d}x = \int\frac{a\mathrm{d}\frac{x}{a}}{\sqrt{1-\left(\frac{x}{a}\right)^2}} - \frac{\mathrm{d}(a^2-x^2)}{2\sqrt{a^2-x^2}} = a\arcsin \frac{x}{a} - \sqrt{a^2-x^2} + C \\
+\end{align*}
+
+\clearpage 
+
+\begin{align*}
+    (\ln(x+\sqrt{x^2-1}))' = \frac{1+\frac{2x}{2\sqrt{x^2-1}}}{x+\sqrt{x^2-1}}= \frac{1}{\sqrt{x^2-1}} \\
+    \int \frac{\mathrm{d}x}{\sqrt{x(1+x)}} = \int \frac{\mathrm{d}(2x+1)}{\sqrt{\left(2x+1\right)^2-1}} = \ln(2x+1+\sqrt{(2x+1)^2 - 1}) + C = \ln |2x+\sqrt{4x^2+4x}+1| + C \\
+    2\cos^2 x - 1 = \cos 2x,\cos^2 x = \frac{\cos 2x + 1}{2} \\
+    \frac{1}{2} \int x(\cos 2x + 1)\mathrm{d}x = \frac{1}{4} \int x \mathrm{d}\sin 2x + \frac{x^2}{4} = \frac{x\sin 2x}{4} + \frac{\cos 2x}{8} + \frac{x^2}{4} + C \\
+    I = \int \mathrm{e}^{ax} \cos bx \mathrm{d}x = \frac{1}{a} \int\cos bx \mathrm{d}(\mathrm{e}^{ax}) = \frac{\cos bx \mathrm{e}^{ax}}{a} + \frac{b}{a}\int \mathrm{e}^{ax}\sin bx \mathrm{d}x = A(x,a,b) + \frac{b}{a^2} \int \sin bx \mathrm{d}(\mathrm{e}^{ax})\\
+    = A(x,a,b) + \frac{b\sin bx \mathrm{e}^{ax}}{a^2} - \frac{b^2}{a^2}\int \mathrm{e}^{ax}\cos bx \mathrm{d}x = A(x,a,b) + B(x,a,b) - \frac{b^2}{a^2}I + C_{1} = I \\ 
+    \frac{b^2+a^2}{a^2} I = \frac{a \mathrm{e}^{ax} \cos bx + b \mathrm{e}^{ax}\sin bx}{a^2} + C_{2} , \quad I = \frac{\mathrm{e}^{ax}(a\cos bx + b\sin bx)}{a^2+b^2} + C\\
+    I = \int \frac{\mathrm{d}x}{\sqrt{1+\mathrm{e}^{x}}} , \sqrt{1+\mathrm{e}^{x}} = u , x = \ln(u^2-1) , \mathrm{d}x = \frac{2u\mathrm{d}u}{u^2-1} \\
+    I = \int \frac{2\mathrm{d}u}{(u+1)(u-1)} = \int \frac{\mathrm{d}u}{u-1} - \int \frac{\mathrm{d}u}{u+1} = \ln\left| \frac{u-1}{u+1} \right| + C  = \ln \left| \frac{\sqrt{1+\mathrm{e}^{x}}-1}{\sqrt{1+\mathrm{e}^{x}+1}} \right| + C\\
+    I = \int \frac{\mathrm{d}x}{x^2\sqrt{x^2-1}} , x = \sec u , \mathrm{d}x = \sec u \tan u \mathrm{d}u , \cos u = \frac{1}{x} , \sin u = \frac{\sqrt{x^2-1}}{x}\\
+    I = \int \frac{\sec u \tan u \mathrm{d}u}{\sec^2 u \tan u} = \sin u + C = \frac{\sqrt{x^2-1}}{x} + C \\ 
+    I = \int \frac{\mathrm{d}x}{(a^2-x^2)^{\frac{5}{2}}} , x = a\sin u , \mathrm{d}x = a\cos u \mathrm{d}u , \tan u = \frac{x}{\sqrt{a^2-x^2}}\\
+    I = \int \frac{a\cos u\mathrm{d}u}{a^5\cos^5 u} = \frac{1}{a^4} \int \sec^4 u \mathrm{d}u = \frac{1}{a^4}\left(\frac{1}{3}\tan^3 u + \tan u\right) + C = \frac{x^3}{3a^4(a^2-x^2)^{\frac{3}{2}}} + \frac{x}{a^4\sqrt{a^2-x^2}} + C \\
+    I = \int \frac{\mathrm{d}x}{x^4\sqrt{1+x^2}} , x = \tan u , \mathrm{d} x = \sec^2 u \mathrm{d} u ,(\csc x)' = -\csc x \cot x , 1 + \cot^2 x = \csc^2 x , \csc u = \frac{\sqrt{x^2+1}}{x}\\
+    I = \int \frac{\sec^2 u \mathrm{d}u}{\tan^4 u \sec u} = \int \frac{\cos^3 u\mathrm{d}u}{\sin^4 u} = \int \cot^3 u \csc u\mathrm{d}u = \int (1-\csc^2 u) \mathrm{d}(\csc u) = \csc u - \frac{\csc^3 u}{3} + C \\ 
+    I = \frac{\sqrt{x^2+1}}{x} - \frac{(x^2+1)^{\frac{3}{2}}}{3x^3} + C \\
+    I = \int \sqrt{x}\sin \sqrt{x} \mathrm{d}x , \sqrt{x} = u, x = u^2 , \mathrm{d}x = 2u\mathrm{d}u \\
+    I = \int 2u^2\sin u \mathrm{d}u = \int -2u^2\mathrm{d}(\cos u) = -2u^2\cos u + \int 4u \mathrm{d}\sin u = -2u^2\cos u+ 4u\sin u + 4 \cos u + C \\ 
+    I = -2x\cos \sqrt{x}+4\sqrt{x}\sin \sqrt{x} + 4\cos \sqrt{x} + C \\
+    \int \ln(1+x^2)\mathrm{d}x = x\ln(1+x^2) - 2\int \left( 1 - \frac{1}{1+x^2}\right) \mathrm{d}x = x\ln(1+x^2)-2x+ 2\arctan x + C \\
+    \int \frac{\sin^2 x}{\cos^3 x}\mathrm{d}x = \int \tan^2 x \sec x \mathrm{d}x = \int \tan x \mathrm{d} \sec x = \tan x \sec x - \int \sec^3 x \mathrm{d}x \\ 
+    = \frac{1}{2}(\tan x\sec x  - \ln|\sec x + \tan x|) + C\\
+\end{align*}
+
+\clearpage
+\begin{align*} 
+    I = \int \arctan \sqrt{x} \mathrm{d}x , \sqrt{x} = u ,x = u^2 , \mathrm{d}x = 2u\mathrm{d}u \\
+    I = \int 2u\arctan u \mathrm{d}u = \int \arctan u \mathrm{d}(u^2+1) = (u^2+1)\arctan u - u + C = (x+1)\arctan\sqrt{x} - \sqrt{x} + C\\
+    \sin x = \frac{2\sin \frac{x}{2}\cos \frac{x}{2}}{\sin^2 \frac{x}{2} + \cos^2 \frac{x}{2}} = \frac{2\tan \frac{x}{2}}{\tan^2 \frac{x}{2} + 1} ,\tan x = \frac{2\tan \frac{x}{2}}{1 - \tan^2 \frac{x}{2}} , \cos x = \frac{1-\tan^2 \frac{x}{2}}{1+ \tan^2 \frac{x}{2}} \\
+    \tan \frac{x}{2} = u , x = 2\arctan u ,\mathrm{d}x = \frac{2\mathrm{d}u}{u^2+1}\\
+    I = \int \frac{\sqrt{1+\cos x}}{\sin x}\mathrm{d}x = \int \frac{\sqrt{1+\frac{1-u^2}{1+u^2}}\frac{2}{u^2+1}}{\frac{2u}{u^2+1}}\mathrm{d}u = \int \frac{\sqrt{2}}{u\sqrt{u^2+1}}\mathrm{d}u \\
+    u = \tan k ,\cot k = \frac{1}{u} , \csc k = \frac{\sqrt{u^2+1}}{u} , \mathrm{d} u = \sec^2 k \mathrm{d} k \\
+    I = \sqrt{2} \int \csc k \mathrm{d} k = -\sqrt{2}\ln|\cot k + \csc k| + C = \sqrt{2}\ln\left|\frac{u}{\sqrt{u^2+1}+1}\right| + C = \sqrt{2} \ln \left| \frac{\tan \frac{x}{2}}{\sqrt{\tan^2 \frac{x}{2}+1} + 1}\right| + C \\
+\end{align*}
+
+\end{document}
