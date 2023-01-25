@@ -326,23 +326,20 @@
     \int \frac{x}{(1-x)^3}\mathrm{d}x = \int \frac{1-(1-x)}{(1-x)^3}\mathrm{d}x = \int \frac{1}{(1-x)^3} - \frac{1}{(1-x)^2} \mathrm{d}x = \frac{1}{2(1-x)^2} - \frac{1}{1-x} + C \\ 
     \int \frac{x^2}{a^6 - x^6} \mathrm{d}x = \int \frac{\mathrm{d}x^3}{3(a^3-x^3)(a^3+x^3)} = \int -\frac{\mathrm{d}(a^3-x^3)}{6a^3(a^3-x^3)} + \int \frac{\mathrm{d}(a^3+x^3)}{6a^3(a^3+x^3)} = \frac{1}{6a^3} \ln\left|\frac{a^3+x^3}{a^3-x^3}\right| + C \\ 
     \int \frac{1+\cos x}{x+\sin x}\mathrm{d}x = \ln|x+\sin x| + C \\ 
-    \int \frac{\ln(\ln x)}{x} \mathrm{d} x = \int \ln(\ln x) \mathrm{d}\ln x = \ln(\ln x) \ln x - \int \frac{\ln x}{x\ln x}\mathrm{d} x = \ln |\ln x | \ln x - \ln x + C \\
-    1-2\sin^2 x = \cos 2x , \sin^2 x = \frac{1-\cos 2x}{2}, \sin^4 x = \frac{(1-\cos 2x)^2}{4}\\ 
-    \int \frac{\sin x \cos x}{1+\sin^4 x} \mathrm{d}x = \int \frac{\sin 2x}{2(1+\frac{(1-\cos 2x)^2}{4})} \mathrm{d}x = \int \frac{1}{2} \frac{\mathrm{d}(\frac{1-\cos 2x}{2})}{1+\left(\frac{(1-\cos 2x)}{2}\right)^2} = \frac{1}{2}\int \arctan \sin^2 x + C \\
+    \int \frac{\ln(\ln x)}{x} \mathrm{d} x = \int \ln(\ln x) \mathrm{d}\ln x = \ln x \ln|\ln x|  - \int \frac{\ln x}{x\ln x}\mathrm{d} x = \ln x \ln |\ln x | - \ln x + C \\
+    \int \frac{\sin x \cos x}{1+\sin^4 x} \mathrm{d}x = \int \frac{\sin 2x}{2(1+\frac{(1-\cos 2x)^2}{4})} \mathrm{d}x = \int \frac{1}{2} \frac{\mathrm{d}(\frac{1-\cos 2x}{2})}{1+\left(\frac{(1-\cos 2x)}{2}\right)^2} = \frac{1}{2} \arctan \sin^2 x + C \\
     \int \tan^4 x \mathrm{d}x = \int (\sec^2 x - 1)^2 \mathrm{d}x  = \int (\tan^2 x+1) \mathrm{d} \tan x - 2\tan x + x = \frac{1}{3}\tan^2 x - \tan x + x + C \\
     \cos(a+b) - \cos(a-b) = -2\sin a \sin b , \sin(a+b) + \sin(a-b) = 2\sin a \cos b \\
     \int \sin x \sin 2x \sin 3x\mathrm{d}x = \frac{1}{2} \int ( \cos x - \cos 3x) \sin 3x \mathrm{d}x = - \frac{1}{4}\int \sin 6x \mathrm{d}x + \frac{1}{4} \int (\sin 4x + \sin 2x) \mathrm{d}x \\ 
     = \frac{\cos 6x}{24} - \frac{\cos 4x}{16} - \frac{\cos 2x}{8} + C \\  
-    \int \frac{\mathrm{d}x}{x(x^6+4)} = \frac{1}{4} \int \frac{1}{x} - \frac{x^5}{x^6+4} \mathrm{d}x = \frac{1}{4}\ln x - \frac{1}{24} \ln(x^6+4) + C \\ 
+    \int \frac{\mathrm{d}x}{x(x^6+4)} = \frac{1}{4} \int \frac{1}{x} - \frac{x^5}{x^6+4} \mathrm{d}x = \frac{1}{4}\ln |x| - \frac{1}{24} \ln(x^6+4) + C \\ 
     a>0 , \int \sqrt{\frac{a+x}{a-x}}\mathrm{d}x = \int \frac{a+x}{\sqrt{a^2-x^2}}\mathrm{d}x = \int\frac{a\mathrm{d}\frac{x}{a}}{\sqrt{1-\left(\frac{x}{a}\right)^2}} - \frac{\mathrm{d}(a^2-x^2)}{2\sqrt{a^2-x^2}} = a\arcsin \frac{x}{a} - \sqrt{a^2-x^2} + C \\
 \end{align*}
 
 \clearpage 
 
 \begin{align*}
-    (\ln(x+\sqrt{x^2-1}))' = \frac{1+\frac{2x}{2\sqrt{x^2-1}}}{x+\sqrt{x^2-1}}= \frac{1}{\sqrt{x^2-1}} \\
     \int \frac{\mathrm{d}x}{\sqrt{x(1+x)}} = \int \frac{\mathrm{d}(2x+1)}{\sqrt{\left(2x+1\right)^2-1}} = \ln(2x+1+\sqrt{(2x+1)^2 - 1}) + C = \ln |2x+\sqrt{4x^2+4x}+1| + C \\
-    2\cos^2 x - 1 = \cos 2x,\cos^2 x = \frac{\cos 2x + 1}{2} \\
     \frac{1}{2} \int x(\cos 2x + 1)\mathrm{d}x = \frac{1}{4} \int x \mathrm{d}\sin 2x + \frac{x^2}{4} = \frac{x\sin 2x}{4} + \frac{\cos 2x}{8} + \frac{x^2}{4} + C \\
     I = \int \mathrm{e}^{ax} \cos bx \mathrm{d}x = \frac{1}{a} \int\cos bx \mathrm{d}(\mathrm{e}^{ax}) = \frac{\cos bx \mathrm{e}^{ax}}{a} + \frac{b}{a}\int \mathrm{e}^{ax}\sin bx \mathrm{d}x = A(x,a,b) + \frac{b}{a^2} \int \sin bx \mathrm{d}(\mathrm{e}^{ax})\\
     = A(x,a,b) + \frac{b\sin bx \mathrm{e}^{ax}}{a^2} - \frac{b^2}{a^2}\int \mathrm{e}^{ax}\cos bx \mathrm{d}x = A(x,a,b) + B(x,a,b) - \frac{b^2}{a^2}I + C_{1} = I \\ 
@@ -372,7 +369,73 @@
     \tan \frac{x}{2} = u , x = 2\arctan u ,\mathrm{d}x = \frac{2\mathrm{d}u}{u^2+1}\\
     I = \int \frac{\sqrt{1+\cos x}}{\sin x}\mathrm{d}x = \int \frac{\sqrt{1+\frac{1-u^2}{1+u^2}}\frac{2}{u^2+1}}{\frac{2u}{u^2+1}}\mathrm{d}u = \int \frac{\sqrt{2}}{u\sqrt{u^2+1}}\mathrm{d}u \\
     u = \tan k ,\cot k = \frac{1}{u} , \csc k = \frac{\sqrt{u^2+1}}{u} , \mathrm{d} u = \sec^2 k \mathrm{d} k \\
-    I = \sqrt{2} \int \csc k \mathrm{d} k = -\sqrt{2}\ln|\cot k + \csc k| + C = \sqrt{2}\ln\left|\frac{u}{\sqrt{u^2+1}+1}\right| + C = \sqrt{2} \ln \left| \frac{\tan \frac{x}{2}}{\sqrt{\tan^2 \frac{x}{2}+1} + 1}\right| + C \\
+    I = \sqrt{2} \int \csc k \mathrm{d} k = -\sqrt{2}\ln|\cot k + \csc k| + C = \sqrt{2}\ln\left|\frac{u}{\sqrt{u^2+1}+1}\right| + C \\
+    = \sqrt{2} \ln \left| \frac{\tan \frac{x}{2}}{\sqrt{\tan^2 \frac{x}{2}+1} + 1}\right| + C \quad \bm{or} ,k =\frac{x}{2} , I = -\sqrt{2}\ln\left|\cot \frac{x}{2} + \csc \frac{x}{2}\right| + C \\
+    \int \frac{x^3}{(1+x^8)^2}\mathrm{d}x = \int \frac{\mathrm{d}x^4}{4(1+(x^4)^2)^2} \underrightarrow{x^4 = u} I = \int \frac{(1+u^2)+(1-u^2)\mathrm{d}u}{8(1+u^2)^2} = \int \frac{\mathrm{d}u}{8(1+u^2)} - \int \frac{\mathrm{d}(\frac{1}{u}+u)}{8(\frac{1}{u}+u)^2} \\
+    = \frac{1}{8}\arctan u + \frac{u}{8(1+u^2)} + C = \frac{1}{8}\arctan x^4 + \frac{x^4}{8(1+x^8)} + C \\
+    \int \frac{x^{11}}{x^8+3x^4+2} \mathrm{d}x = \int \frac{x^{11}}{(x^4+1)(x^4+2)}\mathrm{d}x = \int \frac{\mathrm{d}(x^{12})}{12(x^4+1)} - \int \frac{\mathrm{d}(x^{12})}{12(x^4+2)} \underrightarrow{x^4 = u} \\ 
+    \frac{1}{4}\left(\int \frac{(u+1)(u-1)+1 }{u+1}\mathrm{d}u - \int \frac{(u+2)(u-2)+4}{u+2}\mathrm{d}u\right) = \frac{1}{4}\left( u + \ln\left| \frac{u+1}{(u+2)^4}\right|\right) + C \\ 
+    = \frac{x^4}{4} + \frac{1}{4}\ln\left|\frac{x^4+1}{(x^4+2)^4}\right| + C \\
+    \int \frac{\mathrm{d}x}{16-x^4} = \int \frac{\mathrm{d}x}{(4-x^2)(4+x^2)} = \int \frac{\mathrm{d}x}{32(2-x)}+\int \frac{\mathrm{d}x}{32(2+x)} + \int \frac{\mathrm{d}(\frac{x}{2})}{16(1+(\frac{x}{2})^2)} \\ 
+    = \frac{1}{32}\left(\ln \left|\frac{2+x}{2-x}\right| + 2\arctan \frac{x}{2}\right) + C \\
+    \int \frac{\sin x}{1 + \sin x} \mathrm{d}x \underrightarrow{\tan \frac{x}{2} = u} \int \frac{\frac{4u}{(u^2+1)^2}}{1+\frac{2u}{u^2+1}} \mathrm{d}u = \int \frac{4u\mathrm{d}u}{(u^2+1)(u+1)^2} = \int \frac{2\mathrm{d}u}{u^2+1} - \int \frac{2\mathrm{d}u}{(u+1)^2} \\
+    = 2\arctan u + \frac{2}{u+1} + C = x + \frac{2}{\tan \frac{x}{2} + 1} + C \\
 \end{align*}
 
+
+\clearpage
+
+\begin{align*}
+    \int \frac{x+\sin x}{1+\cos x} \mathrm{d}x = \int x\mathrm{d}(\tan \frac{x}{2}) - \int \frac{\mathrm{d}(1+\cos x)}{1+\cos x} = x\tan \frac{x}{2} - \int \tan \frac{x}{2}\mathrm{d}x - \ln|1+\cos x| \\
+    = x\tan \frac{x}{2} + 2\ln|\cos \frac{x}{2}| - \ln|1+\cos x| + C = x \tan \frac{x}{2} + C \\
+    \int \mathrm{e}^{\sin x} \frac{x\cos^3 x - \sin x}{\cos^2 x} \mathrm{d}x = \int x \mathrm{d}(\mathrm{e}^{\sin x}) - \int \mathrm{e}^{\sin x} \mathrm{d}(\sec x) = x\mathrm{e}^{\sin x} -\int \mathrm{e}^{\sin x} \mathrm{d}x -\sec x\mathrm{e}^{\sin x} + \int \mathrm{e}^{\sin x}\mathrm{d}x \\
+    = (x-\sec x )\mathrm{e}^{\sin x} + C \\ 
+    \int \frac{x^{\frac{1}{3}}}{x(x^{\frac{1}{2}}+x^{\frac{1}{3}})}\mathrm{d}x , x^{\frac{1}{6}} = u ,x = u^6 ,\mathrm{d}x = 6u^5\mathrm{d}u \\
+    \int \frac{6u^7}{u^6(u^3+u^2)} \mathrm{d}u = \int \frac{6\mathrm{d}u}{u(u+1)} = \int \frac{6\mathrm{d}u}{u} - \int \frac{6\mathrm{d}u}{u+1} = 6\ln\left|\frac{u}{u+1}\right| + C = 6\ln \left|\frac{x^{\frac{1}{6}}}{x^{\frac{1}{6}}+1}\right| + C \\
+    I = \int \frac{\mathrm{d}x}{(1+\mathrm{e}^{x})^2} , \mathrm{e}^{x} = u , x=\ln u,\mathrm{d}x = \frac{\mathrm{d}u}{u} \\
+    I = \int \frac{\mathrm{d}u}{u(1+u)^2} = \int \frac{\mathrm{d}u}{u} - \int \frac{(u+2)\mathrm{d}u}{(1+u)^2} = \ln|u| + \frac{2}{1+u} + \int u \mathrm{d}\left(\frac{1}{1+u}\right) = \ln|u| + \frac{2+u}{1+u} - \ln|1+u| \\ 
+    = \ln\left|\frac{\mathrm{e}^{x}}{1+\mathrm{e}^{x}}\right| + \frac{1}{1+\mathrm{e}^{x}} + C\\
+    \int \frac{\mathrm{e}^{3x}+\mathrm{e}^{x}}{\mathrm{e}^{4x}-\mathrm{e}^{2x}+1}\mathrm{d}x = \int \frac{\mathrm{e}^{x}+\mathrm{e}^{-x}}{\mathrm{e}^{2x}+\mathrm{e}^{-2x}-1}\mathrm{d}x = \int \frac{\mathrm{d}(\mathrm{e}^{x}-\mathrm{e}^{-x})}{(\mathrm{e}^{x}-\mathrm{e}^{-x})^2+1} = \arctan (\mathrm{e}^{x}-\mathrm{e}^{-x}) + C \\
+    \int \frac{x\mathrm{e}^{x}}{(1+\mathrm{e}^{x})^2}\mathrm{d}x = - \int \ln u \mathrm{d}\left(\frac{1}{1+u}\right) = - \frac{\ln u}{1+u} + \int \frac{1}{u} - \frac{1}{1+u}\mathrm{d}u = \ln \left|\frac{u}{1+u}\right| - \frac{\ln u}{1+u} + C \\ 
+    = \ln \frac{\mathrm{e}^{x}}{1+\mathrm{e}^{x}} - \frac{x}{1+\mathrm{e}^{x}} + C \\
+    \int \ln^2 (x+\sqrt{1+x^2}) \mathrm{d}x = x\ln^2 (x+\sqrt{1+x^2}) - 2 \int \ln (x+\sqrt{1+x^2}) \mathrm{d}(\sqrt{1+x^2}) \\
+    = x\ln^2 (x+\sqrt{1+x^2}) -2\sqrt{1+x^2} \ln^2 (x+\sqrt{1+x^2}) + 2x + C \\
+\end{align*}    
+
+\clearpage 
+
+\begin{align*}
+    x = \tan u , u = \arctan x , \mathrm{d}x = \sec^2 u \mathrm{d}u , \sin u = \frac{x}{\sqrt{1+x^2}} , \cos u =\frac{1}{\sqrt{{1+x^2}}} \\
+    \int \frac{\ln x}{(1+x^2)^{\frac{3}{2}}} \mathrm{d}x = \int ( \ln(\sin u) - \ln(\cos u) ) \mathrm{d}\sin u = \sin u(\ln(\sin u )-1) -\sin u\ln(\cos u) \\ 
+    - \int \frac{\sin^2 u}{\cos u}\mathrm{d}u = A(u) + \int \cos u - \sec u \mathrm{d}u = A(u) + \sin u - \ln |\sec u + \tan u| + C \\ 
+    = \frac{x}{\sqrt{1+x^2}}\ln x - \ln(x+\sqrt{1+x^2}) + C \\
+    x = \sin u , u = \arcsin x , \mathrm{d}x = \cos u \mathrm{d}u , \sin 2u = 2x\sqrt{1-x^2} , \cos 2u = 1-2x^2\\ 
+    \int \sqrt{1-x^2}\arcsin x\mathrm{d}x = \int u\cos^2 u \mathrm{d}u = \frac{u\sin 2u}{4} + \frac{\cos 2u}{8} + \frac{u^2}{4} + C \\
+    = \frac{x\sqrt{1-x^2}\arcsin x}{2} - \frac{x^2}{4} + \frac{\arcsin^2 x}{4} + C\\
+    x = \cos u , u =\arccos x , \mathrm{d}x = -\sin u \mathrm{d} u\\
+    I_{36} = \int \frac{x^3\arccos x}{\sqrt{1-x^2}} \mathrm{d}x = -\int \frac{u \cos^3 u \sin u}{\sin u}\mathrm{d}u = -\int u \cos^3 u \mathrm{d}u = -\frac{1}{2} \int u\cos u(\cos 2u + 1) \mathrm{d}u \\ 
+    = -\frac{1}{4} \int u(\cos 3u +\cos u) \mathrm{d} u -\frac{1}{2} \int u\cos u \mathrm{d}u = -\frac{1}{36} \int 3u \cos 3u \mathrm{d}(3u) - \frac{3}{4} \int u\cos u \mathrm{d}u \\
+    = -\frac{1}{36}\left(3u\sin 3u + \cos 3u\right) -\frac{3}{4}\left(u\sin u + \cos u\right) + C \\ 
+    = -\frac{1}{12}((4x^2-1)\sqrt{1-x^2}\arccos x) - \frac{x(4x^2-3)}{36} - \frac{3}{4}(\sqrt{1-x^2}\arccos x + x) + C \\
+    \sin 3u = \sin 2u \cos u + \cos 2u \sin u = (4x^2-1)\sqrt{1-x^2} \\ 
+    \cos 3u = \cos 2u \cos u - \sin 2u \sin u = (4x^2-3)x \\
+    I_{36} = -\frac{1}{3}\sqrt{1-x^2}(x^2+2)\arccos x -\frac{x(x^2+6)}{9} + C \\ 
+    \int \frac{\cot x}{1+\sin x} \mathrm{d}x = \int \frac{\mathrm{d}(\sin x) }{\sin x(1+\sin x)} \underrightarrow{\sin x = u } \int \frac{\mathrm{d}u}{u} - \int \frac{\mathrm{d}u}{1 + u} = \ln \left|\frac{\sin x}{1+\sin x}\right| + C \\
+    \tan x = u ,x =\arctan u , \mathrm{d}x = \frac{\mathrm{d}u}{u^2+1} \\
+    \int \frac{\mathrm{d}x}{\sin^3 x \cos x} = \int \frac{4}{(1-\cos 2x)\sin 2x} \mathrm{d}x = \int \frac{4\mathrm{d}u}{(u^2+1)(1-\frac{1-u^2}{1+u^2})\frac{2u}{1+u^2}} = \int \frac{(1+u^2)\mathrm{d}u}{u^3} \\ 
+    = -\frac{1}{2u^2} + \ln u + C = -\frac{\cot^2 x}{2} + \ln |\tan x| + C\\
+    \int \frac{\mathrm{d}x }{(2+\cos x)\sin x} = \int \frac{\frac{2}{u^2+1} \mathrm{d}u}{(2+\frac{1-u^2}{1+u^2})\frac{2u}{u^2+1}} = \int \frac{(u^2+1)\mathrm{d}u}{(u^2+3)u} = \int \frac{\mathrm{d}u}{3u} + \int \frac{\mathrm{d}(u^2+3)}{3(u^2+3)} \\ 
+    = \frac{1}{3}\ln |u| + \frac{1}{3}\ln (u^2+3) + C = \frac{1}{3}\ln\left(\tan \frac{x}{2}(\tan^2 \frac{x}{2}+3)\right) + C \\ 
+\end{align*}
+
+\clearpage
+\begin{align*}
+    \sin x = \frac{2\sin \frac{x}{2}\cos \frac{x}{2}}{\sin^2 \frac{x}{2} + \cos^2 \frac{x}{2}} = \frac{2u}{u^2 + 1} ,\tan x = \frac{2 u}{1 - u^2 } , \cos x = \frac{1 - u^2 }{1 + u^2 } \\
+    \tan \frac{x}{2} = u , x = 2\arctan u ,\mathrm{d}x = \frac{2\mathrm{d}u}{u^2+1}\\
+    \int \frac{\sin x\cos x}{\sin x + \cos x} \mathrm{d}x = \int \frac{\frac{2u}{u^2+1}\frac{1-u^2}{1+u^2}\frac{2}{u^2+1}}{\frac{2u}{u^2+1}+\frac{1-u^2}{1+u^2}}\mathrm{d}u = \int \frac{4u(1-u^2)}{(u^2+1)^2(1-u^2+2u)} \mathrm{d}u \\
+    = \int \frac{au^2+bu+c }{(u^2+1)^2} + \frac{d}{1-u^2+2u} \mathrm{d} u  \underrightarrow{a = -1 ,b = 2,c= 1,d=-1 }= \int \frac{-u^2+2u+1 }{(u^2+1)^2} - \frac{1}{1-u^2+2u} \mathrm{d} u \\
+    = \int \frac{\mathrm{d}(u^2+1)}{(u^2+1)^2} - \int \frac{\mathrm{d}\left(u+\frac{1}{u}\right)}{(u+\frac{1}{u})^2} + \int \frac{\mathrm{d} u}{(u-1+\sqrt{2})(u-1-\sqrt{2})} \\ 
+    = \frac{u-1}{u^2+1} + \frac{1}{2\sqrt{2}}\left(\int \frac{\mathrm{d}(u-1-\sqrt{2})}{u-1-\sqrt{2}} - \int \frac{\mathrm{d}(u-1+\sqrt{2})}{u-1+\sqrt{2}}\right)\\
+    = \frac{u-1}{u^2+1} + \frac{\sqrt{2}}{4}\ln\left|\frac{u-1-\sqrt{2}}{u-1+\sqrt{2}}\right|+ C = \frac{\tan \frac{x}{2}-1}{\tan^2 \frac{x}{2}+1} + \frac{\sqrt{2}}{4}\ln\left|\frac{\tan \frac{x}{2}-1-\sqrt{2}}{\tan \frac{x}{2} - 1+\sqrt{2}}\right|+ C \\
+\end{align*}
 \end{document}
