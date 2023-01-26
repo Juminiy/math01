@@ -45,6 +45,8 @@
     |\lambda E - A| = (\lambda-\frac{1}{2})(\lambda-\frac{3}{2m})-\frac{1}{2m^2} = \lambda^2-\frac{m+3}{2m}\lambda+\frac{3m-2}{4m^2} = 0 \\
     \lambda = \frac{\frac{m+3}{2m} \pm \sqrt{\left(\frac{m+3}{2m}\right)^2-4\frac{3m-2}{4m^2}}}{2} \notin Z \\ 
 \end{align*}
+
+
 \clearpage
 \begin{align*}
     \lim_{x \to 0} \frac{\int_{0}^{x}t\cos t\mathrm{d}t - 1 + \cos x }{\sqrt{1+x\tan x}-\sqrt{1+x\sin x}} = \\
@@ -293,12 +295,17 @@
 
 \clearpage
 \begin{align*}
-    f(x) = \frac{1}{x} - \frac{1}{\mathrm{e}^{x}-1} , \lim_{x \to 0}\frac{f(x)-\lim_{x \to 0}f(x)}{x} = ? \\ 
-    \lim_{x \to 0}f(x) = \lim_{x \to 0} \frac{\mathrm{e}^{x}-1-x}{x(\mathrm{e}^{x}-1)} = \lim_{x \to 0} \frac{1+x+\frac{x^2}{2}+o(x^2)-1-x}{x^2 +o(x^2)} = \frac{1}{2} \\
-    \lim_{x \to 0} \frac{ f(x) - \frac{1}{2}}{x} \\
-    = \lim_{x \to 0} \frac{2\mathrm{e}^{x}-2-2x-x\mathrm{e}^{x}+x}{2x^2 (\mathrm{e}^{x}-1)} = \lim_{x \to 0} \frac{2(1+x+\frac{x^2}{2}+\frac{x^3}{6}+o(x^3))-2-2x-x(1+x+\frac{x^2}{2}+o(x^2))+x}{2x^3+o(x^3)} \\
-    = \lim_{x \to 0} \frac{-\frac{1}{6}x^3+o(x^3)}{2x^3+o(x^3)} = -\frac{1}{12} \\
-    \lim_{x \to 0} \frac{\tan \tan x - \sin \sin x}{x^3} = \lim_{x \to 0} \frac{\tan \tan x - \tan \sin x }{x^3} + \frac{ \tan \sin x - \sin \sin x}{x^3} = \frac{1}{2} + \frac{1}{2} = 1\\
+    f(x) = \frac{1}{x} - \frac{1}{\mathrm{e}^{x}-1} \quad \lim_{x \to 0} \frac{f(x)-\lim_{x \to 0}f(x) - \left( \lim_{x \to 0}\frac{f(x)-\lim_{x \to 0}f(x)}{x} \right)x}{x^3} = ? \\ 
+    A = \lim_{x \to 0}f(x) \\ 
+    B = \lim_{x \to 0}\frac{f(x)-A}{x} \\ 
+    C = \lim_{x \to 0} \frac{f(x)-A-Bx}{x^3} \\ 
+    A = \lim_{x \to 0}f(x) = \lim_{x \to 0} \frac{\mathrm{e}^{x}-1-x}{x(\mathrm{e}^{x}-1)} = \lim_{x \to 0} \frac{1+x+\frac{x^2}{2}+o(x^2)-1-x}{x^2 +o(x^2)} = \frac{1}{2} \\
+    B = \lim_{x \to 0} \frac{ f(x) - \frac{1}{2}}{x} = \lim_{x \to 0} \frac{2\mathrm{e}^{x}-2-2x-x\mathrm{e}^{x}+x}{2x^2 (\mathrm{e}^{x}-1)} \\ 
+    = \lim_{x \to 0} \frac{2(1+x+\frac{x^2}{2}+\frac{x^3}{6}+o(x^3))-2-2x-x(1+x+\frac{x^2}{2}+o(x^2))+x}{2x^3+o(x^3)} = \lim_{x \to 0} \frac{-\frac{1}{6}x^3+o(x^3)}{2x^3+o(x^3)} = -\frac{1}{12} \\
+    C = \lim_{x \to 0} \frac{f(x)-\frac{1}{2}+\frac{1}{12}x}{x^3} = \lim_{x \to 0} \frac{12(\mathrm{e}^{x}-x-1)+(x^2-6x)(\mathrm{e}^{x}-1)}{12x^4(\mathrm{e}^{x}-1)} \\
+    = \lim_{x \to 0} \frac{x^2\mathrm{e}^{x}-6x\mathrm{e}^{x}+12\mathrm{e}^{x}-x^2-6x-12}{12x^5+o(x^5)} = \lim_{x \to 0} \frac{x^2(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3+o(x^3))}{12x^5} \\
+    + \frac{-6x(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3+\frac{1}{24}x^4+o(x^4))}{12x^5} + \frac{12(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3+\frac{1}{24}x^4+\frac{1}{120}x^5+o(x^5))}{12x^5} \\
+    + \frac{-x^2-6x-12}{12x^5} = \lim_{x\to 0} \frac{\frac{1}{60}x^5+o(x^5)}{12x^5+o(x^5)} = \frac{1}{720}\\
 \end{align*}
 
 \clearpage 
@@ -430,6 +437,7 @@
 
 \clearpage
 \begin{align*}
+    \int \frac{\sin x \cos x}{\sin x + \cos x} \mathrm{d}x = ? \\
     \sin x = \frac{2\sin \frac{x}{2}\cos \frac{x}{2}}{\sin^2 \frac{x}{2} + \cos^2 \frac{x}{2}} = \frac{2u}{u^2 + 1} ,\tan x = \frac{2 u}{1 - u^2 } , \cos x = \frac{1 - u^2 }{1 + u^2 } \\
     \tan \frac{x}{2} = u , x = 2\arctan u ,\mathrm{d}x = \frac{2\mathrm{d}u}{u^2+1}\\
     \int \frac{\sin x\cos x}{\sin x + \cos x} \mathrm{d}x = \int \frac{\frac{2u}{u^2+1}\frac{1-u^2}{1+u^2}\frac{2}{u^2+1}}{\frac{2u}{u^2+1}+\frac{1-u^2}{1+u^2}}\mathrm{d}u = \int \frac{4u(1-u^2)}{(u^2+1)^2(1-u^2+2u)} \mathrm{d}u \\
@@ -437,5 +445,33 @@
     = \int \frac{\mathrm{d}(u^2+1)}{(u^2+1)^2} - \int \frac{\mathrm{d}\left(u+\frac{1}{u}\right)}{(u+\frac{1}{u})^2} + \int \frac{\mathrm{d} u}{(u-1+\sqrt{2})(u-1-\sqrt{2})} \\ 
     = \frac{u-1}{u^2+1} + \frac{1}{2\sqrt{2}}\left(\int \frac{\mathrm{d}(u-1-\sqrt{2})}{u-1-\sqrt{2}} - \int \frac{\mathrm{d}(u-1+\sqrt{2})}{u-1+\sqrt{2}}\right)\\
     = \frac{u-1}{u^2+1} + \frac{\sqrt{2}}{4}\ln\left|\frac{u-1-\sqrt{2}}{u-1+\sqrt{2}}\right|+ C = \frac{\tan \frac{x}{2}-1}{\tan^2 \frac{x}{2}+1} + \frac{\sqrt{2}}{4}\ln\left|\frac{\tan \frac{x}{2}-1-\sqrt{2}}{\tan \frac{x}{2} - 1+\sqrt{2}}\right|+ C \\
+\end{align*}
+
+\begin{align*}
+    \int \frac{ax^2+bx+c}{\sqrt{mx^2+nx+p}}\mathrm{d}x = \int \frac{\frac{a}{m}(mx^2+nx+p) + \left(b - \frac{an}{m}\right)x+c-\frac{ap}{m}}{A(x)} \mathrm{d}x = \frac{a}{m}\int A(x) \mathrm{d}x \\
+    + \left(b - \frac{an}{m}\right) \int \frac{x}{\sqrt{m(x+\frac{n}{2m})^2+p-\frac{n^2}{4m}}} \mathrm{d}x + \left(c-\frac{ap}{m}\right)\int \frac{\mathrm{d}x}{A(x)} \\
+    \int \frac{\mathrm{d}x}{x-\sqrt{x^2-1}} = \int x+\sqrt{x^2-1} \mathrm{d}x \underrightarrow{x = \sec u} = \frac{x^2}{2} + \int (\sec^3 u - \sec u) \mathrm{d}u + C \\
+    = \frac{x^2}{2} + \frac{1}{2} \left(\sec u\tan u - \ln|\sec u + \tan u|\right) + C = \frac{x^2}{2} + \frac{1}{2}\left( x\sqrt{x^2-1}-\ln|x+\sqrt{x^2-1}|\right) + C\\
+    \int \frac{x\mathrm{d}x}{\sqrt{-x^2+2x+3}} = -\frac{1}{2} \int \frac{\mathrm{d}(-x^2+2x+3)}{\sqrt{-x^2+2x+3}} + \int \frac{\mathrm{d}(\frac{x-1}{2})}{\sqrt{1-(\frac{x-1}{2})^2}} = - \sqrt{-x^2+2x+3} + \arcsin\frac{x-1}{2} + C \\
+    \left\{
+        \begin{array}{rl}
+            I_{1} = \int \frac{\sin x}{\sin x + \cos x} \mathrm{d}x \\
+            I_{2} = \int \frac{\cos x}{\sin x + \cos x} \mathrm{d}x \\
+        \end{array}
+    \right. \\
+    \left\{
+        \begin{array}{rl}
+            I_{1} + I_{2} = x + C_{1} \\
+            I_{2} - I_{1} = \ln |\sin x + \cos x| + C_{2} \\         
+        \end{array}
+    \right. \\
+    I_{1} = \frac{x}{2}- \frac{1}{2} \ln |\sin x + \cos x| + C \\ 
+    f(\sin^2 x) = \frac{x}{\sin x} ,\int \frac{\sqrt{x}}{\sqrt{1-x}}f(x)\mathrm{d}x \\
+    \sin^2 x = u , \sin x = \sqrt{u} , x = \arcsin \sqrt{u},f(u) = \frac{\arcsin \sqrt{u}}{\sqrt{u}} \\
+    \int \frac{\arcsin \sqrt{x}}{\sqrt{1-x}} \mathrm{d}x , \sqrt{x} = t,x = t^2,\mathrm{d}x = 2t\mathrm{d}t \\
+    \int \frac{2t\arcsin t}{\sqrt{1-t^2}} \mathrm{d}t = -2 \int \arcsin t \mathrm{d}(\sqrt{1-t^2}) = -2 \arcsin t\sqrt{1-t^2} + 2t + C \\
+    = -2\sqrt{1-x}\arcsin \sqrt{x} + 2\sqrt{x} + C \\ 
+   \int xf(x)\mathrm{d}x = \arcsin x + C ,xf(x) = \frac{1}{\sqrt{1-x^2}} , \frac{1}{f(x)} = x\sqrt{1-x^2} \\
+   -\frac{1}{2} \int \sqrt{1-x^2} \mathrm{d}(1-x^2) = -\frac{1}{3}(1-x^2)^{\frac{3}{2}} + C\\
 \end{align*}
 \end{document}
