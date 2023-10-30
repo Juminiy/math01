@@ -469,27 +469,79 @@
 
 \clearpage
 
-$\bm{Variable \quad Digital \quad Properties}$ \\ 
+$\bm{Random \quad Variable \quad Digital \quad Properties \quad }$ \\ 
 \begin{tabular}{|c|c|c|c|c|}%
     \hline 
     Distr & Mark & EX & DX & Addition \\ 
     \hline 
-    Bin & $B(n,p)$ & $np$ & $np(1-p)$ & $P\{X=k\}$ = $\mathbf{C_{n}^k}(1-p)^{n-k}p^k$\\ 
+    Bin & $B(n,p)$ & $np$ & $np(1-p)$ & $P\{X=k\}$ = $\mathbf{C_{n}^k}(1-p)^{n-k}p^k$ \\ 
     \hline 
-    Poi & $P(\lambda)$ & $\lambda$ & $\lambda$ & $P\{X=k\} = \frac{\lambda^k}{k!}\mathrm{e}^{-\lambda}, k = 0,1,2,...$ \\ 
+    Poi & $\pi(\lambda)$ & $\lambda$ & $\lambda$ & $P\{X=k\} = \frac{\lambda^k}{k!}\mathrm{e}^{-\lambda}, k = 0,1,2,...$  \\ 
     \hline 
-    Geo & $G(p)$ & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ & $P\{X=k\} = (1-p)^{k-1}p,k=1,2,...$\\ 
+    Geo & $G(p)$ & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ & $P\{X=k\} = (1-p)^{k-1}p,k=1,2,...$ \\ 
     \hline 
     Hyp & $H(n,M,N)$ & $\frac{nM}{N}$ & $\frac{nM}{N}(1-\frac{M}{N})(\frac{N-n}{N-1})$ & $P\{X=i\} = \frac{\mathbf{C}_{M}^{i}\mathbf{C}_{N-M}^{n-i}}{\mathbf{C}_{N}^{n}}$ \\ 
     \hline 
-    Uni & $U(a,b)$ & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ \\ 
+    Uni & $U(a,b)$ & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ & \\ 
     \hline 
-    Exp & $E(\lambda)$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ \\ 
+    Exp & $E(\lambda)$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ & \\ 
     \hline 
-    Nor & $N(\mu,\sigma^2)$ & $\mu$ & $\sigma^2$ \\ 
+    Nor & $N(\mu,\sigma^2)$ & $\mu$ & $\sigma^2$ & \\ 
     \hline 
 \end{tabular}
 
+\clearpage
+$\bm{Random \quad Variable \quad Characteristic \quad Function}$ \\ 
+\begin{tabular}{|c|c|c|c|}%
+    \hline 
+    Distr & Mark  & $\phi_{X}(t)$ = E($\mathrm{e}^{itX}$) & E(X$^{k}$) = $(-i)^{k}\phi_{X}^{(k)}(0) , \quad \mathrm{E}(|X|^{n}) < +\infty$ \\ 
+    \hline 
+    Bin & $B(n,p)$  & $(\mathrm{e}^{it}p+1-p)^n$ \\ 
+    \hline 
+    Poi & $\pi(\lambda)$  & $\mathrm{e}^{(\mathrm{e}^{it}-1)\lambda}$\\ 
+    \hline 
+    Geo & $G(p)$ & \\ 
+    \hline 
+    Hyp & $H(n,M,N)$  &\\ 
+    \hline 
+    Uni & $U(a,b)$  &  $\frac{\sin tb - \sin ta}{(b-a)t} - i \frac{\cos tb - \cos ta}{(b-a)t}$ \\ 
+    \hline 
+    Exp & $E(\lambda)$ & $\frac{\lambda^2}{\lambda^2+t^2} + i \frac{\lambda t}{\lambda^2+t^2}$ \\ 
+    \hline 
+    Nor & $N(\mu,\sigma^2)$ & $ \mathrm{e}^{-\frac{1}{2}\sigma^2 t^2+i\mu t}$\\ 
+    \hline 
+\end{tabular}
+
+\clearpage
+
+\begin{align*}
+    \mathrm{Abstract \quad Probability \quad SUM}\\
+    \mathrm{E(X)} =
+    \left\{
+        \begin{array}{rl}
+            \sum_{\omega \in S} R(\omega) \mathrm{Pr}(\omega) ,\quad Discrete\\ 
+            \int_{\Omega} X \mathrm{d}P ,\quad Continuous
+        \end{array}
+    \right.\\ \quad \\ 
+    \mathrm{Numeric \quad Sum \quad And \quad Integral}\\
+    \mathrm{E(X)} =
+    \left\{
+        \begin{array}{rl}
+            \sum_{i=1}^{n}x_{i}P(x_{i}),\quad Discrete\\ 
+            \int_{-\infty}^{+\infty} x \mathrm{d}F(x) ,\quad Continuous
+        \end{array}
+    \right.\\
+    \\
+    \Omega \quad \Longrightarrow_{h(\omega)}^{MAP} \quad R \\
+    h(\omega) = \sum_{k=1}^{n}a_{k}I_{A_{k}}(\omega) \quad A_{1} \cup A_{2} \cup \cdots \cup  A_{n} = \Omega \\
+    \mathrm{E}(h) = \sum_{k=1}^{n} a_{k}P(A_{k}) \\
+    def. \quad X^{+} = X \vee 0 \quad X^{-} = -X \vee 0 \quad X = X^{+} - X^{-} \\
+    \int_{\Omega}X\mathrm{d}P = \int_{\Omega}X^{+}\mathrm{d}P - \int_{\Omega}X^{-}\mathrm{d}P \\
+    \mathrm{Dimension \quad Extend} \\ 
+    \vec{X} = (X_{1},X_{2}, \cdots , X_{n}) \in R^{n}\\
+\end{align*}
+
+\clearpage
 \begin{align*} 
     \mathbf{Uni} : f(x) = \left\{
         \begin{array}{rl}
@@ -757,6 +809,25 @@ $\bm{Variable \quad Digital \quad Properties}$ \\
     = \mathrm{e}+\frac{\mathrm{e}+\mathrm{e}^{-1}}{2}+\frac{\mathrm{e}}{3}+\frac{2}{3}\cos{\frac{\sqrt{3}}{2}}\mathrm{e}^{-\frac{1}{2}} + \frac{\mathrm{e}+\mathrm{e}^{-1}}{4}+\frac{\cos 1}{2} \\ 
     = \frac{2}{3}\cos{\frac{\sqrt{3}}{2}}\mathrm{e}^{-\frac{1}{2}} + \frac{\cos 1}{2} + \frac{3}{4}\mathrm{e}^{-1}+\frac{25}{12}\mathrm{e} 
 \end{align*}
+
+
+\clearpage 
+
+\begin{align*}
+    \lim_{n \to \infty}\sum_{k=1}^{n} k(1-p)^{k-1} p = 3 \\
+    p\sum_{k=1}^{n}kq^{k-1} = pf(q) = (1-q)f(q) = g(q)\\
+    f(q) = \frac{g(q)}{1-q} \quad \underrightarrow{integral} \quad \int f(q) \mathrm{d}q = \int \frac{g(q)}{1-q}\mathrm{d}q\\
+    \sum_{k=1}^{n}q^{k} = \frac{q}{1-q} = \int \frac{g(q)}{1-q}\mathrm{d}q \quad \underrightarrow{derivation} \quad \frac{(1-q)+q}{(1-q)^2} = \frac{g(q)}{1-q}\\
+    p = \frac{1}{3} \\ 
+    \lim_{n \to \infty}\sum_{k=2}^{n} k[(1-p)^{k-1}p + p^{k-1}(1-p)] = 3 \\ 
+    G(p) = p\sum_{k=2}^{n}k(1-p)^{k-1} + (1-p)\sum_{k=2}^{n}kp^{k-1} \\
+    F(x) = (1-x)\sum_{k=2}^{n}kx^{k-1} \\ \frac{F(x)}{1-x} = \sum_{k=2}^{n}kx^{k-1} \quad \underrightarrow{integral} \quad \\
+    \int \frac{F(x)}{1-x} \mathrm{d}x = \frac{x^2}{1-x} \quad \underrightarrow{derivation} \quad \frac{F(x)}{1-x} = \frac{2x(1-x)+x^2}{(1-x)^2}\\
+    F(x) = \frac{(2-x)x}{1-x}, \quad G(p) = F(1-p) + F(p) = \frac{(1-p)(1+p)}{p} + \frac{(2-p)p}{1-p} = 3\\
+    p = \frac{1}{2} \\ 
+\end{align*}
+
+
 
 \end{document}
 

@@ -1,0 +1,196 @@
+%!TEX program = pdflatex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{array,tabularx} 
+\usepackage{amssymb}
+% \usepackage{txfonts}
+\begin{document}
+\begin{align*}
+    A(x) = \sum_{i=0}^{n-1}a_{i}x^{i}, B(x) = \sum_{i=0}^{m-1}b_{i}x^{i} \\
+    C(x) = A(x) \cdot B(x) = \sum_{i=0}^{n+m-1}c_{i}x^{i} \\ 
+    \star \quad k = 2^{\lceil\log_{2}(n+m)\rceil}\\
+    \\
+   \mathrm{Matrix \quad Transform}\\
+    (x_{0}.x_{1},..,x_{k-1}), \quad \{(a_{0},a_{1},...,a_{n-1})\} \quad \underrightarrow{A(x)} \quad (x_{0},y_{0}),(x_{1},y_{1}),...,(x_{k-1},y_{k-1}) \\
+    \\
+    (x_{0}.x_{1},..,x_{k-1}), \quad \{(b_{0},b_{1},...,b_{m-1})\} \quad \underrightarrow{B(x)} \quad (x_{0},z_{0}),(x_{1},z_{1}),...,(x_{k-1},z_{k-1}) \\
+    \mathbf{X_{k}} = \left(
+        \begin{array}{cccc}
+            1 & 1 & ... &1 \\ 
+            x_{0}^{1} & x_{1}^{1} & ... & x_{k-1}^{1} \\ 
+            x_{0}^{2} & x_{1}^{2} & ... & x_{k-1}^{2}\\  
+            \vdots & \vdots & \ddots & \vdots \\ 
+            x_{0}^{k-1} & x_{1}^{k-1} & ... & x_{k-1}^{k-1}\\
+        \end{array}
+    \right) \quad \vec{\mathrm{a}} = \left(
+        \begin{array}{c}
+            a_{0} \\
+            a_{1} \\  
+            \vdots \\
+            a_{n-1} \\ 
+         \end{array}
+    \right) \quad \vec{\mathrm{b}} = \left(
+        \begin{array}{c}
+            b_{0} \\
+            b_{1} \\  
+            \vdots \\
+            b_{m-1} \\ 
+         \end{array}
+    \right)\\
+    \mathrm{a}^{\mathrm{T}} \mathbf{X_{n}} = \mathrm{y}^{\mathrm{T}} ,     \mathrm{b}^{\mathrm{T}} \mathbf{X_{m}} = \mathrm{z}^{\mathrm{T}} \\    
+    \\
+    \mathrm{Matrix \quad Inverse \quad Transform}\\
+    (x_{0},y_{0}\cdot z_{0}),(x_{1},y_{1}\cdot z_{1}),...,(x_{k-1},y_{k-1}\cdot z_{k-1}) \rightarrow C(x)\{(c_{0},c_{1},...,c_{n+m-1})\}\\ 
+    \\
+    \mathrm{t} = \mathrm{hadamard(y,z)}, \quad \mathrm{c^{\mathrm{T}}}\mathbf{X_{k}} = \mathrm{t^{\mathrm{T}}}, \rightarrow \mathrm{c^{\mathrm{T}}} = \mathbf{X_{k}^{-1}}\mathrm{t^{\mathrm{T}}}\\
+\end{align*}
+
+\clearpage
+
+\begin{align*}
+    \mathrm{Euler \quad formula} \\
+    \mathrm{e}^{i\theta} = \cos \theta + i\sin \theta\\
+    \mathrm{e}^{2\pi i} = 1,\forall \theta, \mathrm{e}^{i(\theta+2\pi)} = \mathrm{e}^{i\theta}\\
+    \omega_{n}^{k} = \mathrm{e}^{\frac{2\pi i}{n}k}, \quad (\omega_{n}^{k})^{j} = \mathrm{e}^{\frac{2\pi i}{n}kj} = \cos (\frac{2\pi }{n}kj) + i\sin (\frac{2\pi}{n}kj)\\
+    (1). \omega_{n}^{k+\frac{n}{2}} = \mathrm{e}^{\frac{2\pi i}{n}(k+\frac{n}{2})} = -\mathrm{e}^{\frac{2\pi i}{n}k} = -\omega_{n}^{k}\\
+    (2). \omega_{2n}^{2k} = \omega_{n}^{k} \\ 
+    (3). \omega_{n}^{-k} = 1 * \mathrm{e}^{\frac{2\pi i}{n}(-k)} = \mathrm{e}^{\frac{2\pi i}{n}(n-k)} = \omega_{n}^{n-k}
+\end{align*}
+
+\begin{align*}
+    \mathrm{FFT} \\
+    \mathrm{DFT} : \quad X_{k} = \sum_{j=0}^{n-1}x_{j}\mathrm{e}^{\frac{2\pi i}{n}kj}\\
+    \mathrm{IDFT} : \quad x_{j} = \frac{1}{n}\sum_{k=0}^{n-1}X_{k}\mathrm{e}^{-\frac{2\pi i}{n}jk}\\
+    \omega  = \mathrm{e}^{\frac{2 \pi i}{N}}, N = n+m\\
+    c_{j} = f(j), C_{k} = C(\omega_{k})\\ 
+    C_{k} = C(\omega_{k}) = \sum_{j=0}^{N-1}c_{j}(\omega^{k})^{j} = \sum_{j=0}^{N-1}c_{j}\mathrm{e}^{\frac{2\pi i}{N}kj}\\
+    c_{j} = \frac{1}{N}\sum_{j=0}^{N-1}C_{k}\mathrm{e}^{-\frac{2\pi i}{N}jk}\\
+\end{align*}
+
+\begin{align*}
+    \mathrm{Div \quad and \quad conquer} \\
+    H(x) = \sum_{i=0}^{n-1}a_{i}x^{i} = \sum_{i=0}^{\frac{n}{2}-1}a_{2i}x^{2i} + x\left(\sum_{i=0}^{\frac{n}{2}-1}a_{2i+1}x^{2i}\right)\\
+    H(x) = H_{1}(x^2)+xH_{2}(x^2)\\
+    A(\omega_{n}^{k}) = A_{1}(\omega_{n}^{2k}) + xA_{2}(\omega_{n}^{2k}) = A_{1}(\omega_{\frac{n}{2}}^{k}) + \omega_{n}^{k} A_{2}(\omega_{\frac{n}{2}}^{k})\\
+    A(\omega_{n}^{k+\frac{n}{2}}) = A(-\omega_{n}^{k}) = A_{1}(w_{\frac{n}{2}}^{k}) - \omega_{n}^{k} A_{2}(\omega_{\frac{n}{2}}^{k})\\
+\end{align*}
+
+
+\begin{align*}
+    \mathrm{Strassen \quad Matrix \quad Multiply} \\
+    A_{2^{k} \cdot 2^{k}} = \left(
+        \begin{array}{cc}
+            A_{11} & A_{12} \\ 
+            A_{21} & A_{22} \\
+        \end{array} 
+    \right)_{(2^{k-1} \cdot 2^{k-1}) * 4} \quad B_{2^{k} \cdot 2^{k}} = \left(
+        \begin{array}{cc}
+            B_{11} & B_{12} \\ 
+            B_{21} & B_{22} \\
+        \end{array} 
+    \right)\\
+    S_1 = B_{12} - B_{22} \quad 
+    S_2 = A_{11} + A_{12}\\
+    S_3 = A_{21} + A_{22} \quad 
+    S_4 = B_{21} - B_{11}\\
+    S_5 = A_{11} + A_{22}\quad 
+    S_6 = B_{11} + B_{22}\\
+    S_7 = A_{12} - A_{22}\quad 
+    S_8 = B_{21} + B_{22}\\
+    S_9 = A_{11} - A_{21}\quad 
+    S_{10} = B_{11} + B_{12} \\
+    P_1 = A_{11} \cdot S_{1} \quad 
+    P_2 = S_{2} \cdot B_{22} \\
+    P_3 = S_{3} \cdot B_{11} \quad 
+    P_4 = A_{22} \cdot S_{4} \\
+    P_5 = S_{5} \cdot S_{6} \quad 
+    P_6 = S_{7} \cdot S_{8} \quad 
+    P_7 = S_{9} \cdot S_{10}\\
+    C_{11} = P_5 + P_4 - P_2 + P_6\\C_{12} = P_1 + P_2\\C_{21} = P_3 + P_4\\C_{22} = P_5 + P_1 - P_3 - P_7
+\end{align*}
+
+
+\clearpage
+
+\begin{align*}
+    % f(x,y) = \frac{1}{2}\mathrm{e}^{-y}, y> |x| , x \in (-\infty,+\infty) \\
+    f(x,y) = \left\{ 
+    \begin{array}{rl} 
+        \frac{1}{2}\mathrm{e}^{-y}, y> |x| , x \in (-\infty,+\infty)\\
+        0, others \\ 
+    \end{array} \right.  \\ \\
+    f_{X}(x) = \int_{|x|}^{+\infty} \frac{1}{2}\mathrm{e}^{-y}\mathrm{d}y = -\frac{1}{2}\mathrm{e}^{-y} |_{|x|}^{+\infty} = \frac{1}{2}\mathrm{e}^{-|x|}, x \in (-\infty,+\infty)  \\
+    % f_{Y}(y) = \int_{-y}^{+y} \frac{1}{2}\mathrm{e}^{-y}\mathrm{d}x = \frac{1}{2}\mathrm{e}^{-y} \cdot 2y = y\mathrm{e}^{-y}, y \in (0,+\infty) \\
+    % f_{Y}(y) = 0, y \in (-\infty,0) \\
+    f_{Y}(y) = \left\{ 
+    \begin{array}{rl} 
+        \int_{-y}^{+y} \frac{1}{2}\mathrm{e}^{-y}\mathrm{d}x = \frac{1}{2}\mathrm{e}^{-y} \cdot 2y = y\mathrm{e}^{-y}, y \in (0,+\infty) \\
+        0, y \in (-\infty,0) \\
+    \end{array} \right. \ \\ 
+    \\
+    obviously \quad f(x,y) \neq f_{X}(x) \cdot f_{Y}(y) \\
+    f_{Y|X}(y|x) = \frac{f(x,y)}{f_{X}(x)} = \frac{\frac{1}{2}\mathrm{e}^{-y}}{\frac{1}{2}\mathrm{e}^{-|x|}} = \mathrm{e}^{-y+|x|}, y \in (|x|,+\infty)\\
+    \\
+    f(x,y) = \left\{ 
+    \begin{array}{rl} 
+        \frac{1}{x}\mathrm{e}^{-2x}, y \in (0,2x), x \in (0,+\infty)\\
+        0, others \\ 
+    \end{array} \right.  \\
+    \left\{
+        \begin{array}{rl} 
+        U = 2X\\
+        V = X+Y \\ 
+        \end{array}\right. \rightarrow \left\{
+            \begin{array}{rl} 
+            X= \frac{1}{2}U + 0 \cdot V\\
+            Y = -\frac{1}{2}U +V\\ 
+            \end{array}\right. \\
+    \\
+    J = \left| \begin{array}{cc} 
+        \frac{\partial X}{\partial U} & \frac{\partial X}{\partial V} \\ 
+        \\
+        \frac{\partial Y}{\partial U} & \frac{\partial Y}{\partial V} \\
+    \end{array}
+        \right| =\left| \begin{array}{cc} 
+        \frac{1}{2} & 0 \\ 
+        \\
+        -\frac{1}{2} & 1 \\
+    \end{array}
+        \right| = \frac{1}{2}\\
+        \\
+        \frac{u}{2} \in (0,+\infty) , -\frac{u}{2}+v \in (0,u)\\
+        g(u,v) = f(\frac{u}{2},-\frac{u}{2}+v)|J| = \frac{2}{u}\mathrm{e}^{-u} \cdot \frac{1}{2} = \frac{\mathrm{e}^{-u}}{u} , u \in (0,+\infty), v \in (\frac{u}{2},\frac{3u}{2})\\
+        g(u,v) = 0, others\\
+        \\
+        Y \sim U(0,1)\\
+    F_{Y}(y) = P(Y <= y) = P (g(X) <= y)  = F_{X}(g^{-1}(y)) \\
+    F_{Y}(y) = F_{X}(F^{-1}(y)) = y  , y \in (0,1) \
+\end{align*}
+
+\begin{align*}
+    \mathrm{Pr}[X=k] = \frac{2^{k-1}+2}{3^k} \\ 
+    \mathrm{Ex}[X] = \lim_{n \to \infty} \sum_{k=2}^{n} \mathrm{Pr}[X=k] \cdot k = \sum_{k=2}^{\infty} \left[\frac{1}{2}\left(\frac{2}{3}\right)^k k + 2 \left(\frac{1}{3}\right)^k k \right] \\ 
+    = \frac{1}{2} \left(\frac{\frac{2}{3}}{\left(1-\frac{2}{3}\right)^2} - \frac{2}{3}\right) + 2\left(\frac{\frac{1}{3}}{\left(1-\frac{1}{3}\right)^2}-\frac{1}{3}\right) = \frac{7}{2} = 3.5\\
+\end{align*}
+
+\begin{align*}
+    \phi_{X}(t) = \mathrm{E}(\mathrm{e}^{itx})\\
+    f(x) = \frac{1}{b-a}, x \in (a,b)\quad \phi_{x}(t) = \int_{a}^{b} \mathrm{e}^{itx}\frac{1}{b-a} \mathrm{d}x = \frac{-i}{(b-a)t} \mathrm{e}^{itx} |_{a}^{b} = \frac{-i(\mathrm{e}^{itb}-\mathrm{e}^{ita}) }{(b-a)t}\\
+    t \sim N(0,1) \quad \phi(t) = \mathrm{e}^{-\frac{t^2}{2}}\\
+    Y = aX + b \\ 
+    \phi_{Y}(t) = \phi_{(aX+b)}(t) = \mathrm{E}(\mathrm{e}^{it(ax+b)})=\mathrm{e}^{itb}\phi_{X}(at)\\
+\end{align*}
+
+\begin{align*}
+    x^2+y^2 = 1, \quad x+\frac{1}{y+2} \in \quad ? \\ 
+    = \cos \theta + \frac{1}{\sin \theta + 2}, \quad \theta \in [0,2\pi] \\
+    f(\theta) = F(x(\theta),y(\theta)) \\
+    f'(\theta) = -\sin \theta-\frac{\cos \theta}{(\sin \theta +2)^2} = -\cos \theta \left(\tan \theta+\frac{1}{(\sin \theta +2)^2} \right)\\
+    \frac{xy+2x+1}{y+2}\\
+    2x+2y(x)y'(x)=0, y'(x) = -\frac{x}{y(x)} , y(x) \neq 0\\
+    F(x) = x + \frac{1}{y(x)+2}, F'(x) = 1-\frac{y'(x)}{(y(x)+2)^2}\\
+    F'(x) = 1 + \frac{x}{y(x)(y(x)+2)^2}\\
+\end{align*}
+
+\end{document}

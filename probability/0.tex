@@ -1,0 +1,51 @@
+%!TEX program = pdflatex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{array,tabularx} 
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+% \usepackage{txfonts}
+\begin{document}
+
+\section*{Ch17.3}
+\begin{align*}
+    New \quad York \quad Yankees \quad win \quad : A,P(A) = \frac{2}{5} \\ 
+    \quad Boston \quad Red \quad Sox \quad win \quad : B,P(B) = \frac{3}{5} \\
+    Step1. S={(A,A),(A,B,A),(A,B,B),(B,A,A),(B,A,B),(B,B)} \\
+    Step2. (1). play \quad 3 \quad games: {(A,B,A),(A,B,B),(B,A,A),(B,A,B)} \\ 
+    (2). winner \quad lose \quad the \quad first \quad game: {(B,A,A),(A,B,B)} \\
+    (3). correct \quad team \quad win: {(A,B,B),{B,A,B},{B,B}}\\
+    Step3. Tree \quad Diagram   \\   
+    \Tree 
+    [..
+    [.A [.A ] [.B [.A ] [.B ] ] ] 
+    [.B [.A [.A ] [.B ] ] [.B ] ]
+    ]
+    \\ 
+    Step4. \\ 
+    (1). In \quad 3 \quad games, probability \quad is: 
+    \frac{2}{5}*\frac{3}{5}+\frac{3}{5}*\frac{2}{5} = \frac{12}{25}\\ 
+    (2). winner \quad lose \quad the \quad first \quad game: \frac{3}{5}*\frac{2}{5}*\frac{2}{5} + \frac{2}{5}*\frac{3}{5}*\frac{3}{5} = \frac{6}{25} \\
+    (3). correct \quad team \quad win: \frac{2}{5}*\frac{3}{5}*\frac{3}{5} + \frac{3}{5}*\frac{2}{5}*\frac{3}{5}+\frac{3}{5}*\frac{3}{5} = \frac{81}{125}\\
+\end{align*}
+
+\clearpage
+
+\section*{Ch17.8}
+(a) The system fails if any component fails. If we assume that only one component can fail at a time, then the probability of system failure is the same as the probability of a single component failing, which is p. This is because the failure of any single component leads to system failure. The sum of the probabilities of all outcomes (each component failing or not failing) is 1, as required by the axioms of probability. \\
+(b).On the other hand, if we assume that multiple components can fail independently within a year, then the probability of system failure increases. In the worst-case scenario, all components fail within a year. The probability of each component failing is p, and there are n components, so the total probability is np. Again, the sum of all outcome probabilities is 1. \\
+(c). To prove inequality (17.10), we need to consider both scenarios described above. The lower bound p corresponds to the scenario where only one component can fail at a time, leading to system failure. The upper bound np corresponds to the scenario where all components can fail independently within a year, leading to system failure. Therefore, for any given system and failure probability p, the actual probability of system failure within a year lies between p and np. \\ 
+
+
+\clearpage
+
+\section*{Ch1.1}
+1. According to the additivity of probabilities, if events are mutually exclusive (that is, they cannot occur at the same time), then the probability of their union is the sum of their individual probabilities. That is, if A1, A2,…, An are mutually exclusive events, then $P(A_{1} \cup A_{2} \cup ... \cup A_{n}) = P(A_{1}) + P(A_{2}) + … + P(A_{n})$ \\
+2. In the situation that problem is given, the probability $P(A_{i})$ of each event Ai is equal to 0. So even if we add up all these probabilities, the sum is still 0. Therefore, the probability $P(\cup_{i=1}^{n}A_{i})$ of the union of these events is also equal to 0. \\ 
+3. This proof assumes that the events are mutually exclusive. If the events are not mutually exclusive (i.e. they can occur simultaneously), then we cannot simply add the individual probabilities to get the probability of the union. However, since each event has a probability of 0, even if the events are not mutually exclusive, the probability of their union should be 0. Because non-zero probability events cannot arise from zero probability events. \\ 
+
+\section*{Ch1.4}
+$\{\Omega , \varnothing , A, B, A \cup B , A \cap B , \mathrm{C_{A}}, \mathrm{C_{B}}, \mathrm{C_{A \cup B}}, \mathrm{C_{A \cap B}} \}$
+\end{document}

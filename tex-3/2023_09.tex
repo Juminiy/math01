@@ -1,0 +1,38 @@
+%!TEX program = pdflatex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{array,tabularx} 
+\usepackage{amssymb}
+% \usepackage{txfonts}
+\begin{document}
+
+\begin{align*}
+    \exists \tan x = t, \quad \sec x = \sqrt{t^2+1}\\ 
+    \int \frac{1}{\sin^3 x + \cos^3 x} \mathrm{d}x = \int \frac{\sec^3 x\mathrm{d}x}{\tan^3 x+1} = \int \frac{\sec x\mathrm{d}(\tan x)}{\tan^3 x + 1} = \int \frac{\sqrt{t^2 + 1}\mathrm{d}t}{t^3+1} \\ 
+    = \int \frac{\sqrt{t^2 + 1}\mathrm{d}t}{(t+1)(t^2-t+1)} = \frac{\sqrt{t^2 + 1}\mathrm{d}t}{t+1} + \int \frac{\sqrt{t^2 + 1}\mathrm{d}t}{t^2-t+1}\\
+\end{align*}
+
+\clearpage
+
+\begin{align*}
+    \mathrm{PageRank}\\
+    \exists A \quad has \quad citations \quad from \quad T_{1},...,T_{n}\\
+    d \approx 0.85 | d \in (0,1) \\
+    PR(A) = (1-d) + d\sum_{i=1}^{n}\frac{PR(T_{i})}{C(T_{i})} \\
+    R(u) = c \sum_{v \in B_{u}} \frac{R(v)}{N_{v}}\\
+    if |B_{u}| = 1, \exists v_{\sigma} \in B_{u},\quad then \quad u \in F_{v_{\sigma}},R_{u} = \frac{cR_{v_{\sigma}}}{|F_{v_{\sigma}}|}\\
+    A_{u,v} = \left\{ 
+    \begin{array}{rl} 
+        \frac{1}{|F_{u}|},u \rightarrow v  \\ 
+        0, u \nrightarrow v \\
+    \end{array} \right. \ \\ 
+    R_{i} = cA_{u,v}R_{i-1}\\
+    R^{'}(u) = c\sum_{v \in B_{u}}\frac{R^{'}(v)}{N_{v}} + c\mathrm{E}(u)\\
+    R^{'}_{i} = c(A + E \times \mathrm{1})R^{'}_{i-1}
+\end{align*}
+
+\begin{align*}
+    \mathrm{Markov Chains}\\
+\end{align*}
+\end{document}
