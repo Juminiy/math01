@@ -1,0 +1,348 @@
+%!TEX program = pdflatex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{array,tabularx} 
+\usepackage{amssymb}
+% \usepackage{txfonts}
+\begin{document}
+
+\begin{align*}
+    \mathbf{Matrix \quad Calculation} \\  
+    \mathbf{A} = \left(
+        \begin{array}{ccc}
+            a_{11} & a_{12} & a_{13} \\ 
+            a_{21} & a_{22} & a_{23} \\ 
+            a_{31} & a_{32} & a_{33} \\  
+        \end{array}
+    \right) \quad \mathbf{A^{T}} = \left(
+        \begin{array}{ccc}
+            a_{11} & a_{21} & a_{31} \\ 
+            a_{12} & a_{22} & a_{32} \\ 
+            a_{13} & a_{23} & a_{33} \\  
+        \end{array}
+    \right) \\
+    \mathbf{A^{*}} = \begin{bmatrix} 
+        \mathbf{A_{11}} & \mathbf{A_{21}} & \mathbf{A_{31}} \\ 
+        \mathbf{A_{12}} & \mathbf{A_{22}} & \mathbf{A_{32}} \\ 
+        \mathbf{A_{13}} & \mathbf{A_{23}} & \mathbf{A_{33}} \\  
+    \end{bmatrix} 
+    \quad 
+    \mathbf{\alpha^{T}} = \left(
+        \begin{array}{c}
+            a_{1} \\
+            a_{2} \\  
+            a_{3} \\ 
+         \end{array}
+    \right) \quad 
+    |\mathbf{A}| =\det \mathbf{A} = \left|
+    \begin{array}{ccc}
+        a_{11} & a_{12} & a_{13} \\ 
+        a_{21} & a_{22} & a_{23} \\ 
+        a_{31} & a_{32} & a_{33} \\  
+    \end{array}
+    \right| \\ 
+    |\mathbf{A}| = \Pi_{i=1}^n{\lambda_{i}} \quad |k \mathbf{A}| = k^{n}|\mathbf{A}| \quad |\mathbf{A}\mathbf{B}|=|\mathbf{A}||\mathbf{B}| \quad |\mathbf{A}^{n}|=|\mathbf{A}|^{n}\\
+    |\mathbf{A}^{\mathbf{T}}| = |\mathbf{A}| \quad (k\mathbf{A})^{\mathbf{T}} = k\mathbf{A}^{\mathbf{T}} \quad (\mathbf{A}^{\mathbf{T}})^{\mathbf{T}} = \mathbf{A} \quad (\mathbf{A}^{n})^{\mathbf{T}} = (\mathbf{A}^{\mathbf{T}})^{n}\\  
+    |\mathbf{A}^{-1}| = \frac{1}{|\mathbf{A}|} \quad (k\mathbf{A})^{-1} = \frac{1}{k}\mathbf{A}^{-1} \quad (\mathbf{A}^{-1})^{-1} = \mathbf{A} \quad (\mathbf{A}^{n})^{-1} = (\mathbf{A}^{-1})^{n}\\
+    |\mathbf{A}^{*}| = |\mathbf{A}|^{n-1} \quad (k\mathbf{A})^{*} = k^{n-1}\mathbf{A}^{*} \quad (\mathbf{A}^{*})^{*} = |\mathbf{A}|^{n-2}\mathbf{A} \quad \mathbf{A}\mathbf{A}^{*} = \mathbf{A}^{*}\mathbf{A} = |\mathbf{A}|\mathbf{E}\\ 
+    (\mathbf{A}\mathbf{B}\mathbf{C})^{T} = \mathbf{C}^{\mathbf{T}}\mathbf{B}^{\mathbf{T}}\mathbf{A}^{\mathbf{T}} \quad (\mathbf{A}\mathbf{B}\mathbf{C})^{-1} = \mathbf{C}^{-1}\mathbf{B}^{-1}\mathbf{A}^{-1} \quad (\mathbf{A}\mathbf{B}\mathbf{C})^{\mathbf{*}} = \mathbf{C}^{\mathbf{*}}\mathbf{B}^{\mathbf{*}}\mathbf{A}^{\mathbf{*}} \\ 
+    \mathbf{diag}(a_{1},...,a_{n})\mathbf{diag}(b_{1},...,b_{n})=\mathbf{diag}(a_{1}b_{1},...,a_{n}b_{n}) \\ 
+    \Lambda = \mathbf{diag}(\lambda_{1},...,\lambda_{n}),|\Lambda| = \Pi_{i=1}^{n} \lambda_{i},\varphi(\Lambda) = \mathbf{diag}(\varphi(\lambda_{1}),...,\varphi(\lambda_{n}))\\
+    \Lambda = \left(
+        \begin{array}{cccc}
+            0 & 0 & \lambda_{1}\\
+            0 & \lambda_{i} & 0 \\
+            \lambda_{n} & 0 & 0\\
+        \end{array}
+    \right) \quad 
+    |\Lambda| = (-1)^{\frac{n(n-1)}{2}}\Pi_{i=1}^{n}\lambda_{i} \quad \Lambda^{-1} = \left(
+        \begin{array}{cccc}
+            0 & 0 & \frac{1}{\lambda_{n}}\\
+            0 & \frac{1}{\lambda_{i}} & 0 \\
+            \frac{1}{\lambda_{1}} & 0 & 0\\
+        \end{array}
+    \right) \\ 
+    \left|
+        \begin{array}{ccc}
+            \mathbf{A} & * \\ 
+            \mathbf{O} & \mathbf{B} \\ 
+        \end{array} 
+    \right| = 
+    \left|
+        \begin{array}{ccc}
+            \mathbf{A} & \mathbf{O} \\ 
+            \mathbf{*} & \mathbf{B} \\ 
+        \end{array} 
+    \right| = |\mathbf{A}||\mathbf{B}|\\ 
+    \left|
+        \begin{array}{ccc}
+            \mathbf{O} & \mathbf{A}_{mm} \\ 
+            \mathbf{B}_{nn} & \mathbf{*} \\ 
+        \end{array} 
+    \right| = 
+    \left|
+        \begin{array}{ccc}
+            \mathbf{*} & \mathbf{A}_{mm} \\ 
+            \mathbf{B}_{nn} & \mathbf{O} \\ 
+        \end{array} 
+    \right| = (-1)^{mn}|\mathbf{A}||\mathbf{B}|\\
+    \left(
+        \begin{array}{ccc}
+            \mathbf{A} & \mathbf{B} \\ 
+            \mathbf{C} & \mathbf{D} \\   
+        \end{array}
+    \right)^{\mathbf{T}} = 
+    \left(
+        \begin{array}{ccc}
+            \mathbf{A}^{\mathbf{T}} & \mathbf{C}^{\mathbf{T}} \\ 
+            \mathbf{B}^{\mathbf{T}} & \mathbf{D}^{\mathbf{T}} \\   
+        \end{array}
+    \right) \quad 
+    \left(
+        \begin{array}{ccc}
+            \mathbf{A} & 0 & 0 \\ 
+            0 & \mathbf{B} & 0 \\   
+            0 & 0 & \mathbf{C} \\ 
+        \end{array}
+    \right)^{-1} = \left(
+        \begin{array}{ccc}
+            \mathbf{A}^{-1} & 0 & 0 \\ 
+            0 & \mathbf{B}^{-1} & 0 \\   
+            0 & 0 & \mathbf{C}^{-1} \\ 
+        \end{array}
+    \right)  \\
+    \left(
+        \begin{array}{ccc}
+            \mathbf{A} \\
+            \mathbf{B} \\  
+        \end{array}
+    \right)^{\mathbf{T}} =  (\mathbf{A}^{\mathbf{T}},\mathbf{B}^{\mathbf{T}}) \quad 
+    \left(
+        \begin{array}{ccc}
+            0 & 0 & \mathbf{A} \\ 
+            0 & \mathbf{B} & 0 \\   
+            \mathbf{C} & 0 & 0 \\ 
+        \end{array}
+    \right)^{-1} = \left(
+        \begin{array}{ccc}
+            0 & 0 & \mathbf{C}^{-1} \\ 
+            0 & \mathbf{B}^{-1} & 0 \\   
+            \mathbf{A}^{-1} & 0 & 0 \\ 
+        \end{array}
+    \right) \\ 
+    \left(
+        \begin{array}{cccc}
+            \mathbf{A} & \mathbf{C} \\
+            \mathbf{O} & \mathbf{B} \\ 
+        \end{array}        
+    \right)^{-1} = \left(
+        \begin{array}{cccc}
+            \mathbf{A}^{-1} & -\mathbf{A}^{-1}\mathbf{C}\mathbf{B}^{-1} \\ 
+            \mathbf{O} & \mathbf{B}^{-1} \\ 
+        \end{array}
+    \right) \quad 
+    \left(
+        \begin{array}{cccc}
+            \mathbf{A} & \mathbf{O} \\
+            \mathbf{C} & \mathbf{B} \\ 
+        \end{array}        
+    \right)^{-1} = \left(
+        \begin{array}{cccc}
+            \mathbf{A}^{-1} & \mathbf{O} \\ 
+            -\mathbf{B}^{-1}\mathbf{C}\mathbf{A}^{-1} & \mathbf{B}^{-1} \\ 
+        \end{array}
+    \right) \\ 
+    \left(
+        \begin{array}{cccc}
+            \mathbf{C} & \mathbf{A} \\
+            \mathbf{B} & \mathbf{O} \\ 
+        \end{array}        
+    \right)^{-1} = \left(
+        \begin{array}{cccc}
+            \mathbf{O} & \mathbf{B}^{-1} \\ 
+            \mathbf{A}^{-1} & -\mathbf{A}^{-1}\mathbf{C}\mathbf{B}^{-1} \\ 
+        \end{array}
+    \right) \quad 
+    \left(
+        \begin{array}{cccc}
+            \mathbf{O} & \mathbf{A} \\
+            \mathbf{B} & \mathbf{C} \\ 
+        \end{array}        
+    \right)^{-1} = \left(
+        \begin{array}{cccc}
+            -\mathbf{B}^{-1}\mathbf{C}\mathbf{A}^{-1} & \mathbf{B}^{-1} \\ 
+            \mathbf{A}^{-1} & \mathbf{O}\\ 
+        \end{array}
+    \right) \\
+    \left(
+        \begin{array}{cccc}
+            \mathbf{A} & \mathbf{O} \\ 
+            \mathbf{O} & \mathbf{B} \\ 
+        \end{array}
+    \right)^{*} = \left(
+        \begin{array}{cccc}
+            |\mathbf{B}|\mathbf{A}^{*} & \mathbf{O} \\ 
+            \mathbf{O} & |\mathbf{A}|\mathbf{B}^{*} \\ 
+        \end{array}
+    \right) \quad 
+    \left(
+        \begin{array}{cccc}
+            \mathbf{O} & \mathbf{A_{mm}} \\ 
+            \mathbf{B_{nn}} & \mathbf{O} \\ 
+        \end{array}
+    \right)^{*} = (-1)^{mn}\left(
+        \begin{array}{cccc}
+            \mathbf{O} & |\mathbf{A}|\mathbf{B}^{*} \\ 
+            |\mathbf{B}|\mathbf{A}^{*} & \mathbf{O} \\ 
+        \end{array}
+    \right) \\  
+    \left(
+        \begin{array}{cccc}
+            \mathbf{A} & \mathbf{O} \\ 
+            \mathbf{O} & \mathbf{B} \\ 
+        \end{array}
+    \right)^{n} = \left(
+        \begin{array}{cccc}
+            \mathbf{A}^{n} & \mathbf{O} \\ 
+            \mathbf{O} & \mathbf{B}^{n} \\ 
+        \end{array}
+    \right) \quad  
+    \left(
+        \begin{array}{cccc}
+            \mathbf{O} & \mathbf{A} \\ 
+            \mathbf{B} & \mathbf{O} \\ 
+        \end{array}
+    \right)^{n} = \left(
+        \begin{array}{cccc}
+            \mathbf{not} & \mathbf{important} \\
+            \mathbf{at} & \mathbf{all} \\  
+        \end{array}
+    \right) \\
+\end{align*}
+
+\clearpage
+
+\begin{align*}
+    \mathbf{Matrix \quad Rank} \\       
+    r(\mathbf{A}^{*}) = \begin{cases} 
+            n & \text{if } r(\mathbf{A}) = n,\\ 
+            1 & \text{if } r(\mathbf{A}) = n-1,\\ 
+            0 & \text{if } r(\mathbf{A}) < n-1. 
+    \end{cases} \\ 
+    0 \le r(\mathbf{A_{mn}}) \le \min\{m, n\} \\
+    \max\{r(\mathbf{A}),r(\mathbf{B})\} \le \mathbf{r(\mathbf{A},\mathbf{B})} \le r(\mathbf{A})+r(\mathbf{B}) \\
+    r(\mathbf{A}) \le \mathbf{r(\mathbf{A},b)} \le r(\mathbf{A})+1 \\
+    \max\{r(\mathbf{A}),r(\mathbf{B})\} \le r\left(
+        \begin{array}{c}
+            \mathbf{A} \\ 
+            \mathbf{B} \\ 
+         \end{array} 
+    \right) \le r(\mathbf{A})+r(\mathbf{B}) \\   
+    r(\mathbf{A}\pm\mathbf{B}) \le r\left(
+        \begin{array}{c}
+            \mathbf{A} \pm \mathbf{B} \\ 
+            \mathbf{B} \\ 
+         \end{array} 
+    \right) = r(\mathbf{A}\pm\mathbf{B},\mathbf{B}) = r(\mathbf{A},\mathbf{B}) \le r(\mathbf{A})+r(\mathbf{B}) \\ 
+    r(\mathbf{A},\mathbf{B}) \le r\left(
+        \begin{array}{c}
+            \mathbf{A}^{\mathbf{T}} \\ 
+            \mathbf{B}^{\mathbf{T}} \\ 
+        \end{array}
+    \right) \neq r\left(
+        \begin{array}{c}
+            \mathbf{A} \\ 
+            \mathbf{B} \\ 
+        \end{array}
+    \right) = r(\mathbf{A},\mathbf{B}) \\ 
+    r(\mathbf{A})+r(\mathbf{B})-n \le r(\mathbf{AB}) \le \min\{r(\mathbf{A}),r(\mathbf{B})\} \\
+    r(\mathbf{A^{\mathbf{T}}A}) = r(\mathbf{AA^{\mathbf{T}}}) = r(\mathbf{A}^{\mathbf{T}}) = r(\mathbf{A}) = r(k\mathbf{A}),(\forall k \neq 0)\\
+    \exists \mathbf{A_{mn}B_{ns}} = \mathbf{O},r(\mathbf{A})+r(\mathbf{B}) \le n \\ 
+    \exists \mathbf{A_{mn}B_{ns}} = \mathbf{C_{ms}},\exists r(\mathbf{A})=n, r(\mathbf{B}) = r(\mathbf{C}) \\ 
+    \exists \mathbf{A_{mn}B_{ns}} = \mathbf{C_{ms}},\exists r(\mathbf{B})=n, r(\mathbf{A}) = r(\mathbf{C}) \\
+    \exists \mathbf{A_{nn}},\forall k \in \mathbf{N^{*}} ,r(\mathbf{A}^{n}) = r(\mathbf{A}^{n+k}) \Longrightarrow  r(\mathbf{A}) = r(\mathbf{A}^{2}) = ... =  r(\mathbf{A}^{n}) \\
+    r\left(
+        \begin{array}{ccc}
+            \mathbf{A}_{mm} & \mathbf{O} \\ 
+            \mathbf{O} & \mathbf{B}_{nn} \\ 
+        \end{array} 
+    \right) = r(\mathbf{A})+r({\mathbf{B}}) 
+\end{align*}
+
+\clearpage
+
+\begin{align*}
+    \mathbf{Similarity \quad Theory \quad and \quad Feature \quad Vector} \\ 
+    |\lambda\mathbf{E}-\mathbf{A}| = 0 \Rightarrow \lambda_{i},i \in [1,n] \\ 
+    |\lambda\mathbf{E}-\mathbf{A}| = \left( 
+        \begin{array}{ccc}
+            \lambda-a_{11} & ... & a_{1n} \\  
+            \vdots & \ddots & \vdots \\ 
+            a_{n1} & ... & \lambda-a_{nn} \\ 
+        \end{array}  
+    \right) = \lambda^{n}+\sum_{i=1}^{n}a_{ii}\lambda^{n-1}+...\\ 
+    \forall i\in [0,n],\exists \lambda_{i},f(\lambda_{i})=0 \Longrightarrow \Pi_{i=1}^{n}(\lambda-\lambda_{i}) = 0 \\ 
+    \lambda^{n}+\sum_{i=1}^{n}\lambda_{i}\lambda^{n-1}+...+ (-1)^{n}\Pi_{i=1}^{n}\lambda_{i} = 0 \Rightarrow \sum_{i=1}^{n}a_{ii} = \sum_{i=1}^{n}\lambda_{i} \\
+    \exists \lambda = 0, (-1)^{n}\Pi_{i=1}^{n}\lambda_{i}=|-\mathbf{A}|=(-1)^{n}|\mathbf{A}| \Rightarrow\Pi_{i=1}^{n}\lambda_{i} = |\mathrm{A}| \\ 
+\end{align*}
+
+\begin{align*}
+    \mathbf{Specially \quad n = 3} \\ 
+    |\lambda\mathbf{E}-\mathbf{A}| = \left( 
+        \begin{array}{ccc}
+            \lambda-a_{11} & a_{12} & a_{13} \\  
+            a_{21} & \lambda-a_{22} & a_{23}  \\ 
+            a_{31} & a_{32} & \lambda-a_{33} \\ 
+        \end{array}  
+    \right) = \lambda^{3}-\left(\sum_{i=1}^{3}a_{ii}\right)\lambda^{2}+\left(\sum_{i=1}^{3}\mathbf{A_{ii}}\right)\lambda-|\mathbf{A}|\\
+    \lambda^{3}-(a_{11}+a_{22}+a_{33})\lambda^{2}+(\mathbf{A_{11}}+\mathbf{A_{22}}+\mathbf{A_{33}})\lambda-|\mathbf{A}| = (\lambda-\lambda_{1})(\lambda-\lambda_{2})(\lambda-\lambda_{3}) \\ 
+    (\lambda-\lambda_{1})(\lambda-\lambda_{2})(\lambda-\lambda_{3}) = \lambda^{3}-(\lambda_{1}+\lambda_{2}+\lambda_{3})\lambda^{2}+(\lambda_{2}\lambda_{3}+\lambda_{1}\lambda_{3}+\lambda_{1}\lambda_{2})\lambda-(\lambda_{1}\lambda_{2}\lambda_{3}) \\ 
+    \sum_{i=1}^{3}\mathbf{A_{ii}} = \mathbf{tr}(\mathbf{A}^{*}) = (\lambda_{2}\lambda_{3}+\lambda_{1}\lambda_{3}+\lambda_{1}\lambda_{2})\\ 
+\end{align*}
+
+\begin{align*} 
+    \alpha^{\mathbf{T}}\alpha = \mathbf{tr(A)} \qquad r(\alpha\alpha^{\mathbf{T}}) = 1 \\ 
+    \alpha \alpha^{\mathbf{T}} \sim \left( 
+        \begin{array}{ccc} 
+            \mathbf{tr(A)} & 0 & 0 \\ 
+            0 & 0 & 0 \\ 
+            0 & 0 & 0 \\
+        \end{array}  
+    \right)_{nn} \\ 
+\end{align*}
+
+\begin{align*}
+    \mathbf{A} \sim \mathbf{B} \Longrightarrow \mathbf{A}^{\mathbf{T}} \sim \mathbf{B}^{\mathbf{T}},\mathbf{A}^{-1} \sim \mathbf{B}^{-1},\mathbf{A}^{\mathbf{*}} \sim \mathbf{B}^{\mathbf{*}},f(\mathbf{A}) \sim f(\mathbf{B}) \\ 
+    f(\mathbf{A})=0 \Rightarrow f(\lambda) = 0 (E \sim 1)\\ 
+    \lambda_{\mathbf{A}^{*}_{i}} \lambda_{\mathbf{A}_{i}} = |\mathbf{A}|,i \in [1,n]\\ 
+\end{align*}
+
+\begin{tabular}{|c|c|c|c|c|c|c|}%
+    \hline 
+    $\mathbf{A}$ & $\mathbf{A}^{\mathbf{T}}$ & $\mathbf{A}^{-1}$ & $\mathbf{A}^{*}$ & $f(\mathbf{A})$ & $\mathbf{P}^{-1}\mathbf{A}\mathbf{P}$ & $\mathbf{P}\mathbf{A}\mathbf{P}^{-1}$ \\   
+    \hline
+    $\lambda$ & $\lambda$ & $\frac{1}{\lambda}$ & $\frac{|\mathbf{A}|}{\lambda}$ & $f(\mathbf{\lambda})$ & $\lambda$ & $\lambda$ \\ 
+    \hline 
+    $\alpha$ & * & $\alpha$ & $\alpha$ & $\alpha$ & $\mathbf{P}^{-1}\alpha$ & $\mathbf{P}\alpha$ \\ 
+    \hline 
+\end{tabular}
+
+\clearpage
+
+\begin{align*} 
+    \mathbf{Base \quad \sigma} \\ 
+    (\eta_{1},\eta_{2},...\eta_{n}) = (\xi_{1},\xi_{2},...\xi_{n})\mathbf{M} \\ 
+    \left\{
+        \begin{array}{rl}
+            \eta_{1} = a_{11}\xi_{1} + a_{21}\xi_{2}+...+a_{n1}\xi{n} \\
+            \vdots \quad \vdots \quad \ddots  \qquad \qquad \qquad \qquad \vdots \quad \vdots  \\
+            \eta_{n} = a_{1n}\xi_{1} + a_{2n}\xi_{2}+...+a_{nn}\xi{n} \\
+        \end{array} \Longrightarrow \mathbf{A}\mathbf{M} = \mathbf{B} \Longleftrightarrow \mathbf{M} = \mathbf{A^{-1}}\mathbf{B} 
+    \right. \\ 
+    \mathbf{A}\xi_{\mathbf{A}} = \mathbf{B}\xi_{\mathbf{B}} \Longrightarrow \xi_{\mathbf{A}} = \mathbf{A}^{-1}\mathbf{B}\xi_{\mathbf{B}} = \mathbf{M}\xi_{B}\\ 
+\end{align*}
+
+\clearpage 
+
+\end{document}
