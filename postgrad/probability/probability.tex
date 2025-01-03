@@ -106,12 +106,49 @@ $\mathbf{Random \quad Variable \quad Characteristic \quad Function}$ \\
     \frac{S_{n}-n\mu}{\sqrt{n}\sigma} \sim N(0,1)\\
 \end{align*}
 
+\begin{align*}
+    \mathrm{De \quad Moivre \quad Laplace \quad Integral \quad Limit \quad  Theory}\\
+    \lim_{n \to \infty} P\{a < \frac{\mu_{n}-np}{\sqrt{npq}} \le b\} = \frac{1}{\sqrt{2\pi}}\int_{a}^{b} \mathrm{e}^{-\frac{x^2}{2}} \mathrm{d}x = \Phi(b) - \Phi(a) \\\
+    \mu_{n} \sim B(n,p), \quad \phi_{n}(t) = (p\mathrm{e}^{it}+q)^{n} \\ 
+    X_{n} = \frac{\mu_{n}-np}{\sqrt{npq}}, \quad \varphi_{n}(t) = \mathrm{E}(\mathrm{e}^{iX_{n}t}) = \left(p\mathrm{e}^{\frac{iqt}{\sqrt{npq}}} + q\mathrm{e}^{-\frac{ipt}{\sqrt{npq}}}\right)^{n}\\
+    \mathrm{e}^{x} = 1+x+\frac{x^2}{2} + o(x^2)\\
+    p\mathrm{e}^{\frac{iqt}{\sqrt{npq}}} = p+it\sqrt{\frac{pq}{n}} - \frac{qt^2}{2n} + o(\frac{t^2}{n})\\ 
+    q\mathrm{e}^{-\frac{ipt}{\sqrt{npq}}} = q-it\sqrt{\frac{pq}{n}} - \frac{pt^2}{2n}+ +o(\frac{t^2}{n})\\
+    \varphi_{n}(t) =\left[ 1 - \frac{t^2}{2n} + o(\frac{t^2}{n}) \right]^{n} \to \mathrm{e}^{-\frac{t^2}{2}}, (n \to \infty)\\
+\end{align*}
+
 \clearpage
 
 \begin{align*}
     \mathrm{Multiple \quad Random \quad Variable \quad PDF}\\
     \vec{\mu} = (\mu_{1},\mu_{2},\dots)^{\mathrm{T}}, \quad \vec{X} = (x_{1},x_{2}, \dots)^{\mathrm{T}}, \quad \Sigma = \left(\mathrm{Cov}(x_{i},x_{j})\right)_{n*n}\\
     f(\vec{X}) = \frac{1}{(2\pi)^{\frac{n}{2}}|\Sigma|^{\frac{1}{2}}} \mathrm{e}^{-\frac{1}{2}\left(\vec{X}-\vec{\mu}\right)^{\mathrm{T}} \Sigma^{-1} \left(\vec{X}-\vec{\mu}\right)}\\
+    eg. X \sim N(\mu_{1},\sigma_{1}^2), Y \sim N(\mu_{2},\sigma_{2}^2) \\
+    \Sigma = \left(
+        \begin{array}{cc}
+            \sigma_{1}^{2} & \rho \sigma_{1} \sigma_{2}\\
+            \rho \sigma_{1} \sigma_{2} & \sigma_{2}^{2}\\ 
+        \end{array}
+    \right), \quad \Sigma^{-1} = \frac{1}{\sigma_{1}^{2}\sigma_{2}^{2}(1-\rho^2)} 
+        \left(
+        \begin{array}{cc}
+            \sigma_{2}^{2} & -\rho \sigma_{1} \sigma_{2}\\
+            -\rho \sigma_{1} \sigma_{2} & \sigma_{1}^{2}\\ 
+        \end{array}
+        \right) \\ 
+        |\Sigma| = \sigma_{1}^{2}\sigma_{2}^{2}(1-\rho^2)\\
+    \vec{\mu} = \left(
+        \begin{array}{c}
+            \mu_{1}\\
+            \mu_{2}\\
+        \end{array}
+    \right) \quad \vec{X} = \left(
+        \begin{array}{c}
+            x\\
+            y\\
+        \end{array}
+        \right)\\
+    f(x,y) = \frac{1}{2\pi \sigma_{1}\sigma_{2}\sqrt{1-\rho^2}} \mathrm{e}^{-\frac{1}{2(1-\rho^2)}\left[\frac{(x-\mu_{1})^2}{\sigma_{1}^2} + \frac{(y-\mu_{2})^2}{\sigma_{2}^2} - \frac{2\rho(x-\mu_{1})(y-\mu_{2})}{\sigma_{1}\sigma_{2}}\right]}\\
 \end{align*}
 
 \end{document}
